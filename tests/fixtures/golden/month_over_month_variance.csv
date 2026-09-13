@@ -1,0 +1,1561 @@
+account_id,account_code,account_name,account_type,month_start,net_usd,prior_month_usd,mom_change_usd,mom_change_pct,prior_year_usd,yoy_change_usd,yoy_change_pct,mom_mover_rank,yoy_mover_rank
+ACC-1100,1100,Accounts Receivable,asset,2025-01-01,366170.54,13463.07,352707.47,2619.81,0.0,366170.54,,1,1
+ACC-1200,1200,Inventory,asset,2025-01-01,-320035.36,-10850.92,-309184.44,-2849.38,0.0,-320035.36,,2,2
+ACC-4007,4007,Revenue 08,revenue,2025-01-01,-69362.11,0.0,-69362.11,,0.0,-69362.11,,3,3
+ACC-5002,5002,Cost of Goods Sold 03,cogs,2025-01-01,59918.57,0.0,59918.57,,0.0,59918.57,,4,4
+ACC-4000,4000,Revenue 01,revenue,2025-01-01,-58101.99,-284.34,-57817.65,-20333.98,0.0,-58101.99,,5,5
+ACC-4014,4014,Revenue 15,revenue,2025-01-01,-52598.46,0.0,-52598.46,,0.0,-52598.46,,6,6
+ACC-4012,4012,Revenue 13,revenue,2025-01-01,-39742.4,0.0,-39742.4,,0.0,-39742.4,,7,8
+ACC-1000,1000,Cash and Cash Equivalents,asset,2025-01-01,-42533.89,-5313.24,-37220.65,-700.53,0.0,-42533.89,,8,7
+ACC-5004,5004,Cost of Goods Sold 05,cogs,2025-01-01,36255.97,0.0,36255.97,,0.0,36255.97,,9,9
+ACC-5008,5008,Cost of Goods Sold 09,cogs,2025-01-01,35398.93,224.61,35174.32,15660.18,0.0,35398.93,,10,10
+ACC-5006,5006,Cost of Goods Sold 07,cogs,2025-01-01,34430.33,0.0,34430.33,,0.0,34430.33,,11,11
+ACC-4004,4004,Revenue 05,revenue,2025-01-01,-31262.15,0.0,-31262.15,,0.0,-31262.15,,12,12
+ACC-5001,5001,Cost of Goods Sold 02,cogs,2025-01-01,30346.12,0.0,30346.12,,0.0,30346.12,,13,13
+ACC-5000,5000,Cost of Goods Sold 01,cogs,2025-01-01,28524.07,0.0,28524.07,,0.0,28524.07,,14,15
+ACC-4003,4003,Revenue 04,revenue,2025-01-01,-28301.22,0.0,-28301.22,,0.0,-28301.22,,15,16
+ACC-4002,4002,Revenue 03,revenue,2025-01-01,-25707.01,0.0,-25707.01,,0.0,-25707.01,,16,17
+ACC-5007,5007,Cost of Goods Sold 08,cogs,2025-01-01,25427.98,170.6,25257.38,14805.03,0.0,25427.98,,17,18
+ACC-5003,5003,Cost of Goods Sold 04,cogs,2025-01-01,28905.39,5497.84,23407.55,425.76,0.0,28905.39,,18,14
+ACC-4019,4019,Revenue 20,revenue,2025-01-01,-24185.69,-2169.88,-22015.81,-1014.61,0.0,-24185.69,,19,19
+ACC-4013,4013,Revenue 14,revenue,2025-01-01,-22351.65,-345.48,-22006.17,-6369.74,0.0,-22351.65,,20,21
+ACC-4006,4006,Revenue 07,revenue,2025-01-01,-21622.1,0.0,-21622.1,,0.0,-21622.1,,21,22
+ACC-4015,4015,Revenue 16,revenue,2025-01-01,-20510.26,0.0,-20510.26,,0.0,-20510.26,,22,24
+ACC-5009,5009,Cost of Goods Sold 10,cogs,2025-01-01,23844.65,4413.36,19431.29,440.28,0.0,23844.65,,23,20
+ACC-5005,5005,Cost of Goods Sold 06,cogs,2025-01-01,19609.98,544.51,19065.47,3501.4,0.0,19609.98,,24,26
+ACC-4016,4016,Revenue 17,revenue,2025-01-01,-17268.81,0.0,-17268.81,,0.0,-17268.81,,25,27
+ACC-4009,4009,Revenue 10,revenue,2025-01-01,-16205.39,-131.88,-16073.51,-12187.98,0.0,-16205.39,,26,28
+ACC-4011,4011,Revenue 12,revenue,2025-01-01,-20468.38,-6332.25,-14136.13,-223.24,0.0,-20468.38,,27,25
+ACC-4018,4018,Revenue 19,revenue,2025-01-01,-14258.31,-242.47,-14015.84,-5780.44,0.0,-14258.31,,28,29
+ACC-6051,6051,Operating Expense 52,expense,2025-01-01,13606.64,0.0,13606.64,,0.0,13606.64,,29,31
+ACC-4005,4005,Revenue 06,revenue,2025-01-01,-20786.16,-7181.58,-13604.58,-189.44,0.0,-20786.16,,30,23
+ACC-4008,4008,Revenue 09,revenue,2025-01-01,-13458.36,0.0,-13458.36,,0.0,-13458.36,,31,32
+ACC-6030,6030,Operating Expense 31,expense,2025-01-01,12907.04,0.0,12907.04,,0.0,12907.04,,32,33
+ACC-4017,4017,Revenue 18,revenue,2025-01-01,-12788.31,-213.98,-12574.33,-5876.4,0.0,-12788.31,,33,34
+ACC-4010,4010,Revenue 11,revenue,2025-01-01,-13703.06,-1182.97,-12520.09,-1058.36,0.0,-13703.06,,34,30
+ACC-4001,4001,Revenue 02,revenue,2025-01-01,-10689.29,0.0,-10689.29,,0.0,-10689.29,,35,35
+ACC-6013,6013,Operating Expense 14,expense,2025-01-01,8633.12,0.0,8633.12,,0.0,8633.12,,36,36
+ACC-6010,6010,Operating Expense 11,expense,2025-01-01,8225.93,1385.14,6840.79,493.87,0.0,8225.93,,37,37
+ACC-6021,6021,Operating Expense 22,expense,2025-01-01,6837.42,0.0,6837.42,,0.0,6837.42,,38,38
+ACC-6043,6043,Operating Expense 44,expense,2025-01-01,6759.79,0.0,6759.79,,0.0,6759.79,,39,39
+ACC-2008,2008,Liability 09,liability,2025-01-01,6750.69,0.0,6750.69,,0.0,6750.69,,40,40
+ACC-6032,6032,Operating Expense 33,expense,2025-01-01,6664.64,0.0,6664.64,,0.0,6664.64,,41,41
+ACC-6040,6040,Operating Expense 41,expense,2025-01-01,6551.72,0.0,6551.72,,0.0,6551.72,,42,42
+ACC-6047,6047,Operating Expense 48,expense,2025-01-01,5583.45,0.0,5583.45,,0.0,5583.45,,43,44
+ACC-6052,6052,Operating Expense 53,expense,2025-01-01,5216.75,0.0,5216.75,,0.0,5216.75,,44,45
+ACC-6036,6036,Operating Expense 37,expense,2025-01-01,5103.4,0.0,5103.4,,0.0,5103.4,,45,46
+ACC-6049,6049,Operating Expense 50,expense,2025-01-01,5029.24,0.0,5029.24,,0.0,5029.24,,46,47
+ACC-6007,6007,Operating Expense 08,expense,2025-01-01,4765.1,0.0,4765.1,,0.0,4765.1,,47,48
+ACC-6044,6044,Operating Expense 45,expense,2025-01-01,6169.99,1471.77,4698.22,319.22,0.0,6169.99,,48,43
+ACC-6006,6006,Operating Expense 07,expense,2025-01-01,4695.62,0.0,4695.62,,0.0,4695.62,,49,50
+ACC-6054,6054,Operating Expense 55,expense,2025-01-01,4524.2,0.0,4524.2,,0.0,4524.2,,50,51
+ACC-2000,2000,Liability 01,liability,2025-01-01,4214.14,0.0,4214.14,,0.0,4214.14,,51,52
+ACC-6033,6033,Operating Expense 34,expense,2025-01-01,4000.54,0.0,4000.54,,0.0,4000.54,,52,53
+ACC-2005,2005,Liability 06,liability,2025-01-01,3879.22,0.0,3879.22,,0.0,3879.22,,53,54
+ACC-6022,6022,Operating Expense 23,expense,2025-01-01,4729.02,866.79,3862.23,445.58,0.0,4729.02,,54,49
+ACC-6053,6053,Operating Expense 54,expense,2025-01-01,3833.71,0.0,3833.71,,0.0,3833.71,,55,55
+ACC-2004,2004,Liability 05,liability,2025-01-01,3833.27,0.0,3833.27,,0.0,3833.27,,56,56
+ACC-6015,6015,Operating Expense 16,expense,2025-01-01,3641.64,0.0,3641.64,,0.0,3641.64,,57,57
+ACC-2001,2001,Liability 02,liability,2025-01-01,3358.67,0.0,3358.67,,0.0,3358.67,,58,60
+ACC-6024,6024,Operating Expense 25,expense,2025-01-01,3188.73,0.0,3188.73,,0.0,3188.73,,59,61
+ACC-6026,6026,Operating Expense 27,expense,2025-01-01,3120.49,0.0,3120.49,,0.0,3120.49,,60,62
+ACC-6005,6005,Operating Expense 06,expense,2025-01-01,3410.11,323.13,3086.98,955.34,0.0,3410.11,,61,59
+ACC-6056,6056,Operating Expense 57,expense,2025-01-01,2991.3,0.0,2991.3,,0.0,2991.3,,62,63
+ACC-6046,6046,Operating Expense 47,expense,2025-01-01,3450.73,490.28,2960.45,603.83,0.0,3450.73,,63,58
+ACC-6001,6001,Operating Expense 02,expense,2025-01-01,2842.45,0.0,2842.45,,0.0,2842.45,,64,64
+ACC-6055,6055,Operating Expense 56,expense,2025-01-01,2672.6,0.0,2672.6,,0.0,2672.6,,65,65
+ACC-2003,2003,Liability 04,liability,2025-01-01,2658.55,0.0,2658.55,,0.0,2658.55,,66,66
+ACC-6035,6035,Operating Expense 36,expense,2025-01-01,2608.2,0.0,2608.2,,0.0,2608.2,,67,67
+ACC-2007,2007,Liability 08,liability,2025-01-01,2585.23,0.0,2585.23,,0.0,2585.23,,68,68
+ACC-2009,2009,Liability 10,liability,2025-01-01,2461.82,0.0,2461.82,,0.0,2461.82,,69,69
+ACC-6020,6020,Operating Expense 21,expense,2025-01-01,2351.54,0.0,2351.54,,0.0,2351.54,,70,70
+ACC-6004,6004,Operating Expense 05,expense,2025-01-01,2333.36,0.0,2333.36,,0.0,2333.36,,71,71
+ACC-6031,6031,Operating Expense 32,expense,2025-01-01,2314.63,0.0,2314.63,,0.0,2314.63,,72,72
+ACC-6002,6002,Operating Expense 03,expense,2025-01-01,2041.1,0.0,2041.1,,0.0,2041.1,,73,74
+ACC-6019,6019,Operating Expense 20,expense,2025-01-01,1833.39,0.0,1833.39,,0.0,1833.39,,74,75
+ACC-6012,6012,Operating Expense 13,expense,2025-01-01,1805.84,0.0,1805.84,,0.0,1805.84,,75,76
+ACC-6023,6023,Operating Expense 24,expense,2025-01-01,1642.35,0.0,1642.35,,0.0,1642.35,,76,77
+ACC-6042,6042,Operating Expense 43,expense,2025-01-01,1575.9,0.0,1575.9,,0.0,1575.9,,77,78
+ACC-6000,6000,Operating Expense 01,expense,2025-01-01,1565.03,0.0,1565.03,,0.0,1565.03,,78,80
+ACC-6039,6039,Operating Expense 40,expense,2025-01-01,1445.24,0.0,1445.24,,0.0,1445.24,,79,81
+ACC-6050,6050,Operating Expense 51,expense,2025-01-01,1353.15,0.0,1353.15,,0.0,1353.15,,80,82
+ACC-6014,6014,Operating Expense 15,expense,2025-01-01,1247.56,0.0,1247.56,,0.0,1247.56,,81,83
+ACC-6037,6037,Operating Expense 38,expense,2025-01-01,1163.16,0.0,1163.16,,0.0,1163.16,,82,84
+ACC-6008,6008,Operating Expense 09,expense,2025-01-01,1143.16,0.0,1143.16,,0.0,1143.16,,83,85
+ACC-6029,6029,Operating Expense 30,expense,2025-01-01,1002.7,0.0,1002.7,,0.0,1002.7,,84,86
+ACC-6025,6025,Operating Expense 26,expense,2025-01-01,995.97,0.0,995.97,,0.0,995.97,,85,87
+ACC-6011,6011,Operating Expense 12,expense,2025-01-01,806.09,1758.25,-952.16,-54.15,0.0,806.09,,86,90
+ACC-6009,6009,Operating Expense 10,expense,2025-01-01,910.35,0.0,910.35,,0.0,910.35,,87,88
+ACC-6028,6028,Operating Expense 29,expense,2025-01-01,836.46,0.0,836.46,,0.0,836.46,,88,89
+ACC-2002,2002,Liability 03,liability,2025-01-01,804.53,0.0,804.53,,0.0,804.53,,89,91
+ACC-6048,6048,Operating Expense 49,expense,2025-01-01,742.35,0.0,742.35,,0.0,742.35,,90,92
+ACC-6038,6038,Operating Expense 39,expense,2025-01-01,651.15,0.0,651.15,,0.0,651.15,,91,94
+ACC-6041,6041,Operating Expense 42,expense,2025-01-01,620.95,0.0,620.95,,0.0,620.95,,92,95
+ACC-6017,6017,Operating Expense 18,expense,2025-01-01,602.85,0.0,602.85,,0.0,602.85,,93,96
+ACC-6045,6045,Operating Expense 46,expense,2025-01-01,419.87,0.0,419.87,,0.0,419.87,,94,97
+ACC-6027,6027,Operating Expense 28,expense,2025-01-01,375.37,0.0,375.37,,0.0,375.37,,95,98
+ACC-6016,6016,Operating Expense 17,expense,2025-01-01,373.43,0.0,373.43,,0.0,373.43,,96,99
+ACC-6034,6034,Operating Expense 35,expense,2025-01-01,1570.63,1263.55,307.08,24.3,0.0,1570.63,,97,79
+ACC-6003,6003,Operating Expense 04,expense,2025-01-01,662.29,363.58,298.71,82.16,0.0,662.29,,98,93
+ACC-6018,6018,Operating Expense 19,expense,2025-01-01,2106.48,2012.51,93.97,4.67,0.0,2106.48,,99,73
+ACC-1300,1300,Other Asset 01,asset,2025-01-01,0.0,0.0,0.0,,0.0,0.0,,100,100
+ACC-1301,1301,Other Asset 02,asset,2025-01-01,0.0,0.0,0.0,,0.0,0.0,,100,100
+ACC-1302,1302,Other Asset 03,asset,2025-01-01,0.0,0.0,0.0,,0.0,0.0,,100,100
+ACC-1303,1303,Other Asset 04,asset,2025-01-01,0.0,0.0,0.0,,0.0,0.0,,100,100
+ACC-1304,1304,Other Asset 05,asset,2025-01-01,0.0,0.0,0.0,,0.0,0.0,,100,100
+ACC-1305,1305,Other Asset 06,asset,2025-01-01,0.0,0.0,0.0,,0.0,0.0,,100,100
+ACC-1306,1306,Other Asset 07,asset,2025-01-01,0.0,0.0,0.0,,0.0,0.0,,100,100
+ACC-1307,1307,Other Asset 08,asset,2025-01-01,0.0,0.0,0.0,,0.0,0.0,,100,100
+ACC-1308,1308,Other Asset 09,asset,2025-01-01,0.0,0.0,0.0,,0.0,0.0,,100,100
+ACC-1309,1309,Other Asset 10,asset,2025-01-01,0.0,0.0,0.0,,0.0,0.0,,100,100
+ACC-1310,1310,Other Asset 11,asset,2025-01-01,0.0,0.0,0.0,,0.0,0.0,,100,100
+ACC-1311,1311,Other Asset 12,asset,2025-01-01,0.0,0.0,0.0,,0.0,0.0,,100,100
+ACC-1312,1312,Other Asset 13,asset,2025-01-01,0.0,0.0,0.0,,0.0,0.0,,100,100
+ACC-1313,1313,Other Asset 14,asset,2025-01-01,0.0,0.0,0.0,,0.0,0.0,,100,100
+ACC-1314,1314,Other Asset 15,asset,2025-01-01,0.0,0.0,0.0,,0.0,0.0,,100,100
+ACC-1315,1315,Other Asset 16,asset,2025-01-01,0.0,0.0,0.0,,0.0,0.0,,100,100
+ACC-1316,1316,Other Asset 17,asset,2025-01-01,0.0,0.0,0.0,,0.0,0.0,,100,100
+ACC-2006,2006,Liability 07,liability,2025-01-01,0.0,0.0,0.0,,0.0,0.0,,100,100
+ACC-3000,3000,Equity 01,equity,2025-01-01,0.0,0.0,0.0,,0.0,0.0,,100,100
+ACC-3001,3001,Equity 02,equity,2025-01-01,0.0,0.0,0.0,,0.0,0.0,,100,100
+ACC-3002,3002,Equity 03,equity,2025-01-01,0.0,0.0,0.0,,0.0,0.0,,100,100
+ACC-1100,1100,Accounts Receivable,asset,2024-12-01,13463.07,0.0,13463.07,,,,,1,1
+ACC-1200,1200,Inventory,asset,2024-12-01,-10850.92,0.0,-10850.92,,,,,2,1
+ACC-4005,4005,Revenue 06,revenue,2024-12-01,-7181.58,0.0,-7181.58,,,,,3,1
+ACC-4011,4011,Revenue 12,revenue,2024-12-01,-6332.25,0.0,-6332.25,,,,,4,1
+ACC-5003,5003,Cost of Goods Sold 04,cogs,2024-12-01,5497.84,0.0,5497.84,,,,,5,1
+ACC-1000,1000,Cash and Cash Equivalents,asset,2024-12-01,-5313.24,0.0,-5313.24,,,,,6,1
+ACC-5009,5009,Cost of Goods Sold 10,cogs,2024-12-01,4413.36,0.0,4413.36,,,,,7,1
+ACC-4019,4019,Revenue 20,revenue,2024-12-01,-2169.88,0.0,-2169.88,,,,,8,1
+ACC-6018,6018,Operating Expense 19,expense,2024-12-01,2012.51,0.0,2012.51,,,,,9,1
+ACC-6011,6011,Operating Expense 12,expense,2024-12-01,1758.25,0.0,1758.25,,,,,10,1
+ACC-6044,6044,Operating Expense 45,expense,2024-12-01,1471.77,0.0,1471.77,,,,,11,1
+ACC-6010,6010,Operating Expense 11,expense,2024-12-01,1385.14,0.0,1385.14,,,,,12,1
+ACC-6034,6034,Operating Expense 35,expense,2024-12-01,1263.55,0.0,1263.55,,,,,13,1
+ACC-4010,4010,Revenue 11,revenue,2024-12-01,-1182.97,0.0,-1182.97,,,,,14,1
+ACC-6022,6022,Operating Expense 23,expense,2024-12-01,866.79,0.0,866.79,,,,,15,1
+ACC-5005,5005,Cost of Goods Sold 06,cogs,2024-12-01,544.51,0.0,544.51,,,,,16,1
+ACC-6046,6046,Operating Expense 47,expense,2024-12-01,490.28,0.0,490.28,,,,,17,1
+ACC-6003,6003,Operating Expense 04,expense,2024-12-01,363.58,0.0,363.58,,,,,18,1
+ACC-4013,4013,Revenue 14,revenue,2024-12-01,-345.48,0.0,-345.48,,,,,19,1
+ACC-6005,6005,Operating Expense 06,expense,2024-12-01,323.13,0.0,323.13,,,,,20,1
+ACC-4000,4000,Revenue 01,revenue,2024-12-01,-284.34,0.0,-284.34,,,,,21,1
+ACC-4018,4018,Revenue 19,revenue,2024-12-01,-242.47,0.0,-242.47,,,,,22,1
+ACC-5008,5008,Cost of Goods Sold 09,cogs,2024-12-01,224.61,0.0,224.61,,,,,23,1
+ACC-4017,4017,Revenue 18,revenue,2024-12-01,-213.98,0.0,-213.98,,,,,24,1
+ACC-5007,5007,Cost of Goods Sold 08,cogs,2024-12-01,170.6,0.0,170.6,,,,,25,1
+ACC-4009,4009,Revenue 10,revenue,2024-12-01,-131.88,0.0,-131.88,,,,,26,1
+ACC-1300,1300,Other Asset 01,asset,2024-12-01,0.0,0.0,0.0,,,,,27,1
+ACC-1301,1301,Other Asset 02,asset,2024-12-01,0.0,0.0,0.0,,,,,27,1
+ACC-1302,1302,Other Asset 03,asset,2024-12-01,0.0,0.0,0.0,,,,,27,1
+ACC-1303,1303,Other Asset 04,asset,2024-12-01,0.0,0.0,0.0,,,,,27,1
+ACC-1304,1304,Other Asset 05,asset,2024-12-01,0.0,0.0,0.0,,,,,27,1
+ACC-1305,1305,Other Asset 06,asset,2024-12-01,0.0,0.0,0.0,,,,,27,1
+ACC-1306,1306,Other Asset 07,asset,2024-12-01,0.0,0.0,0.0,,,,,27,1
+ACC-1307,1307,Other Asset 08,asset,2024-12-01,0.0,0.0,0.0,,,,,27,1
+ACC-1308,1308,Other Asset 09,asset,2024-12-01,0.0,0.0,0.0,,,,,27,1
+ACC-1309,1309,Other Asset 10,asset,2024-12-01,0.0,0.0,0.0,,,,,27,1
+ACC-1310,1310,Other Asset 11,asset,2024-12-01,0.0,0.0,0.0,,,,,27,1
+ACC-1311,1311,Other Asset 12,asset,2024-12-01,0.0,0.0,0.0,,,,,27,1
+ACC-1312,1312,Other Asset 13,asset,2024-12-01,0.0,0.0,0.0,,,,,27,1
+ACC-1313,1313,Other Asset 14,asset,2024-12-01,0.0,0.0,0.0,,,,,27,1
+ACC-1314,1314,Other Asset 15,asset,2024-12-01,0.0,0.0,0.0,,,,,27,1
+ACC-1315,1315,Other Asset 16,asset,2024-12-01,0.0,0.0,0.0,,,,,27,1
+ACC-1316,1316,Other Asset 17,asset,2024-12-01,0.0,0.0,0.0,,,,,27,1
+ACC-2000,2000,Liability 01,liability,2024-12-01,0.0,0.0,0.0,,,,,27,1
+ACC-2001,2001,Liability 02,liability,2024-12-01,0.0,0.0,0.0,,,,,27,1
+ACC-2002,2002,Liability 03,liability,2024-12-01,0.0,0.0,0.0,,,,,27,1
+ACC-2003,2003,Liability 04,liability,2024-12-01,0.0,0.0,0.0,,,,,27,1
+ACC-2004,2004,Liability 05,liability,2024-12-01,0.0,0.0,0.0,,,,,27,1
+ACC-2005,2005,Liability 06,liability,2024-12-01,0.0,0.0,0.0,,,,,27,1
+ACC-2006,2006,Liability 07,liability,2024-12-01,0.0,0.0,0.0,,,,,27,1
+ACC-2007,2007,Liability 08,liability,2024-12-01,0.0,0.0,0.0,,,,,27,1
+ACC-2008,2008,Liability 09,liability,2024-12-01,0.0,0.0,0.0,,,,,27,1
+ACC-2009,2009,Liability 10,liability,2024-12-01,0.0,0.0,0.0,,,,,27,1
+ACC-3000,3000,Equity 01,equity,2024-12-01,0.0,0.0,0.0,,,,,27,1
+ACC-3001,3001,Equity 02,equity,2024-12-01,0.0,0.0,0.0,,,,,27,1
+ACC-3002,3002,Equity 03,equity,2024-12-01,0.0,0.0,0.0,,,,,27,1
+ACC-4001,4001,Revenue 02,revenue,2024-12-01,0.0,0.0,0.0,,,,,27,1
+ACC-4002,4002,Revenue 03,revenue,2024-12-01,0.0,0.0,0.0,,,,,27,1
+ACC-4003,4003,Revenue 04,revenue,2024-12-01,0.0,0.0,0.0,,,,,27,1
+ACC-4004,4004,Revenue 05,revenue,2024-12-01,0.0,0.0,0.0,,,,,27,1
+ACC-4006,4006,Revenue 07,revenue,2024-12-01,0.0,0.0,0.0,,,,,27,1
+ACC-4007,4007,Revenue 08,revenue,2024-12-01,0.0,0.0,0.0,,,,,27,1
+ACC-4008,4008,Revenue 09,revenue,2024-12-01,0.0,0.0,0.0,,,,,27,1
+ACC-4012,4012,Revenue 13,revenue,2024-12-01,0.0,0.0,0.0,,,,,27,1
+ACC-4014,4014,Revenue 15,revenue,2024-12-01,0.0,0.0,0.0,,,,,27,1
+ACC-4015,4015,Revenue 16,revenue,2024-12-01,0.0,0.0,0.0,,,,,27,1
+ACC-4016,4016,Revenue 17,revenue,2024-12-01,0.0,0.0,0.0,,,,,27,1
+ACC-5000,5000,Cost of Goods Sold 01,cogs,2024-12-01,0.0,0.0,0.0,,,,,27,1
+ACC-5001,5001,Cost of Goods Sold 02,cogs,2024-12-01,0.0,0.0,0.0,,,,,27,1
+ACC-5002,5002,Cost of Goods Sold 03,cogs,2024-12-01,0.0,0.0,0.0,,,,,27,1
+ACC-5004,5004,Cost of Goods Sold 05,cogs,2024-12-01,0.0,0.0,0.0,,,,,27,1
+ACC-5006,5006,Cost of Goods Sold 07,cogs,2024-12-01,0.0,0.0,0.0,,,,,27,1
+ACC-6000,6000,Operating Expense 01,expense,2024-12-01,0.0,0.0,0.0,,,,,27,1
+ACC-6001,6001,Operating Expense 02,expense,2024-12-01,0.0,0.0,0.0,,,,,27,1
+ACC-6002,6002,Operating Expense 03,expense,2024-12-01,0.0,0.0,0.0,,,,,27,1
+ACC-6004,6004,Operating Expense 05,expense,2024-12-01,0.0,0.0,0.0,,,,,27,1
+ACC-6006,6006,Operating Expense 07,expense,2024-12-01,0.0,0.0,0.0,,,,,27,1
+ACC-6007,6007,Operating Expense 08,expense,2024-12-01,0.0,0.0,0.0,,,,,27,1
+ACC-6008,6008,Operating Expense 09,expense,2024-12-01,0.0,0.0,0.0,,,,,27,1
+ACC-6009,6009,Operating Expense 10,expense,2024-12-01,0.0,0.0,0.0,,,,,27,1
+ACC-6012,6012,Operating Expense 13,expense,2024-12-01,0.0,0.0,0.0,,,,,27,1
+ACC-6013,6013,Operating Expense 14,expense,2024-12-01,0.0,0.0,0.0,,,,,27,1
+ACC-6014,6014,Operating Expense 15,expense,2024-12-01,0.0,0.0,0.0,,,,,27,1
+ACC-6015,6015,Operating Expense 16,expense,2024-12-01,0.0,0.0,0.0,,,,,27,1
+ACC-6016,6016,Operating Expense 17,expense,2024-12-01,0.0,0.0,0.0,,,,,27,1
+ACC-6017,6017,Operating Expense 18,expense,2024-12-01,0.0,0.0,0.0,,,,,27,1
+ACC-6019,6019,Operating Expense 20,expense,2024-12-01,0.0,0.0,0.0,,,,,27,1
+ACC-6020,6020,Operating Expense 21,expense,2024-12-01,0.0,0.0,0.0,,,,,27,1
+ACC-6021,6021,Operating Expense 22,expense,2024-12-01,0.0,0.0,0.0,,,,,27,1
+ACC-6023,6023,Operating Expense 24,expense,2024-12-01,0.0,0.0,0.0,,,,,27,1
+ACC-6024,6024,Operating Expense 25,expense,2024-12-01,0.0,0.0,0.0,,,,,27,1
+ACC-6025,6025,Operating Expense 26,expense,2024-12-01,0.0,0.0,0.0,,,,,27,1
+ACC-6026,6026,Operating Expense 27,expense,2024-12-01,0.0,0.0,0.0,,,,,27,1
+ACC-6027,6027,Operating Expense 28,expense,2024-12-01,0.0,0.0,0.0,,,,,27,1
+ACC-6028,6028,Operating Expense 29,expense,2024-12-01,0.0,0.0,0.0,,,,,27,1
+ACC-6029,6029,Operating Expense 30,expense,2024-12-01,0.0,0.0,0.0,,,,,27,1
+ACC-6030,6030,Operating Expense 31,expense,2024-12-01,0.0,0.0,0.0,,,,,27,1
+ACC-6031,6031,Operating Expense 32,expense,2024-12-01,0.0,0.0,0.0,,,,,27,1
+ACC-6032,6032,Operating Expense 33,expense,2024-12-01,0.0,0.0,0.0,,,,,27,1
+ACC-6033,6033,Operating Expense 34,expense,2024-12-01,0.0,0.0,0.0,,,,,27,1
+ACC-6035,6035,Operating Expense 36,expense,2024-12-01,0.0,0.0,0.0,,,,,27,1
+ACC-6036,6036,Operating Expense 37,expense,2024-12-01,0.0,0.0,0.0,,,,,27,1
+ACC-6037,6037,Operating Expense 38,expense,2024-12-01,0.0,0.0,0.0,,,,,27,1
+ACC-6038,6038,Operating Expense 39,expense,2024-12-01,0.0,0.0,0.0,,,,,27,1
+ACC-6039,6039,Operating Expense 40,expense,2024-12-01,0.0,0.0,0.0,,,,,27,1
+ACC-6040,6040,Operating Expense 41,expense,2024-12-01,0.0,0.0,0.0,,,,,27,1
+ACC-6041,6041,Operating Expense 42,expense,2024-12-01,0.0,0.0,0.0,,,,,27,1
+ACC-6042,6042,Operating Expense 43,expense,2024-12-01,0.0,0.0,0.0,,,,,27,1
+ACC-6043,6043,Operating Expense 44,expense,2024-12-01,0.0,0.0,0.0,,,,,27,1
+ACC-6045,6045,Operating Expense 46,expense,2024-12-01,0.0,0.0,0.0,,,,,27,1
+ACC-6047,6047,Operating Expense 48,expense,2024-12-01,0.0,0.0,0.0,,,,,27,1
+ACC-6048,6048,Operating Expense 49,expense,2024-12-01,0.0,0.0,0.0,,,,,27,1
+ACC-6049,6049,Operating Expense 50,expense,2024-12-01,0.0,0.0,0.0,,,,,27,1
+ACC-6050,6050,Operating Expense 51,expense,2024-12-01,0.0,0.0,0.0,,,,,27,1
+ACC-6051,6051,Operating Expense 52,expense,2024-12-01,0.0,0.0,0.0,,,,,27,1
+ACC-6052,6052,Operating Expense 53,expense,2024-12-01,0.0,0.0,0.0,,,,,27,1
+ACC-6053,6053,Operating Expense 54,expense,2024-12-01,0.0,0.0,0.0,,,,,27,1
+ACC-6054,6054,Operating Expense 55,expense,2024-12-01,0.0,0.0,0.0,,,,,27,1
+ACC-6055,6055,Operating Expense 56,expense,2024-12-01,0.0,0.0,0.0,,,,,27,1
+ACC-6056,6056,Operating Expense 57,expense,2024-12-01,0.0,0.0,0.0,,,,,27,1
+ACC-1000,1000,Cash and Cash Equivalents,asset,2024-11-01,0.0,0.0,0.0,,,,,1,1
+ACC-1100,1100,Accounts Receivable,asset,2024-11-01,0.0,0.0,0.0,,,,,1,1
+ACC-1200,1200,Inventory,asset,2024-11-01,0.0,0.0,0.0,,,,,1,1
+ACC-1300,1300,Other Asset 01,asset,2024-11-01,0.0,0.0,0.0,,,,,1,1
+ACC-1301,1301,Other Asset 02,asset,2024-11-01,0.0,0.0,0.0,,,,,1,1
+ACC-1302,1302,Other Asset 03,asset,2024-11-01,0.0,0.0,0.0,,,,,1,1
+ACC-1303,1303,Other Asset 04,asset,2024-11-01,0.0,0.0,0.0,,,,,1,1
+ACC-1304,1304,Other Asset 05,asset,2024-11-01,0.0,0.0,0.0,,,,,1,1
+ACC-1305,1305,Other Asset 06,asset,2024-11-01,0.0,0.0,0.0,,,,,1,1
+ACC-1306,1306,Other Asset 07,asset,2024-11-01,0.0,0.0,0.0,,,,,1,1
+ACC-1307,1307,Other Asset 08,asset,2024-11-01,0.0,0.0,0.0,,,,,1,1
+ACC-1308,1308,Other Asset 09,asset,2024-11-01,0.0,0.0,0.0,,,,,1,1
+ACC-1309,1309,Other Asset 10,asset,2024-11-01,0.0,0.0,0.0,,,,,1,1
+ACC-1310,1310,Other Asset 11,asset,2024-11-01,0.0,0.0,0.0,,,,,1,1
+ACC-1311,1311,Other Asset 12,asset,2024-11-01,0.0,0.0,0.0,,,,,1,1
+ACC-1312,1312,Other Asset 13,asset,2024-11-01,0.0,0.0,0.0,,,,,1,1
+ACC-1313,1313,Other Asset 14,asset,2024-11-01,0.0,0.0,0.0,,,,,1,1
+ACC-1314,1314,Other Asset 15,asset,2024-11-01,0.0,0.0,0.0,,,,,1,1
+ACC-1315,1315,Other Asset 16,asset,2024-11-01,0.0,0.0,0.0,,,,,1,1
+ACC-1316,1316,Other Asset 17,asset,2024-11-01,0.0,0.0,0.0,,,,,1,1
+ACC-2000,2000,Liability 01,liability,2024-11-01,0.0,0.0,0.0,,,,,1,1
+ACC-2001,2001,Liability 02,liability,2024-11-01,0.0,0.0,0.0,,,,,1,1
+ACC-2002,2002,Liability 03,liability,2024-11-01,0.0,0.0,0.0,,,,,1,1
+ACC-2003,2003,Liability 04,liability,2024-11-01,0.0,0.0,0.0,,,,,1,1
+ACC-2004,2004,Liability 05,liability,2024-11-01,0.0,0.0,0.0,,,,,1,1
+ACC-2005,2005,Liability 06,liability,2024-11-01,0.0,0.0,0.0,,,,,1,1
+ACC-2006,2006,Liability 07,liability,2024-11-01,0.0,0.0,0.0,,,,,1,1
+ACC-2007,2007,Liability 08,liability,2024-11-01,0.0,0.0,0.0,,,,,1,1
+ACC-2008,2008,Liability 09,liability,2024-11-01,0.0,0.0,0.0,,,,,1,1
+ACC-2009,2009,Liability 10,liability,2024-11-01,0.0,0.0,0.0,,,,,1,1
+ACC-3000,3000,Equity 01,equity,2024-11-01,0.0,0.0,0.0,,,,,1,1
+ACC-3001,3001,Equity 02,equity,2024-11-01,0.0,0.0,0.0,,,,,1,1
+ACC-3002,3002,Equity 03,equity,2024-11-01,0.0,0.0,0.0,,,,,1,1
+ACC-4000,4000,Revenue 01,revenue,2024-11-01,0.0,0.0,0.0,,,,,1,1
+ACC-4001,4001,Revenue 02,revenue,2024-11-01,0.0,0.0,0.0,,,,,1,1
+ACC-4002,4002,Revenue 03,revenue,2024-11-01,0.0,0.0,0.0,,,,,1,1
+ACC-4003,4003,Revenue 04,revenue,2024-11-01,0.0,0.0,0.0,,,,,1,1
+ACC-4004,4004,Revenue 05,revenue,2024-11-01,0.0,0.0,0.0,,,,,1,1
+ACC-4005,4005,Revenue 06,revenue,2024-11-01,0.0,0.0,0.0,,,,,1,1
+ACC-4006,4006,Revenue 07,revenue,2024-11-01,0.0,0.0,0.0,,,,,1,1
+ACC-4007,4007,Revenue 08,revenue,2024-11-01,0.0,0.0,0.0,,,,,1,1
+ACC-4008,4008,Revenue 09,revenue,2024-11-01,0.0,0.0,0.0,,,,,1,1
+ACC-4009,4009,Revenue 10,revenue,2024-11-01,0.0,0.0,0.0,,,,,1,1
+ACC-4010,4010,Revenue 11,revenue,2024-11-01,0.0,0.0,0.0,,,,,1,1
+ACC-4011,4011,Revenue 12,revenue,2024-11-01,0.0,0.0,0.0,,,,,1,1
+ACC-4012,4012,Revenue 13,revenue,2024-11-01,0.0,0.0,0.0,,,,,1,1
+ACC-4013,4013,Revenue 14,revenue,2024-11-01,0.0,0.0,0.0,,,,,1,1
+ACC-4014,4014,Revenue 15,revenue,2024-11-01,0.0,0.0,0.0,,,,,1,1
+ACC-4015,4015,Revenue 16,revenue,2024-11-01,0.0,0.0,0.0,,,,,1,1
+ACC-4016,4016,Revenue 17,revenue,2024-11-01,0.0,0.0,0.0,,,,,1,1
+ACC-4017,4017,Revenue 18,revenue,2024-11-01,0.0,0.0,0.0,,,,,1,1
+ACC-4018,4018,Revenue 19,revenue,2024-11-01,0.0,0.0,0.0,,,,,1,1
+ACC-4019,4019,Revenue 20,revenue,2024-11-01,0.0,0.0,0.0,,,,,1,1
+ACC-5000,5000,Cost of Goods Sold 01,cogs,2024-11-01,0.0,0.0,0.0,,,,,1,1
+ACC-5001,5001,Cost of Goods Sold 02,cogs,2024-11-01,0.0,0.0,0.0,,,,,1,1
+ACC-5002,5002,Cost of Goods Sold 03,cogs,2024-11-01,0.0,0.0,0.0,,,,,1,1
+ACC-5003,5003,Cost of Goods Sold 04,cogs,2024-11-01,0.0,0.0,0.0,,,,,1,1
+ACC-5004,5004,Cost of Goods Sold 05,cogs,2024-11-01,0.0,0.0,0.0,,,,,1,1
+ACC-5005,5005,Cost of Goods Sold 06,cogs,2024-11-01,0.0,0.0,0.0,,,,,1,1
+ACC-5006,5006,Cost of Goods Sold 07,cogs,2024-11-01,0.0,0.0,0.0,,,,,1,1
+ACC-5007,5007,Cost of Goods Sold 08,cogs,2024-11-01,0.0,0.0,0.0,,,,,1,1
+ACC-5008,5008,Cost of Goods Sold 09,cogs,2024-11-01,0.0,0.0,0.0,,,,,1,1
+ACC-5009,5009,Cost of Goods Sold 10,cogs,2024-11-01,0.0,0.0,0.0,,,,,1,1
+ACC-6000,6000,Operating Expense 01,expense,2024-11-01,0.0,0.0,0.0,,,,,1,1
+ACC-6001,6001,Operating Expense 02,expense,2024-11-01,0.0,0.0,0.0,,,,,1,1
+ACC-6002,6002,Operating Expense 03,expense,2024-11-01,0.0,0.0,0.0,,,,,1,1
+ACC-6003,6003,Operating Expense 04,expense,2024-11-01,0.0,0.0,0.0,,,,,1,1
+ACC-6004,6004,Operating Expense 05,expense,2024-11-01,0.0,0.0,0.0,,,,,1,1
+ACC-6005,6005,Operating Expense 06,expense,2024-11-01,0.0,0.0,0.0,,,,,1,1
+ACC-6006,6006,Operating Expense 07,expense,2024-11-01,0.0,0.0,0.0,,,,,1,1
+ACC-6007,6007,Operating Expense 08,expense,2024-11-01,0.0,0.0,0.0,,,,,1,1
+ACC-6008,6008,Operating Expense 09,expense,2024-11-01,0.0,0.0,0.0,,,,,1,1
+ACC-6009,6009,Operating Expense 10,expense,2024-11-01,0.0,0.0,0.0,,,,,1,1
+ACC-6010,6010,Operating Expense 11,expense,2024-11-01,0.0,0.0,0.0,,,,,1,1
+ACC-6011,6011,Operating Expense 12,expense,2024-11-01,0.0,0.0,0.0,,,,,1,1
+ACC-6012,6012,Operating Expense 13,expense,2024-11-01,0.0,0.0,0.0,,,,,1,1
+ACC-6013,6013,Operating Expense 14,expense,2024-11-01,0.0,0.0,0.0,,,,,1,1
+ACC-6014,6014,Operating Expense 15,expense,2024-11-01,0.0,0.0,0.0,,,,,1,1
+ACC-6015,6015,Operating Expense 16,expense,2024-11-01,0.0,0.0,0.0,,,,,1,1
+ACC-6016,6016,Operating Expense 17,expense,2024-11-01,0.0,0.0,0.0,,,,,1,1
+ACC-6017,6017,Operating Expense 18,expense,2024-11-01,0.0,0.0,0.0,,,,,1,1
+ACC-6018,6018,Operating Expense 19,expense,2024-11-01,0.0,0.0,0.0,,,,,1,1
+ACC-6019,6019,Operating Expense 20,expense,2024-11-01,0.0,0.0,0.0,,,,,1,1
+ACC-6020,6020,Operating Expense 21,expense,2024-11-01,0.0,0.0,0.0,,,,,1,1
+ACC-6021,6021,Operating Expense 22,expense,2024-11-01,0.0,0.0,0.0,,,,,1,1
+ACC-6022,6022,Operating Expense 23,expense,2024-11-01,0.0,0.0,0.0,,,,,1,1
+ACC-6023,6023,Operating Expense 24,expense,2024-11-01,0.0,0.0,0.0,,,,,1,1
+ACC-6024,6024,Operating Expense 25,expense,2024-11-01,0.0,0.0,0.0,,,,,1,1
+ACC-6025,6025,Operating Expense 26,expense,2024-11-01,0.0,0.0,0.0,,,,,1,1
+ACC-6026,6026,Operating Expense 27,expense,2024-11-01,0.0,0.0,0.0,,,,,1,1
+ACC-6027,6027,Operating Expense 28,expense,2024-11-01,0.0,0.0,0.0,,,,,1,1
+ACC-6028,6028,Operating Expense 29,expense,2024-11-01,0.0,0.0,0.0,,,,,1,1
+ACC-6029,6029,Operating Expense 30,expense,2024-11-01,0.0,0.0,0.0,,,,,1,1
+ACC-6030,6030,Operating Expense 31,expense,2024-11-01,0.0,0.0,0.0,,,,,1,1
+ACC-6031,6031,Operating Expense 32,expense,2024-11-01,0.0,0.0,0.0,,,,,1,1
+ACC-6032,6032,Operating Expense 33,expense,2024-11-01,0.0,0.0,0.0,,,,,1,1
+ACC-6033,6033,Operating Expense 34,expense,2024-11-01,0.0,0.0,0.0,,,,,1,1
+ACC-6034,6034,Operating Expense 35,expense,2024-11-01,0.0,0.0,0.0,,,,,1,1
+ACC-6035,6035,Operating Expense 36,expense,2024-11-01,0.0,0.0,0.0,,,,,1,1
+ACC-6036,6036,Operating Expense 37,expense,2024-11-01,0.0,0.0,0.0,,,,,1,1
+ACC-6037,6037,Operating Expense 38,expense,2024-11-01,0.0,0.0,0.0,,,,,1,1
+ACC-6038,6038,Operating Expense 39,expense,2024-11-01,0.0,0.0,0.0,,,,,1,1
+ACC-6039,6039,Operating Expense 40,expense,2024-11-01,0.0,0.0,0.0,,,,,1,1
+ACC-6040,6040,Operating Expense 41,expense,2024-11-01,0.0,0.0,0.0,,,,,1,1
+ACC-6041,6041,Operating Expense 42,expense,2024-11-01,0.0,0.0,0.0,,,,,1,1
+ACC-6042,6042,Operating Expense 43,expense,2024-11-01,0.0,0.0,0.0,,,,,1,1
+ACC-6043,6043,Operating Expense 44,expense,2024-11-01,0.0,0.0,0.0,,,,,1,1
+ACC-6044,6044,Operating Expense 45,expense,2024-11-01,0.0,0.0,0.0,,,,,1,1
+ACC-6045,6045,Operating Expense 46,expense,2024-11-01,0.0,0.0,0.0,,,,,1,1
+ACC-6046,6046,Operating Expense 47,expense,2024-11-01,0.0,0.0,0.0,,,,,1,1
+ACC-6047,6047,Operating Expense 48,expense,2024-11-01,0.0,0.0,0.0,,,,,1,1
+ACC-6048,6048,Operating Expense 49,expense,2024-11-01,0.0,0.0,0.0,,,,,1,1
+ACC-6049,6049,Operating Expense 50,expense,2024-11-01,0.0,0.0,0.0,,,,,1,1
+ACC-6050,6050,Operating Expense 51,expense,2024-11-01,0.0,0.0,0.0,,,,,1,1
+ACC-6051,6051,Operating Expense 52,expense,2024-11-01,0.0,0.0,0.0,,,,,1,1
+ACC-6052,6052,Operating Expense 53,expense,2024-11-01,0.0,0.0,0.0,,,,,1,1
+ACC-6053,6053,Operating Expense 54,expense,2024-11-01,0.0,0.0,0.0,,,,,1,1
+ACC-6054,6054,Operating Expense 55,expense,2024-11-01,0.0,0.0,0.0,,,,,1,1
+ACC-6055,6055,Operating Expense 56,expense,2024-11-01,0.0,0.0,0.0,,,,,1,1
+ACC-6056,6056,Operating Expense 57,expense,2024-11-01,0.0,0.0,0.0,,,,,1,1
+ACC-1000,1000,Cash and Cash Equivalents,asset,2024-10-01,0.0,0.0,0.0,,,,,1,1
+ACC-1100,1100,Accounts Receivable,asset,2024-10-01,0.0,0.0,0.0,,,,,1,1
+ACC-1200,1200,Inventory,asset,2024-10-01,0.0,0.0,0.0,,,,,1,1
+ACC-1300,1300,Other Asset 01,asset,2024-10-01,0.0,0.0,0.0,,,,,1,1
+ACC-1301,1301,Other Asset 02,asset,2024-10-01,0.0,0.0,0.0,,,,,1,1
+ACC-1302,1302,Other Asset 03,asset,2024-10-01,0.0,0.0,0.0,,,,,1,1
+ACC-1303,1303,Other Asset 04,asset,2024-10-01,0.0,0.0,0.0,,,,,1,1
+ACC-1304,1304,Other Asset 05,asset,2024-10-01,0.0,0.0,0.0,,,,,1,1
+ACC-1305,1305,Other Asset 06,asset,2024-10-01,0.0,0.0,0.0,,,,,1,1
+ACC-1306,1306,Other Asset 07,asset,2024-10-01,0.0,0.0,0.0,,,,,1,1
+ACC-1307,1307,Other Asset 08,asset,2024-10-01,0.0,0.0,0.0,,,,,1,1
+ACC-1308,1308,Other Asset 09,asset,2024-10-01,0.0,0.0,0.0,,,,,1,1
+ACC-1309,1309,Other Asset 10,asset,2024-10-01,0.0,0.0,0.0,,,,,1,1
+ACC-1310,1310,Other Asset 11,asset,2024-10-01,0.0,0.0,0.0,,,,,1,1
+ACC-1311,1311,Other Asset 12,asset,2024-10-01,0.0,0.0,0.0,,,,,1,1
+ACC-1312,1312,Other Asset 13,asset,2024-10-01,0.0,0.0,0.0,,,,,1,1
+ACC-1313,1313,Other Asset 14,asset,2024-10-01,0.0,0.0,0.0,,,,,1,1
+ACC-1314,1314,Other Asset 15,asset,2024-10-01,0.0,0.0,0.0,,,,,1,1
+ACC-1315,1315,Other Asset 16,asset,2024-10-01,0.0,0.0,0.0,,,,,1,1
+ACC-1316,1316,Other Asset 17,asset,2024-10-01,0.0,0.0,0.0,,,,,1,1
+ACC-2000,2000,Liability 01,liability,2024-10-01,0.0,0.0,0.0,,,,,1,1
+ACC-2001,2001,Liability 02,liability,2024-10-01,0.0,0.0,0.0,,,,,1,1
+ACC-2002,2002,Liability 03,liability,2024-10-01,0.0,0.0,0.0,,,,,1,1
+ACC-2003,2003,Liability 04,liability,2024-10-01,0.0,0.0,0.0,,,,,1,1
+ACC-2004,2004,Liability 05,liability,2024-10-01,0.0,0.0,0.0,,,,,1,1
+ACC-2005,2005,Liability 06,liability,2024-10-01,0.0,0.0,0.0,,,,,1,1
+ACC-2006,2006,Liability 07,liability,2024-10-01,0.0,0.0,0.0,,,,,1,1
+ACC-2007,2007,Liability 08,liability,2024-10-01,0.0,0.0,0.0,,,,,1,1
+ACC-2008,2008,Liability 09,liability,2024-10-01,0.0,0.0,0.0,,,,,1,1
+ACC-2009,2009,Liability 10,liability,2024-10-01,0.0,0.0,0.0,,,,,1,1
+ACC-3000,3000,Equity 01,equity,2024-10-01,0.0,0.0,0.0,,,,,1,1
+ACC-3001,3001,Equity 02,equity,2024-10-01,0.0,0.0,0.0,,,,,1,1
+ACC-3002,3002,Equity 03,equity,2024-10-01,0.0,0.0,0.0,,,,,1,1
+ACC-4000,4000,Revenue 01,revenue,2024-10-01,0.0,0.0,0.0,,,,,1,1
+ACC-4001,4001,Revenue 02,revenue,2024-10-01,0.0,0.0,0.0,,,,,1,1
+ACC-4002,4002,Revenue 03,revenue,2024-10-01,0.0,0.0,0.0,,,,,1,1
+ACC-4003,4003,Revenue 04,revenue,2024-10-01,0.0,0.0,0.0,,,,,1,1
+ACC-4004,4004,Revenue 05,revenue,2024-10-01,0.0,0.0,0.0,,,,,1,1
+ACC-4005,4005,Revenue 06,revenue,2024-10-01,0.0,0.0,0.0,,,,,1,1
+ACC-4006,4006,Revenue 07,revenue,2024-10-01,0.0,0.0,0.0,,,,,1,1
+ACC-4007,4007,Revenue 08,revenue,2024-10-01,0.0,0.0,0.0,,,,,1,1
+ACC-4008,4008,Revenue 09,revenue,2024-10-01,0.0,0.0,0.0,,,,,1,1
+ACC-4009,4009,Revenue 10,revenue,2024-10-01,0.0,0.0,0.0,,,,,1,1
+ACC-4010,4010,Revenue 11,revenue,2024-10-01,0.0,0.0,0.0,,,,,1,1
+ACC-4011,4011,Revenue 12,revenue,2024-10-01,0.0,0.0,0.0,,,,,1,1
+ACC-4012,4012,Revenue 13,revenue,2024-10-01,0.0,0.0,0.0,,,,,1,1
+ACC-4013,4013,Revenue 14,revenue,2024-10-01,0.0,0.0,0.0,,,,,1,1
+ACC-4014,4014,Revenue 15,revenue,2024-10-01,0.0,0.0,0.0,,,,,1,1
+ACC-4015,4015,Revenue 16,revenue,2024-10-01,0.0,0.0,0.0,,,,,1,1
+ACC-4016,4016,Revenue 17,revenue,2024-10-01,0.0,0.0,0.0,,,,,1,1
+ACC-4017,4017,Revenue 18,revenue,2024-10-01,0.0,0.0,0.0,,,,,1,1
+ACC-4018,4018,Revenue 19,revenue,2024-10-01,0.0,0.0,0.0,,,,,1,1
+ACC-4019,4019,Revenue 20,revenue,2024-10-01,0.0,0.0,0.0,,,,,1,1
+ACC-5000,5000,Cost of Goods Sold 01,cogs,2024-10-01,0.0,0.0,0.0,,,,,1,1
+ACC-5001,5001,Cost of Goods Sold 02,cogs,2024-10-01,0.0,0.0,0.0,,,,,1,1
+ACC-5002,5002,Cost of Goods Sold 03,cogs,2024-10-01,0.0,0.0,0.0,,,,,1,1
+ACC-5003,5003,Cost of Goods Sold 04,cogs,2024-10-01,0.0,0.0,0.0,,,,,1,1
+ACC-5004,5004,Cost of Goods Sold 05,cogs,2024-10-01,0.0,0.0,0.0,,,,,1,1
+ACC-5005,5005,Cost of Goods Sold 06,cogs,2024-10-01,0.0,0.0,0.0,,,,,1,1
+ACC-5006,5006,Cost of Goods Sold 07,cogs,2024-10-01,0.0,0.0,0.0,,,,,1,1
+ACC-5007,5007,Cost of Goods Sold 08,cogs,2024-10-01,0.0,0.0,0.0,,,,,1,1
+ACC-5008,5008,Cost of Goods Sold 09,cogs,2024-10-01,0.0,0.0,0.0,,,,,1,1
+ACC-5009,5009,Cost of Goods Sold 10,cogs,2024-10-01,0.0,0.0,0.0,,,,,1,1
+ACC-6000,6000,Operating Expense 01,expense,2024-10-01,0.0,0.0,0.0,,,,,1,1
+ACC-6001,6001,Operating Expense 02,expense,2024-10-01,0.0,0.0,0.0,,,,,1,1
+ACC-6002,6002,Operating Expense 03,expense,2024-10-01,0.0,0.0,0.0,,,,,1,1
+ACC-6003,6003,Operating Expense 04,expense,2024-10-01,0.0,0.0,0.0,,,,,1,1
+ACC-6004,6004,Operating Expense 05,expense,2024-10-01,0.0,0.0,0.0,,,,,1,1
+ACC-6005,6005,Operating Expense 06,expense,2024-10-01,0.0,0.0,0.0,,,,,1,1
+ACC-6006,6006,Operating Expense 07,expense,2024-10-01,0.0,0.0,0.0,,,,,1,1
+ACC-6007,6007,Operating Expense 08,expense,2024-10-01,0.0,0.0,0.0,,,,,1,1
+ACC-6008,6008,Operating Expense 09,expense,2024-10-01,0.0,0.0,0.0,,,,,1,1
+ACC-6009,6009,Operating Expense 10,expense,2024-10-01,0.0,0.0,0.0,,,,,1,1
+ACC-6010,6010,Operating Expense 11,expense,2024-10-01,0.0,0.0,0.0,,,,,1,1
+ACC-6011,6011,Operating Expense 12,expense,2024-10-01,0.0,0.0,0.0,,,,,1,1
+ACC-6012,6012,Operating Expense 13,expense,2024-10-01,0.0,0.0,0.0,,,,,1,1
+ACC-6013,6013,Operating Expense 14,expense,2024-10-01,0.0,0.0,0.0,,,,,1,1
+ACC-6014,6014,Operating Expense 15,expense,2024-10-01,0.0,0.0,0.0,,,,,1,1
+ACC-6015,6015,Operating Expense 16,expense,2024-10-01,0.0,0.0,0.0,,,,,1,1
+ACC-6016,6016,Operating Expense 17,expense,2024-10-01,0.0,0.0,0.0,,,,,1,1
+ACC-6017,6017,Operating Expense 18,expense,2024-10-01,0.0,0.0,0.0,,,,,1,1
+ACC-6018,6018,Operating Expense 19,expense,2024-10-01,0.0,0.0,0.0,,,,,1,1
+ACC-6019,6019,Operating Expense 20,expense,2024-10-01,0.0,0.0,0.0,,,,,1,1
+ACC-6020,6020,Operating Expense 21,expense,2024-10-01,0.0,0.0,0.0,,,,,1,1
+ACC-6021,6021,Operating Expense 22,expense,2024-10-01,0.0,0.0,0.0,,,,,1,1
+ACC-6022,6022,Operating Expense 23,expense,2024-10-01,0.0,0.0,0.0,,,,,1,1
+ACC-6023,6023,Operating Expense 24,expense,2024-10-01,0.0,0.0,0.0,,,,,1,1
+ACC-6024,6024,Operating Expense 25,expense,2024-10-01,0.0,0.0,0.0,,,,,1,1
+ACC-6025,6025,Operating Expense 26,expense,2024-10-01,0.0,0.0,0.0,,,,,1,1
+ACC-6026,6026,Operating Expense 27,expense,2024-10-01,0.0,0.0,0.0,,,,,1,1
+ACC-6027,6027,Operating Expense 28,expense,2024-10-01,0.0,0.0,0.0,,,,,1,1
+ACC-6028,6028,Operating Expense 29,expense,2024-10-01,0.0,0.0,0.0,,,,,1,1
+ACC-6029,6029,Operating Expense 30,expense,2024-10-01,0.0,0.0,0.0,,,,,1,1
+ACC-6030,6030,Operating Expense 31,expense,2024-10-01,0.0,0.0,0.0,,,,,1,1
+ACC-6031,6031,Operating Expense 32,expense,2024-10-01,0.0,0.0,0.0,,,,,1,1
+ACC-6032,6032,Operating Expense 33,expense,2024-10-01,0.0,0.0,0.0,,,,,1,1
+ACC-6033,6033,Operating Expense 34,expense,2024-10-01,0.0,0.0,0.0,,,,,1,1
+ACC-6034,6034,Operating Expense 35,expense,2024-10-01,0.0,0.0,0.0,,,,,1,1
+ACC-6035,6035,Operating Expense 36,expense,2024-10-01,0.0,0.0,0.0,,,,,1,1
+ACC-6036,6036,Operating Expense 37,expense,2024-10-01,0.0,0.0,0.0,,,,,1,1
+ACC-6037,6037,Operating Expense 38,expense,2024-10-01,0.0,0.0,0.0,,,,,1,1
+ACC-6038,6038,Operating Expense 39,expense,2024-10-01,0.0,0.0,0.0,,,,,1,1
+ACC-6039,6039,Operating Expense 40,expense,2024-10-01,0.0,0.0,0.0,,,,,1,1
+ACC-6040,6040,Operating Expense 41,expense,2024-10-01,0.0,0.0,0.0,,,,,1,1
+ACC-6041,6041,Operating Expense 42,expense,2024-10-01,0.0,0.0,0.0,,,,,1,1
+ACC-6042,6042,Operating Expense 43,expense,2024-10-01,0.0,0.0,0.0,,,,,1,1
+ACC-6043,6043,Operating Expense 44,expense,2024-10-01,0.0,0.0,0.0,,,,,1,1
+ACC-6044,6044,Operating Expense 45,expense,2024-10-01,0.0,0.0,0.0,,,,,1,1
+ACC-6045,6045,Operating Expense 46,expense,2024-10-01,0.0,0.0,0.0,,,,,1,1
+ACC-6046,6046,Operating Expense 47,expense,2024-10-01,0.0,0.0,0.0,,,,,1,1
+ACC-6047,6047,Operating Expense 48,expense,2024-10-01,0.0,0.0,0.0,,,,,1,1
+ACC-6048,6048,Operating Expense 49,expense,2024-10-01,0.0,0.0,0.0,,,,,1,1
+ACC-6049,6049,Operating Expense 50,expense,2024-10-01,0.0,0.0,0.0,,,,,1,1
+ACC-6050,6050,Operating Expense 51,expense,2024-10-01,0.0,0.0,0.0,,,,,1,1
+ACC-6051,6051,Operating Expense 52,expense,2024-10-01,0.0,0.0,0.0,,,,,1,1
+ACC-6052,6052,Operating Expense 53,expense,2024-10-01,0.0,0.0,0.0,,,,,1,1
+ACC-6053,6053,Operating Expense 54,expense,2024-10-01,0.0,0.0,0.0,,,,,1,1
+ACC-6054,6054,Operating Expense 55,expense,2024-10-01,0.0,0.0,0.0,,,,,1,1
+ACC-6055,6055,Operating Expense 56,expense,2024-10-01,0.0,0.0,0.0,,,,,1,1
+ACC-6056,6056,Operating Expense 57,expense,2024-10-01,0.0,0.0,0.0,,,,,1,1
+ACC-1000,1000,Cash and Cash Equivalents,asset,2024-09-01,0.0,0.0,0.0,,,,,1,1
+ACC-1100,1100,Accounts Receivable,asset,2024-09-01,0.0,0.0,0.0,,,,,1,1
+ACC-1200,1200,Inventory,asset,2024-09-01,0.0,0.0,0.0,,,,,1,1
+ACC-1300,1300,Other Asset 01,asset,2024-09-01,0.0,0.0,0.0,,,,,1,1
+ACC-1301,1301,Other Asset 02,asset,2024-09-01,0.0,0.0,0.0,,,,,1,1
+ACC-1302,1302,Other Asset 03,asset,2024-09-01,0.0,0.0,0.0,,,,,1,1
+ACC-1303,1303,Other Asset 04,asset,2024-09-01,0.0,0.0,0.0,,,,,1,1
+ACC-1304,1304,Other Asset 05,asset,2024-09-01,0.0,0.0,0.0,,,,,1,1
+ACC-1305,1305,Other Asset 06,asset,2024-09-01,0.0,0.0,0.0,,,,,1,1
+ACC-1306,1306,Other Asset 07,asset,2024-09-01,0.0,0.0,0.0,,,,,1,1
+ACC-1307,1307,Other Asset 08,asset,2024-09-01,0.0,0.0,0.0,,,,,1,1
+ACC-1308,1308,Other Asset 09,asset,2024-09-01,0.0,0.0,0.0,,,,,1,1
+ACC-1309,1309,Other Asset 10,asset,2024-09-01,0.0,0.0,0.0,,,,,1,1
+ACC-1310,1310,Other Asset 11,asset,2024-09-01,0.0,0.0,0.0,,,,,1,1
+ACC-1311,1311,Other Asset 12,asset,2024-09-01,0.0,0.0,0.0,,,,,1,1
+ACC-1312,1312,Other Asset 13,asset,2024-09-01,0.0,0.0,0.0,,,,,1,1
+ACC-1313,1313,Other Asset 14,asset,2024-09-01,0.0,0.0,0.0,,,,,1,1
+ACC-1314,1314,Other Asset 15,asset,2024-09-01,0.0,0.0,0.0,,,,,1,1
+ACC-1315,1315,Other Asset 16,asset,2024-09-01,0.0,0.0,0.0,,,,,1,1
+ACC-1316,1316,Other Asset 17,asset,2024-09-01,0.0,0.0,0.0,,,,,1,1
+ACC-2000,2000,Liability 01,liability,2024-09-01,0.0,0.0,0.0,,,,,1,1
+ACC-2001,2001,Liability 02,liability,2024-09-01,0.0,0.0,0.0,,,,,1,1
+ACC-2002,2002,Liability 03,liability,2024-09-01,0.0,0.0,0.0,,,,,1,1
+ACC-2003,2003,Liability 04,liability,2024-09-01,0.0,0.0,0.0,,,,,1,1
+ACC-2004,2004,Liability 05,liability,2024-09-01,0.0,0.0,0.0,,,,,1,1
+ACC-2005,2005,Liability 06,liability,2024-09-01,0.0,0.0,0.0,,,,,1,1
+ACC-2006,2006,Liability 07,liability,2024-09-01,0.0,0.0,0.0,,,,,1,1
+ACC-2007,2007,Liability 08,liability,2024-09-01,0.0,0.0,0.0,,,,,1,1
+ACC-2008,2008,Liability 09,liability,2024-09-01,0.0,0.0,0.0,,,,,1,1
+ACC-2009,2009,Liability 10,liability,2024-09-01,0.0,0.0,0.0,,,,,1,1
+ACC-3000,3000,Equity 01,equity,2024-09-01,0.0,0.0,0.0,,,,,1,1
+ACC-3001,3001,Equity 02,equity,2024-09-01,0.0,0.0,0.0,,,,,1,1
+ACC-3002,3002,Equity 03,equity,2024-09-01,0.0,0.0,0.0,,,,,1,1
+ACC-4000,4000,Revenue 01,revenue,2024-09-01,0.0,0.0,0.0,,,,,1,1
+ACC-4001,4001,Revenue 02,revenue,2024-09-01,0.0,0.0,0.0,,,,,1,1
+ACC-4002,4002,Revenue 03,revenue,2024-09-01,0.0,0.0,0.0,,,,,1,1
+ACC-4003,4003,Revenue 04,revenue,2024-09-01,0.0,0.0,0.0,,,,,1,1
+ACC-4004,4004,Revenue 05,revenue,2024-09-01,0.0,0.0,0.0,,,,,1,1
+ACC-4005,4005,Revenue 06,revenue,2024-09-01,0.0,0.0,0.0,,,,,1,1
+ACC-4006,4006,Revenue 07,revenue,2024-09-01,0.0,0.0,0.0,,,,,1,1
+ACC-4007,4007,Revenue 08,revenue,2024-09-01,0.0,0.0,0.0,,,,,1,1
+ACC-4008,4008,Revenue 09,revenue,2024-09-01,0.0,0.0,0.0,,,,,1,1
+ACC-4009,4009,Revenue 10,revenue,2024-09-01,0.0,0.0,0.0,,,,,1,1
+ACC-4010,4010,Revenue 11,revenue,2024-09-01,0.0,0.0,0.0,,,,,1,1
+ACC-4011,4011,Revenue 12,revenue,2024-09-01,0.0,0.0,0.0,,,,,1,1
+ACC-4012,4012,Revenue 13,revenue,2024-09-01,0.0,0.0,0.0,,,,,1,1
+ACC-4013,4013,Revenue 14,revenue,2024-09-01,0.0,0.0,0.0,,,,,1,1
+ACC-4014,4014,Revenue 15,revenue,2024-09-01,0.0,0.0,0.0,,,,,1,1
+ACC-4015,4015,Revenue 16,revenue,2024-09-01,0.0,0.0,0.0,,,,,1,1
+ACC-4016,4016,Revenue 17,revenue,2024-09-01,0.0,0.0,0.0,,,,,1,1
+ACC-4017,4017,Revenue 18,revenue,2024-09-01,0.0,0.0,0.0,,,,,1,1
+ACC-4018,4018,Revenue 19,revenue,2024-09-01,0.0,0.0,0.0,,,,,1,1
+ACC-4019,4019,Revenue 20,revenue,2024-09-01,0.0,0.0,0.0,,,,,1,1
+ACC-5000,5000,Cost of Goods Sold 01,cogs,2024-09-01,0.0,0.0,0.0,,,,,1,1
+ACC-5001,5001,Cost of Goods Sold 02,cogs,2024-09-01,0.0,0.0,0.0,,,,,1,1
+ACC-5002,5002,Cost of Goods Sold 03,cogs,2024-09-01,0.0,0.0,0.0,,,,,1,1
+ACC-5003,5003,Cost of Goods Sold 04,cogs,2024-09-01,0.0,0.0,0.0,,,,,1,1
+ACC-5004,5004,Cost of Goods Sold 05,cogs,2024-09-01,0.0,0.0,0.0,,,,,1,1
+ACC-5005,5005,Cost of Goods Sold 06,cogs,2024-09-01,0.0,0.0,0.0,,,,,1,1
+ACC-5006,5006,Cost of Goods Sold 07,cogs,2024-09-01,0.0,0.0,0.0,,,,,1,1
+ACC-5007,5007,Cost of Goods Sold 08,cogs,2024-09-01,0.0,0.0,0.0,,,,,1,1
+ACC-5008,5008,Cost of Goods Sold 09,cogs,2024-09-01,0.0,0.0,0.0,,,,,1,1
+ACC-5009,5009,Cost of Goods Sold 10,cogs,2024-09-01,0.0,0.0,0.0,,,,,1,1
+ACC-6000,6000,Operating Expense 01,expense,2024-09-01,0.0,0.0,0.0,,,,,1,1
+ACC-6001,6001,Operating Expense 02,expense,2024-09-01,0.0,0.0,0.0,,,,,1,1
+ACC-6002,6002,Operating Expense 03,expense,2024-09-01,0.0,0.0,0.0,,,,,1,1
+ACC-6003,6003,Operating Expense 04,expense,2024-09-01,0.0,0.0,0.0,,,,,1,1
+ACC-6004,6004,Operating Expense 05,expense,2024-09-01,0.0,0.0,0.0,,,,,1,1
+ACC-6005,6005,Operating Expense 06,expense,2024-09-01,0.0,0.0,0.0,,,,,1,1
+ACC-6006,6006,Operating Expense 07,expense,2024-09-01,0.0,0.0,0.0,,,,,1,1
+ACC-6007,6007,Operating Expense 08,expense,2024-09-01,0.0,0.0,0.0,,,,,1,1
+ACC-6008,6008,Operating Expense 09,expense,2024-09-01,0.0,0.0,0.0,,,,,1,1
+ACC-6009,6009,Operating Expense 10,expense,2024-09-01,0.0,0.0,0.0,,,,,1,1
+ACC-6010,6010,Operating Expense 11,expense,2024-09-01,0.0,0.0,0.0,,,,,1,1
+ACC-6011,6011,Operating Expense 12,expense,2024-09-01,0.0,0.0,0.0,,,,,1,1
+ACC-6012,6012,Operating Expense 13,expense,2024-09-01,0.0,0.0,0.0,,,,,1,1
+ACC-6013,6013,Operating Expense 14,expense,2024-09-01,0.0,0.0,0.0,,,,,1,1
+ACC-6014,6014,Operating Expense 15,expense,2024-09-01,0.0,0.0,0.0,,,,,1,1
+ACC-6015,6015,Operating Expense 16,expense,2024-09-01,0.0,0.0,0.0,,,,,1,1
+ACC-6016,6016,Operating Expense 17,expense,2024-09-01,0.0,0.0,0.0,,,,,1,1
+ACC-6017,6017,Operating Expense 18,expense,2024-09-01,0.0,0.0,0.0,,,,,1,1
+ACC-6018,6018,Operating Expense 19,expense,2024-09-01,0.0,0.0,0.0,,,,,1,1
+ACC-6019,6019,Operating Expense 20,expense,2024-09-01,0.0,0.0,0.0,,,,,1,1
+ACC-6020,6020,Operating Expense 21,expense,2024-09-01,0.0,0.0,0.0,,,,,1,1
+ACC-6021,6021,Operating Expense 22,expense,2024-09-01,0.0,0.0,0.0,,,,,1,1
+ACC-6022,6022,Operating Expense 23,expense,2024-09-01,0.0,0.0,0.0,,,,,1,1
+ACC-6023,6023,Operating Expense 24,expense,2024-09-01,0.0,0.0,0.0,,,,,1,1
+ACC-6024,6024,Operating Expense 25,expense,2024-09-01,0.0,0.0,0.0,,,,,1,1
+ACC-6025,6025,Operating Expense 26,expense,2024-09-01,0.0,0.0,0.0,,,,,1,1
+ACC-6026,6026,Operating Expense 27,expense,2024-09-01,0.0,0.0,0.0,,,,,1,1
+ACC-6027,6027,Operating Expense 28,expense,2024-09-01,0.0,0.0,0.0,,,,,1,1
+ACC-6028,6028,Operating Expense 29,expense,2024-09-01,0.0,0.0,0.0,,,,,1,1
+ACC-6029,6029,Operating Expense 30,expense,2024-09-01,0.0,0.0,0.0,,,,,1,1
+ACC-6030,6030,Operating Expense 31,expense,2024-09-01,0.0,0.0,0.0,,,,,1,1
+ACC-6031,6031,Operating Expense 32,expense,2024-09-01,0.0,0.0,0.0,,,,,1,1
+ACC-6032,6032,Operating Expense 33,expense,2024-09-01,0.0,0.0,0.0,,,,,1,1
+ACC-6033,6033,Operating Expense 34,expense,2024-09-01,0.0,0.0,0.0,,,,,1,1
+ACC-6034,6034,Operating Expense 35,expense,2024-09-01,0.0,0.0,0.0,,,,,1,1
+ACC-6035,6035,Operating Expense 36,expense,2024-09-01,0.0,0.0,0.0,,,,,1,1
+ACC-6036,6036,Operating Expense 37,expense,2024-09-01,0.0,0.0,0.0,,,,,1,1
+ACC-6037,6037,Operating Expense 38,expense,2024-09-01,0.0,0.0,0.0,,,,,1,1
+ACC-6038,6038,Operating Expense 39,expense,2024-09-01,0.0,0.0,0.0,,,,,1,1
+ACC-6039,6039,Operating Expense 40,expense,2024-09-01,0.0,0.0,0.0,,,,,1,1
+ACC-6040,6040,Operating Expense 41,expense,2024-09-01,0.0,0.0,0.0,,,,,1,1
+ACC-6041,6041,Operating Expense 42,expense,2024-09-01,0.0,0.0,0.0,,,,,1,1
+ACC-6042,6042,Operating Expense 43,expense,2024-09-01,0.0,0.0,0.0,,,,,1,1
+ACC-6043,6043,Operating Expense 44,expense,2024-09-01,0.0,0.0,0.0,,,,,1,1
+ACC-6044,6044,Operating Expense 45,expense,2024-09-01,0.0,0.0,0.0,,,,,1,1
+ACC-6045,6045,Operating Expense 46,expense,2024-09-01,0.0,0.0,0.0,,,,,1,1
+ACC-6046,6046,Operating Expense 47,expense,2024-09-01,0.0,0.0,0.0,,,,,1,1
+ACC-6047,6047,Operating Expense 48,expense,2024-09-01,0.0,0.0,0.0,,,,,1,1
+ACC-6048,6048,Operating Expense 49,expense,2024-09-01,0.0,0.0,0.0,,,,,1,1
+ACC-6049,6049,Operating Expense 50,expense,2024-09-01,0.0,0.0,0.0,,,,,1,1
+ACC-6050,6050,Operating Expense 51,expense,2024-09-01,0.0,0.0,0.0,,,,,1,1
+ACC-6051,6051,Operating Expense 52,expense,2024-09-01,0.0,0.0,0.0,,,,,1,1
+ACC-6052,6052,Operating Expense 53,expense,2024-09-01,0.0,0.0,0.0,,,,,1,1
+ACC-6053,6053,Operating Expense 54,expense,2024-09-01,0.0,0.0,0.0,,,,,1,1
+ACC-6054,6054,Operating Expense 55,expense,2024-09-01,0.0,0.0,0.0,,,,,1,1
+ACC-6055,6055,Operating Expense 56,expense,2024-09-01,0.0,0.0,0.0,,,,,1,1
+ACC-6056,6056,Operating Expense 57,expense,2024-09-01,0.0,0.0,0.0,,,,,1,1
+ACC-1000,1000,Cash and Cash Equivalents,asset,2024-08-01,0.0,0.0,0.0,,,,,1,1
+ACC-1100,1100,Accounts Receivable,asset,2024-08-01,0.0,0.0,0.0,,,,,1,1
+ACC-1200,1200,Inventory,asset,2024-08-01,0.0,0.0,0.0,,,,,1,1
+ACC-1300,1300,Other Asset 01,asset,2024-08-01,0.0,0.0,0.0,,,,,1,1
+ACC-1301,1301,Other Asset 02,asset,2024-08-01,0.0,0.0,0.0,,,,,1,1
+ACC-1302,1302,Other Asset 03,asset,2024-08-01,0.0,0.0,0.0,,,,,1,1
+ACC-1303,1303,Other Asset 04,asset,2024-08-01,0.0,0.0,0.0,,,,,1,1
+ACC-1304,1304,Other Asset 05,asset,2024-08-01,0.0,0.0,0.0,,,,,1,1
+ACC-1305,1305,Other Asset 06,asset,2024-08-01,0.0,0.0,0.0,,,,,1,1
+ACC-1306,1306,Other Asset 07,asset,2024-08-01,0.0,0.0,0.0,,,,,1,1
+ACC-1307,1307,Other Asset 08,asset,2024-08-01,0.0,0.0,0.0,,,,,1,1
+ACC-1308,1308,Other Asset 09,asset,2024-08-01,0.0,0.0,0.0,,,,,1,1
+ACC-1309,1309,Other Asset 10,asset,2024-08-01,0.0,0.0,0.0,,,,,1,1
+ACC-1310,1310,Other Asset 11,asset,2024-08-01,0.0,0.0,0.0,,,,,1,1
+ACC-1311,1311,Other Asset 12,asset,2024-08-01,0.0,0.0,0.0,,,,,1,1
+ACC-1312,1312,Other Asset 13,asset,2024-08-01,0.0,0.0,0.0,,,,,1,1
+ACC-1313,1313,Other Asset 14,asset,2024-08-01,0.0,0.0,0.0,,,,,1,1
+ACC-1314,1314,Other Asset 15,asset,2024-08-01,0.0,0.0,0.0,,,,,1,1
+ACC-1315,1315,Other Asset 16,asset,2024-08-01,0.0,0.0,0.0,,,,,1,1
+ACC-1316,1316,Other Asset 17,asset,2024-08-01,0.0,0.0,0.0,,,,,1,1
+ACC-2000,2000,Liability 01,liability,2024-08-01,0.0,0.0,0.0,,,,,1,1
+ACC-2001,2001,Liability 02,liability,2024-08-01,0.0,0.0,0.0,,,,,1,1
+ACC-2002,2002,Liability 03,liability,2024-08-01,0.0,0.0,0.0,,,,,1,1
+ACC-2003,2003,Liability 04,liability,2024-08-01,0.0,0.0,0.0,,,,,1,1
+ACC-2004,2004,Liability 05,liability,2024-08-01,0.0,0.0,0.0,,,,,1,1
+ACC-2005,2005,Liability 06,liability,2024-08-01,0.0,0.0,0.0,,,,,1,1
+ACC-2006,2006,Liability 07,liability,2024-08-01,0.0,0.0,0.0,,,,,1,1
+ACC-2007,2007,Liability 08,liability,2024-08-01,0.0,0.0,0.0,,,,,1,1
+ACC-2008,2008,Liability 09,liability,2024-08-01,0.0,0.0,0.0,,,,,1,1
+ACC-2009,2009,Liability 10,liability,2024-08-01,0.0,0.0,0.0,,,,,1,1
+ACC-3000,3000,Equity 01,equity,2024-08-01,0.0,0.0,0.0,,,,,1,1
+ACC-3001,3001,Equity 02,equity,2024-08-01,0.0,0.0,0.0,,,,,1,1
+ACC-3002,3002,Equity 03,equity,2024-08-01,0.0,0.0,0.0,,,,,1,1
+ACC-4000,4000,Revenue 01,revenue,2024-08-01,0.0,0.0,0.0,,,,,1,1
+ACC-4001,4001,Revenue 02,revenue,2024-08-01,0.0,0.0,0.0,,,,,1,1
+ACC-4002,4002,Revenue 03,revenue,2024-08-01,0.0,0.0,0.0,,,,,1,1
+ACC-4003,4003,Revenue 04,revenue,2024-08-01,0.0,0.0,0.0,,,,,1,1
+ACC-4004,4004,Revenue 05,revenue,2024-08-01,0.0,0.0,0.0,,,,,1,1
+ACC-4005,4005,Revenue 06,revenue,2024-08-01,0.0,0.0,0.0,,,,,1,1
+ACC-4006,4006,Revenue 07,revenue,2024-08-01,0.0,0.0,0.0,,,,,1,1
+ACC-4007,4007,Revenue 08,revenue,2024-08-01,0.0,0.0,0.0,,,,,1,1
+ACC-4008,4008,Revenue 09,revenue,2024-08-01,0.0,0.0,0.0,,,,,1,1
+ACC-4009,4009,Revenue 10,revenue,2024-08-01,0.0,0.0,0.0,,,,,1,1
+ACC-4010,4010,Revenue 11,revenue,2024-08-01,0.0,0.0,0.0,,,,,1,1
+ACC-4011,4011,Revenue 12,revenue,2024-08-01,0.0,0.0,0.0,,,,,1,1
+ACC-4012,4012,Revenue 13,revenue,2024-08-01,0.0,0.0,0.0,,,,,1,1
+ACC-4013,4013,Revenue 14,revenue,2024-08-01,0.0,0.0,0.0,,,,,1,1
+ACC-4014,4014,Revenue 15,revenue,2024-08-01,0.0,0.0,0.0,,,,,1,1
+ACC-4015,4015,Revenue 16,revenue,2024-08-01,0.0,0.0,0.0,,,,,1,1
+ACC-4016,4016,Revenue 17,revenue,2024-08-01,0.0,0.0,0.0,,,,,1,1
+ACC-4017,4017,Revenue 18,revenue,2024-08-01,0.0,0.0,0.0,,,,,1,1
+ACC-4018,4018,Revenue 19,revenue,2024-08-01,0.0,0.0,0.0,,,,,1,1
+ACC-4019,4019,Revenue 20,revenue,2024-08-01,0.0,0.0,0.0,,,,,1,1
+ACC-5000,5000,Cost of Goods Sold 01,cogs,2024-08-01,0.0,0.0,0.0,,,,,1,1
+ACC-5001,5001,Cost of Goods Sold 02,cogs,2024-08-01,0.0,0.0,0.0,,,,,1,1
+ACC-5002,5002,Cost of Goods Sold 03,cogs,2024-08-01,0.0,0.0,0.0,,,,,1,1
+ACC-5003,5003,Cost of Goods Sold 04,cogs,2024-08-01,0.0,0.0,0.0,,,,,1,1
+ACC-5004,5004,Cost of Goods Sold 05,cogs,2024-08-01,0.0,0.0,0.0,,,,,1,1
+ACC-5005,5005,Cost of Goods Sold 06,cogs,2024-08-01,0.0,0.0,0.0,,,,,1,1
+ACC-5006,5006,Cost of Goods Sold 07,cogs,2024-08-01,0.0,0.0,0.0,,,,,1,1
+ACC-5007,5007,Cost of Goods Sold 08,cogs,2024-08-01,0.0,0.0,0.0,,,,,1,1
+ACC-5008,5008,Cost of Goods Sold 09,cogs,2024-08-01,0.0,0.0,0.0,,,,,1,1
+ACC-5009,5009,Cost of Goods Sold 10,cogs,2024-08-01,0.0,0.0,0.0,,,,,1,1
+ACC-6000,6000,Operating Expense 01,expense,2024-08-01,0.0,0.0,0.0,,,,,1,1
+ACC-6001,6001,Operating Expense 02,expense,2024-08-01,0.0,0.0,0.0,,,,,1,1
+ACC-6002,6002,Operating Expense 03,expense,2024-08-01,0.0,0.0,0.0,,,,,1,1
+ACC-6003,6003,Operating Expense 04,expense,2024-08-01,0.0,0.0,0.0,,,,,1,1
+ACC-6004,6004,Operating Expense 05,expense,2024-08-01,0.0,0.0,0.0,,,,,1,1
+ACC-6005,6005,Operating Expense 06,expense,2024-08-01,0.0,0.0,0.0,,,,,1,1
+ACC-6006,6006,Operating Expense 07,expense,2024-08-01,0.0,0.0,0.0,,,,,1,1
+ACC-6007,6007,Operating Expense 08,expense,2024-08-01,0.0,0.0,0.0,,,,,1,1
+ACC-6008,6008,Operating Expense 09,expense,2024-08-01,0.0,0.0,0.0,,,,,1,1
+ACC-6009,6009,Operating Expense 10,expense,2024-08-01,0.0,0.0,0.0,,,,,1,1
+ACC-6010,6010,Operating Expense 11,expense,2024-08-01,0.0,0.0,0.0,,,,,1,1
+ACC-6011,6011,Operating Expense 12,expense,2024-08-01,0.0,0.0,0.0,,,,,1,1
+ACC-6012,6012,Operating Expense 13,expense,2024-08-01,0.0,0.0,0.0,,,,,1,1
+ACC-6013,6013,Operating Expense 14,expense,2024-08-01,0.0,0.0,0.0,,,,,1,1
+ACC-6014,6014,Operating Expense 15,expense,2024-08-01,0.0,0.0,0.0,,,,,1,1
+ACC-6015,6015,Operating Expense 16,expense,2024-08-01,0.0,0.0,0.0,,,,,1,1
+ACC-6016,6016,Operating Expense 17,expense,2024-08-01,0.0,0.0,0.0,,,,,1,1
+ACC-6017,6017,Operating Expense 18,expense,2024-08-01,0.0,0.0,0.0,,,,,1,1
+ACC-6018,6018,Operating Expense 19,expense,2024-08-01,0.0,0.0,0.0,,,,,1,1
+ACC-6019,6019,Operating Expense 20,expense,2024-08-01,0.0,0.0,0.0,,,,,1,1
+ACC-6020,6020,Operating Expense 21,expense,2024-08-01,0.0,0.0,0.0,,,,,1,1
+ACC-6021,6021,Operating Expense 22,expense,2024-08-01,0.0,0.0,0.0,,,,,1,1
+ACC-6022,6022,Operating Expense 23,expense,2024-08-01,0.0,0.0,0.0,,,,,1,1
+ACC-6023,6023,Operating Expense 24,expense,2024-08-01,0.0,0.0,0.0,,,,,1,1
+ACC-6024,6024,Operating Expense 25,expense,2024-08-01,0.0,0.0,0.0,,,,,1,1
+ACC-6025,6025,Operating Expense 26,expense,2024-08-01,0.0,0.0,0.0,,,,,1,1
+ACC-6026,6026,Operating Expense 27,expense,2024-08-01,0.0,0.0,0.0,,,,,1,1
+ACC-6027,6027,Operating Expense 28,expense,2024-08-01,0.0,0.0,0.0,,,,,1,1
+ACC-6028,6028,Operating Expense 29,expense,2024-08-01,0.0,0.0,0.0,,,,,1,1
+ACC-6029,6029,Operating Expense 30,expense,2024-08-01,0.0,0.0,0.0,,,,,1,1
+ACC-6030,6030,Operating Expense 31,expense,2024-08-01,0.0,0.0,0.0,,,,,1,1
+ACC-6031,6031,Operating Expense 32,expense,2024-08-01,0.0,0.0,0.0,,,,,1,1
+ACC-6032,6032,Operating Expense 33,expense,2024-08-01,0.0,0.0,0.0,,,,,1,1
+ACC-6033,6033,Operating Expense 34,expense,2024-08-01,0.0,0.0,0.0,,,,,1,1
+ACC-6034,6034,Operating Expense 35,expense,2024-08-01,0.0,0.0,0.0,,,,,1,1
+ACC-6035,6035,Operating Expense 36,expense,2024-08-01,0.0,0.0,0.0,,,,,1,1
+ACC-6036,6036,Operating Expense 37,expense,2024-08-01,0.0,0.0,0.0,,,,,1,1
+ACC-6037,6037,Operating Expense 38,expense,2024-08-01,0.0,0.0,0.0,,,,,1,1
+ACC-6038,6038,Operating Expense 39,expense,2024-08-01,0.0,0.0,0.0,,,,,1,1
+ACC-6039,6039,Operating Expense 40,expense,2024-08-01,0.0,0.0,0.0,,,,,1,1
+ACC-6040,6040,Operating Expense 41,expense,2024-08-01,0.0,0.0,0.0,,,,,1,1
+ACC-6041,6041,Operating Expense 42,expense,2024-08-01,0.0,0.0,0.0,,,,,1,1
+ACC-6042,6042,Operating Expense 43,expense,2024-08-01,0.0,0.0,0.0,,,,,1,1
+ACC-6043,6043,Operating Expense 44,expense,2024-08-01,0.0,0.0,0.0,,,,,1,1
+ACC-6044,6044,Operating Expense 45,expense,2024-08-01,0.0,0.0,0.0,,,,,1,1
+ACC-6045,6045,Operating Expense 46,expense,2024-08-01,0.0,0.0,0.0,,,,,1,1
+ACC-6046,6046,Operating Expense 47,expense,2024-08-01,0.0,0.0,0.0,,,,,1,1
+ACC-6047,6047,Operating Expense 48,expense,2024-08-01,0.0,0.0,0.0,,,,,1,1
+ACC-6048,6048,Operating Expense 49,expense,2024-08-01,0.0,0.0,0.0,,,,,1,1
+ACC-6049,6049,Operating Expense 50,expense,2024-08-01,0.0,0.0,0.0,,,,,1,1
+ACC-6050,6050,Operating Expense 51,expense,2024-08-01,0.0,0.0,0.0,,,,,1,1
+ACC-6051,6051,Operating Expense 52,expense,2024-08-01,0.0,0.0,0.0,,,,,1,1
+ACC-6052,6052,Operating Expense 53,expense,2024-08-01,0.0,0.0,0.0,,,,,1,1
+ACC-6053,6053,Operating Expense 54,expense,2024-08-01,0.0,0.0,0.0,,,,,1,1
+ACC-6054,6054,Operating Expense 55,expense,2024-08-01,0.0,0.0,0.0,,,,,1,1
+ACC-6055,6055,Operating Expense 56,expense,2024-08-01,0.0,0.0,0.0,,,,,1,1
+ACC-6056,6056,Operating Expense 57,expense,2024-08-01,0.0,0.0,0.0,,,,,1,1
+ACC-1000,1000,Cash and Cash Equivalents,asset,2024-07-01,0.0,0.0,0.0,,,,,1,1
+ACC-1100,1100,Accounts Receivable,asset,2024-07-01,0.0,0.0,0.0,,,,,1,1
+ACC-1200,1200,Inventory,asset,2024-07-01,0.0,0.0,0.0,,,,,1,1
+ACC-1300,1300,Other Asset 01,asset,2024-07-01,0.0,0.0,0.0,,,,,1,1
+ACC-1301,1301,Other Asset 02,asset,2024-07-01,0.0,0.0,0.0,,,,,1,1
+ACC-1302,1302,Other Asset 03,asset,2024-07-01,0.0,0.0,0.0,,,,,1,1
+ACC-1303,1303,Other Asset 04,asset,2024-07-01,0.0,0.0,0.0,,,,,1,1
+ACC-1304,1304,Other Asset 05,asset,2024-07-01,0.0,0.0,0.0,,,,,1,1
+ACC-1305,1305,Other Asset 06,asset,2024-07-01,0.0,0.0,0.0,,,,,1,1
+ACC-1306,1306,Other Asset 07,asset,2024-07-01,0.0,0.0,0.0,,,,,1,1
+ACC-1307,1307,Other Asset 08,asset,2024-07-01,0.0,0.0,0.0,,,,,1,1
+ACC-1308,1308,Other Asset 09,asset,2024-07-01,0.0,0.0,0.0,,,,,1,1
+ACC-1309,1309,Other Asset 10,asset,2024-07-01,0.0,0.0,0.0,,,,,1,1
+ACC-1310,1310,Other Asset 11,asset,2024-07-01,0.0,0.0,0.0,,,,,1,1
+ACC-1311,1311,Other Asset 12,asset,2024-07-01,0.0,0.0,0.0,,,,,1,1
+ACC-1312,1312,Other Asset 13,asset,2024-07-01,0.0,0.0,0.0,,,,,1,1
+ACC-1313,1313,Other Asset 14,asset,2024-07-01,0.0,0.0,0.0,,,,,1,1
+ACC-1314,1314,Other Asset 15,asset,2024-07-01,0.0,0.0,0.0,,,,,1,1
+ACC-1315,1315,Other Asset 16,asset,2024-07-01,0.0,0.0,0.0,,,,,1,1
+ACC-1316,1316,Other Asset 17,asset,2024-07-01,0.0,0.0,0.0,,,,,1,1
+ACC-2000,2000,Liability 01,liability,2024-07-01,0.0,0.0,0.0,,,,,1,1
+ACC-2001,2001,Liability 02,liability,2024-07-01,0.0,0.0,0.0,,,,,1,1
+ACC-2002,2002,Liability 03,liability,2024-07-01,0.0,0.0,0.0,,,,,1,1
+ACC-2003,2003,Liability 04,liability,2024-07-01,0.0,0.0,0.0,,,,,1,1
+ACC-2004,2004,Liability 05,liability,2024-07-01,0.0,0.0,0.0,,,,,1,1
+ACC-2005,2005,Liability 06,liability,2024-07-01,0.0,0.0,0.0,,,,,1,1
+ACC-2006,2006,Liability 07,liability,2024-07-01,0.0,0.0,0.0,,,,,1,1
+ACC-2007,2007,Liability 08,liability,2024-07-01,0.0,0.0,0.0,,,,,1,1
+ACC-2008,2008,Liability 09,liability,2024-07-01,0.0,0.0,0.0,,,,,1,1
+ACC-2009,2009,Liability 10,liability,2024-07-01,0.0,0.0,0.0,,,,,1,1
+ACC-3000,3000,Equity 01,equity,2024-07-01,0.0,0.0,0.0,,,,,1,1
+ACC-3001,3001,Equity 02,equity,2024-07-01,0.0,0.0,0.0,,,,,1,1
+ACC-3002,3002,Equity 03,equity,2024-07-01,0.0,0.0,0.0,,,,,1,1
+ACC-4000,4000,Revenue 01,revenue,2024-07-01,0.0,0.0,0.0,,,,,1,1
+ACC-4001,4001,Revenue 02,revenue,2024-07-01,0.0,0.0,0.0,,,,,1,1
+ACC-4002,4002,Revenue 03,revenue,2024-07-01,0.0,0.0,0.0,,,,,1,1
+ACC-4003,4003,Revenue 04,revenue,2024-07-01,0.0,0.0,0.0,,,,,1,1
+ACC-4004,4004,Revenue 05,revenue,2024-07-01,0.0,0.0,0.0,,,,,1,1
+ACC-4005,4005,Revenue 06,revenue,2024-07-01,0.0,0.0,0.0,,,,,1,1
+ACC-4006,4006,Revenue 07,revenue,2024-07-01,0.0,0.0,0.0,,,,,1,1
+ACC-4007,4007,Revenue 08,revenue,2024-07-01,0.0,0.0,0.0,,,,,1,1
+ACC-4008,4008,Revenue 09,revenue,2024-07-01,0.0,0.0,0.0,,,,,1,1
+ACC-4009,4009,Revenue 10,revenue,2024-07-01,0.0,0.0,0.0,,,,,1,1
+ACC-4010,4010,Revenue 11,revenue,2024-07-01,0.0,0.0,0.0,,,,,1,1
+ACC-4011,4011,Revenue 12,revenue,2024-07-01,0.0,0.0,0.0,,,,,1,1
+ACC-4012,4012,Revenue 13,revenue,2024-07-01,0.0,0.0,0.0,,,,,1,1
+ACC-4013,4013,Revenue 14,revenue,2024-07-01,0.0,0.0,0.0,,,,,1,1
+ACC-4014,4014,Revenue 15,revenue,2024-07-01,0.0,0.0,0.0,,,,,1,1
+ACC-4015,4015,Revenue 16,revenue,2024-07-01,0.0,0.0,0.0,,,,,1,1
+ACC-4016,4016,Revenue 17,revenue,2024-07-01,0.0,0.0,0.0,,,,,1,1
+ACC-4017,4017,Revenue 18,revenue,2024-07-01,0.0,0.0,0.0,,,,,1,1
+ACC-4018,4018,Revenue 19,revenue,2024-07-01,0.0,0.0,0.0,,,,,1,1
+ACC-4019,4019,Revenue 20,revenue,2024-07-01,0.0,0.0,0.0,,,,,1,1
+ACC-5000,5000,Cost of Goods Sold 01,cogs,2024-07-01,0.0,0.0,0.0,,,,,1,1
+ACC-5001,5001,Cost of Goods Sold 02,cogs,2024-07-01,0.0,0.0,0.0,,,,,1,1
+ACC-5002,5002,Cost of Goods Sold 03,cogs,2024-07-01,0.0,0.0,0.0,,,,,1,1
+ACC-5003,5003,Cost of Goods Sold 04,cogs,2024-07-01,0.0,0.0,0.0,,,,,1,1
+ACC-5004,5004,Cost of Goods Sold 05,cogs,2024-07-01,0.0,0.0,0.0,,,,,1,1
+ACC-5005,5005,Cost of Goods Sold 06,cogs,2024-07-01,0.0,0.0,0.0,,,,,1,1
+ACC-5006,5006,Cost of Goods Sold 07,cogs,2024-07-01,0.0,0.0,0.0,,,,,1,1
+ACC-5007,5007,Cost of Goods Sold 08,cogs,2024-07-01,0.0,0.0,0.0,,,,,1,1
+ACC-5008,5008,Cost of Goods Sold 09,cogs,2024-07-01,0.0,0.0,0.0,,,,,1,1
+ACC-5009,5009,Cost of Goods Sold 10,cogs,2024-07-01,0.0,0.0,0.0,,,,,1,1
+ACC-6000,6000,Operating Expense 01,expense,2024-07-01,0.0,0.0,0.0,,,,,1,1
+ACC-6001,6001,Operating Expense 02,expense,2024-07-01,0.0,0.0,0.0,,,,,1,1
+ACC-6002,6002,Operating Expense 03,expense,2024-07-01,0.0,0.0,0.0,,,,,1,1
+ACC-6003,6003,Operating Expense 04,expense,2024-07-01,0.0,0.0,0.0,,,,,1,1
+ACC-6004,6004,Operating Expense 05,expense,2024-07-01,0.0,0.0,0.0,,,,,1,1
+ACC-6005,6005,Operating Expense 06,expense,2024-07-01,0.0,0.0,0.0,,,,,1,1
+ACC-6006,6006,Operating Expense 07,expense,2024-07-01,0.0,0.0,0.0,,,,,1,1
+ACC-6007,6007,Operating Expense 08,expense,2024-07-01,0.0,0.0,0.0,,,,,1,1
+ACC-6008,6008,Operating Expense 09,expense,2024-07-01,0.0,0.0,0.0,,,,,1,1
+ACC-6009,6009,Operating Expense 10,expense,2024-07-01,0.0,0.0,0.0,,,,,1,1
+ACC-6010,6010,Operating Expense 11,expense,2024-07-01,0.0,0.0,0.0,,,,,1,1
+ACC-6011,6011,Operating Expense 12,expense,2024-07-01,0.0,0.0,0.0,,,,,1,1
+ACC-6012,6012,Operating Expense 13,expense,2024-07-01,0.0,0.0,0.0,,,,,1,1
+ACC-6013,6013,Operating Expense 14,expense,2024-07-01,0.0,0.0,0.0,,,,,1,1
+ACC-6014,6014,Operating Expense 15,expense,2024-07-01,0.0,0.0,0.0,,,,,1,1
+ACC-6015,6015,Operating Expense 16,expense,2024-07-01,0.0,0.0,0.0,,,,,1,1
+ACC-6016,6016,Operating Expense 17,expense,2024-07-01,0.0,0.0,0.0,,,,,1,1
+ACC-6017,6017,Operating Expense 18,expense,2024-07-01,0.0,0.0,0.0,,,,,1,1
+ACC-6018,6018,Operating Expense 19,expense,2024-07-01,0.0,0.0,0.0,,,,,1,1
+ACC-6019,6019,Operating Expense 20,expense,2024-07-01,0.0,0.0,0.0,,,,,1,1
+ACC-6020,6020,Operating Expense 21,expense,2024-07-01,0.0,0.0,0.0,,,,,1,1
+ACC-6021,6021,Operating Expense 22,expense,2024-07-01,0.0,0.0,0.0,,,,,1,1
+ACC-6022,6022,Operating Expense 23,expense,2024-07-01,0.0,0.0,0.0,,,,,1,1
+ACC-6023,6023,Operating Expense 24,expense,2024-07-01,0.0,0.0,0.0,,,,,1,1
+ACC-6024,6024,Operating Expense 25,expense,2024-07-01,0.0,0.0,0.0,,,,,1,1
+ACC-6025,6025,Operating Expense 26,expense,2024-07-01,0.0,0.0,0.0,,,,,1,1
+ACC-6026,6026,Operating Expense 27,expense,2024-07-01,0.0,0.0,0.0,,,,,1,1
+ACC-6027,6027,Operating Expense 28,expense,2024-07-01,0.0,0.0,0.0,,,,,1,1
+ACC-6028,6028,Operating Expense 29,expense,2024-07-01,0.0,0.0,0.0,,,,,1,1
+ACC-6029,6029,Operating Expense 30,expense,2024-07-01,0.0,0.0,0.0,,,,,1,1
+ACC-6030,6030,Operating Expense 31,expense,2024-07-01,0.0,0.0,0.0,,,,,1,1
+ACC-6031,6031,Operating Expense 32,expense,2024-07-01,0.0,0.0,0.0,,,,,1,1
+ACC-6032,6032,Operating Expense 33,expense,2024-07-01,0.0,0.0,0.0,,,,,1,1
+ACC-6033,6033,Operating Expense 34,expense,2024-07-01,0.0,0.0,0.0,,,,,1,1
+ACC-6034,6034,Operating Expense 35,expense,2024-07-01,0.0,0.0,0.0,,,,,1,1
+ACC-6035,6035,Operating Expense 36,expense,2024-07-01,0.0,0.0,0.0,,,,,1,1
+ACC-6036,6036,Operating Expense 37,expense,2024-07-01,0.0,0.0,0.0,,,,,1,1
+ACC-6037,6037,Operating Expense 38,expense,2024-07-01,0.0,0.0,0.0,,,,,1,1
+ACC-6038,6038,Operating Expense 39,expense,2024-07-01,0.0,0.0,0.0,,,,,1,1
+ACC-6039,6039,Operating Expense 40,expense,2024-07-01,0.0,0.0,0.0,,,,,1,1
+ACC-6040,6040,Operating Expense 41,expense,2024-07-01,0.0,0.0,0.0,,,,,1,1
+ACC-6041,6041,Operating Expense 42,expense,2024-07-01,0.0,0.0,0.0,,,,,1,1
+ACC-6042,6042,Operating Expense 43,expense,2024-07-01,0.0,0.0,0.0,,,,,1,1
+ACC-6043,6043,Operating Expense 44,expense,2024-07-01,0.0,0.0,0.0,,,,,1,1
+ACC-6044,6044,Operating Expense 45,expense,2024-07-01,0.0,0.0,0.0,,,,,1,1
+ACC-6045,6045,Operating Expense 46,expense,2024-07-01,0.0,0.0,0.0,,,,,1,1
+ACC-6046,6046,Operating Expense 47,expense,2024-07-01,0.0,0.0,0.0,,,,,1,1
+ACC-6047,6047,Operating Expense 48,expense,2024-07-01,0.0,0.0,0.0,,,,,1,1
+ACC-6048,6048,Operating Expense 49,expense,2024-07-01,0.0,0.0,0.0,,,,,1,1
+ACC-6049,6049,Operating Expense 50,expense,2024-07-01,0.0,0.0,0.0,,,,,1,1
+ACC-6050,6050,Operating Expense 51,expense,2024-07-01,0.0,0.0,0.0,,,,,1,1
+ACC-6051,6051,Operating Expense 52,expense,2024-07-01,0.0,0.0,0.0,,,,,1,1
+ACC-6052,6052,Operating Expense 53,expense,2024-07-01,0.0,0.0,0.0,,,,,1,1
+ACC-6053,6053,Operating Expense 54,expense,2024-07-01,0.0,0.0,0.0,,,,,1,1
+ACC-6054,6054,Operating Expense 55,expense,2024-07-01,0.0,0.0,0.0,,,,,1,1
+ACC-6055,6055,Operating Expense 56,expense,2024-07-01,0.0,0.0,0.0,,,,,1,1
+ACC-6056,6056,Operating Expense 57,expense,2024-07-01,0.0,0.0,0.0,,,,,1,1
+ACC-1000,1000,Cash and Cash Equivalents,asset,2024-06-01,0.0,0.0,0.0,,,,,1,1
+ACC-1100,1100,Accounts Receivable,asset,2024-06-01,0.0,0.0,0.0,,,,,1,1
+ACC-1200,1200,Inventory,asset,2024-06-01,0.0,0.0,0.0,,,,,1,1
+ACC-1300,1300,Other Asset 01,asset,2024-06-01,0.0,0.0,0.0,,,,,1,1
+ACC-1301,1301,Other Asset 02,asset,2024-06-01,0.0,0.0,0.0,,,,,1,1
+ACC-1302,1302,Other Asset 03,asset,2024-06-01,0.0,0.0,0.0,,,,,1,1
+ACC-1303,1303,Other Asset 04,asset,2024-06-01,0.0,0.0,0.0,,,,,1,1
+ACC-1304,1304,Other Asset 05,asset,2024-06-01,0.0,0.0,0.0,,,,,1,1
+ACC-1305,1305,Other Asset 06,asset,2024-06-01,0.0,0.0,0.0,,,,,1,1
+ACC-1306,1306,Other Asset 07,asset,2024-06-01,0.0,0.0,0.0,,,,,1,1
+ACC-1307,1307,Other Asset 08,asset,2024-06-01,0.0,0.0,0.0,,,,,1,1
+ACC-1308,1308,Other Asset 09,asset,2024-06-01,0.0,0.0,0.0,,,,,1,1
+ACC-1309,1309,Other Asset 10,asset,2024-06-01,0.0,0.0,0.0,,,,,1,1
+ACC-1310,1310,Other Asset 11,asset,2024-06-01,0.0,0.0,0.0,,,,,1,1
+ACC-1311,1311,Other Asset 12,asset,2024-06-01,0.0,0.0,0.0,,,,,1,1
+ACC-1312,1312,Other Asset 13,asset,2024-06-01,0.0,0.0,0.0,,,,,1,1
+ACC-1313,1313,Other Asset 14,asset,2024-06-01,0.0,0.0,0.0,,,,,1,1
+ACC-1314,1314,Other Asset 15,asset,2024-06-01,0.0,0.0,0.0,,,,,1,1
+ACC-1315,1315,Other Asset 16,asset,2024-06-01,0.0,0.0,0.0,,,,,1,1
+ACC-1316,1316,Other Asset 17,asset,2024-06-01,0.0,0.0,0.0,,,,,1,1
+ACC-2000,2000,Liability 01,liability,2024-06-01,0.0,0.0,0.0,,,,,1,1
+ACC-2001,2001,Liability 02,liability,2024-06-01,0.0,0.0,0.0,,,,,1,1
+ACC-2002,2002,Liability 03,liability,2024-06-01,0.0,0.0,0.0,,,,,1,1
+ACC-2003,2003,Liability 04,liability,2024-06-01,0.0,0.0,0.0,,,,,1,1
+ACC-2004,2004,Liability 05,liability,2024-06-01,0.0,0.0,0.0,,,,,1,1
+ACC-2005,2005,Liability 06,liability,2024-06-01,0.0,0.0,0.0,,,,,1,1
+ACC-2006,2006,Liability 07,liability,2024-06-01,0.0,0.0,0.0,,,,,1,1
+ACC-2007,2007,Liability 08,liability,2024-06-01,0.0,0.0,0.0,,,,,1,1
+ACC-2008,2008,Liability 09,liability,2024-06-01,0.0,0.0,0.0,,,,,1,1
+ACC-2009,2009,Liability 10,liability,2024-06-01,0.0,0.0,0.0,,,,,1,1
+ACC-3000,3000,Equity 01,equity,2024-06-01,0.0,0.0,0.0,,,,,1,1
+ACC-3001,3001,Equity 02,equity,2024-06-01,0.0,0.0,0.0,,,,,1,1
+ACC-3002,3002,Equity 03,equity,2024-06-01,0.0,0.0,0.0,,,,,1,1
+ACC-4000,4000,Revenue 01,revenue,2024-06-01,0.0,0.0,0.0,,,,,1,1
+ACC-4001,4001,Revenue 02,revenue,2024-06-01,0.0,0.0,0.0,,,,,1,1
+ACC-4002,4002,Revenue 03,revenue,2024-06-01,0.0,0.0,0.0,,,,,1,1
+ACC-4003,4003,Revenue 04,revenue,2024-06-01,0.0,0.0,0.0,,,,,1,1
+ACC-4004,4004,Revenue 05,revenue,2024-06-01,0.0,0.0,0.0,,,,,1,1
+ACC-4005,4005,Revenue 06,revenue,2024-06-01,0.0,0.0,0.0,,,,,1,1
+ACC-4006,4006,Revenue 07,revenue,2024-06-01,0.0,0.0,0.0,,,,,1,1
+ACC-4007,4007,Revenue 08,revenue,2024-06-01,0.0,0.0,0.0,,,,,1,1
+ACC-4008,4008,Revenue 09,revenue,2024-06-01,0.0,0.0,0.0,,,,,1,1
+ACC-4009,4009,Revenue 10,revenue,2024-06-01,0.0,0.0,0.0,,,,,1,1
+ACC-4010,4010,Revenue 11,revenue,2024-06-01,0.0,0.0,0.0,,,,,1,1
+ACC-4011,4011,Revenue 12,revenue,2024-06-01,0.0,0.0,0.0,,,,,1,1
+ACC-4012,4012,Revenue 13,revenue,2024-06-01,0.0,0.0,0.0,,,,,1,1
+ACC-4013,4013,Revenue 14,revenue,2024-06-01,0.0,0.0,0.0,,,,,1,1
+ACC-4014,4014,Revenue 15,revenue,2024-06-01,0.0,0.0,0.0,,,,,1,1
+ACC-4015,4015,Revenue 16,revenue,2024-06-01,0.0,0.0,0.0,,,,,1,1
+ACC-4016,4016,Revenue 17,revenue,2024-06-01,0.0,0.0,0.0,,,,,1,1
+ACC-4017,4017,Revenue 18,revenue,2024-06-01,0.0,0.0,0.0,,,,,1,1
+ACC-4018,4018,Revenue 19,revenue,2024-06-01,0.0,0.0,0.0,,,,,1,1
+ACC-4019,4019,Revenue 20,revenue,2024-06-01,0.0,0.0,0.0,,,,,1,1
+ACC-5000,5000,Cost of Goods Sold 01,cogs,2024-06-01,0.0,0.0,0.0,,,,,1,1
+ACC-5001,5001,Cost of Goods Sold 02,cogs,2024-06-01,0.0,0.0,0.0,,,,,1,1
+ACC-5002,5002,Cost of Goods Sold 03,cogs,2024-06-01,0.0,0.0,0.0,,,,,1,1
+ACC-5003,5003,Cost of Goods Sold 04,cogs,2024-06-01,0.0,0.0,0.0,,,,,1,1
+ACC-5004,5004,Cost of Goods Sold 05,cogs,2024-06-01,0.0,0.0,0.0,,,,,1,1
+ACC-5005,5005,Cost of Goods Sold 06,cogs,2024-06-01,0.0,0.0,0.0,,,,,1,1
+ACC-5006,5006,Cost of Goods Sold 07,cogs,2024-06-01,0.0,0.0,0.0,,,,,1,1
+ACC-5007,5007,Cost of Goods Sold 08,cogs,2024-06-01,0.0,0.0,0.0,,,,,1,1
+ACC-5008,5008,Cost of Goods Sold 09,cogs,2024-06-01,0.0,0.0,0.0,,,,,1,1
+ACC-5009,5009,Cost of Goods Sold 10,cogs,2024-06-01,0.0,0.0,0.0,,,,,1,1
+ACC-6000,6000,Operating Expense 01,expense,2024-06-01,0.0,0.0,0.0,,,,,1,1
+ACC-6001,6001,Operating Expense 02,expense,2024-06-01,0.0,0.0,0.0,,,,,1,1
+ACC-6002,6002,Operating Expense 03,expense,2024-06-01,0.0,0.0,0.0,,,,,1,1
+ACC-6003,6003,Operating Expense 04,expense,2024-06-01,0.0,0.0,0.0,,,,,1,1
+ACC-6004,6004,Operating Expense 05,expense,2024-06-01,0.0,0.0,0.0,,,,,1,1
+ACC-6005,6005,Operating Expense 06,expense,2024-06-01,0.0,0.0,0.0,,,,,1,1
+ACC-6006,6006,Operating Expense 07,expense,2024-06-01,0.0,0.0,0.0,,,,,1,1
+ACC-6007,6007,Operating Expense 08,expense,2024-06-01,0.0,0.0,0.0,,,,,1,1
+ACC-6008,6008,Operating Expense 09,expense,2024-06-01,0.0,0.0,0.0,,,,,1,1
+ACC-6009,6009,Operating Expense 10,expense,2024-06-01,0.0,0.0,0.0,,,,,1,1
+ACC-6010,6010,Operating Expense 11,expense,2024-06-01,0.0,0.0,0.0,,,,,1,1
+ACC-6011,6011,Operating Expense 12,expense,2024-06-01,0.0,0.0,0.0,,,,,1,1
+ACC-6012,6012,Operating Expense 13,expense,2024-06-01,0.0,0.0,0.0,,,,,1,1
+ACC-6013,6013,Operating Expense 14,expense,2024-06-01,0.0,0.0,0.0,,,,,1,1
+ACC-6014,6014,Operating Expense 15,expense,2024-06-01,0.0,0.0,0.0,,,,,1,1
+ACC-6015,6015,Operating Expense 16,expense,2024-06-01,0.0,0.0,0.0,,,,,1,1
+ACC-6016,6016,Operating Expense 17,expense,2024-06-01,0.0,0.0,0.0,,,,,1,1
+ACC-6017,6017,Operating Expense 18,expense,2024-06-01,0.0,0.0,0.0,,,,,1,1
+ACC-6018,6018,Operating Expense 19,expense,2024-06-01,0.0,0.0,0.0,,,,,1,1
+ACC-6019,6019,Operating Expense 20,expense,2024-06-01,0.0,0.0,0.0,,,,,1,1
+ACC-6020,6020,Operating Expense 21,expense,2024-06-01,0.0,0.0,0.0,,,,,1,1
+ACC-6021,6021,Operating Expense 22,expense,2024-06-01,0.0,0.0,0.0,,,,,1,1
+ACC-6022,6022,Operating Expense 23,expense,2024-06-01,0.0,0.0,0.0,,,,,1,1
+ACC-6023,6023,Operating Expense 24,expense,2024-06-01,0.0,0.0,0.0,,,,,1,1
+ACC-6024,6024,Operating Expense 25,expense,2024-06-01,0.0,0.0,0.0,,,,,1,1
+ACC-6025,6025,Operating Expense 26,expense,2024-06-01,0.0,0.0,0.0,,,,,1,1
+ACC-6026,6026,Operating Expense 27,expense,2024-06-01,0.0,0.0,0.0,,,,,1,1
+ACC-6027,6027,Operating Expense 28,expense,2024-06-01,0.0,0.0,0.0,,,,,1,1
+ACC-6028,6028,Operating Expense 29,expense,2024-06-01,0.0,0.0,0.0,,,,,1,1
+ACC-6029,6029,Operating Expense 30,expense,2024-06-01,0.0,0.0,0.0,,,,,1,1
+ACC-6030,6030,Operating Expense 31,expense,2024-06-01,0.0,0.0,0.0,,,,,1,1
+ACC-6031,6031,Operating Expense 32,expense,2024-06-01,0.0,0.0,0.0,,,,,1,1
+ACC-6032,6032,Operating Expense 33,expense,2024-06-01,0.0,0.0,0.0,,,,,1,1
+ACC-6033,6033,Operating Expense 34,expense,2024-06-01,0.0,0.0,0.0,,,,,1,1
+ACC-6034,6034,Operating Expense 35,expense,2024-06-01,0.0,0.0,0.0,,,,,1,1
+ACC-6035,6035,Operating Expense 36,expense,2024-06-01,0.0,0.0,0.0,,,,,1,1
+ACC-6036,6036,Operating Expense 37,expense,2024-06-01,0.0,0.0,0.0,,,,,1,1
+ACC-6037,6037,Operating Expense 38,expense,2024-06-01,0.0,0.0,0.0,,,,,1,1
+ACC-6038,6038,Operating Expense 39,expense,2024-06-01,0.0,0.0,0.0,,,,,1,1
+ACC-6039,6039,Operating Expense 40,expense,2024-06-01,0.0,0.0,0.0,,,,,1,1
+ACC-6040,6040,Operating Expense 41,expense,2024-06-01,0.0,0.0,0.0,,,,,1,1
+ACC-6041,6041,Operating Expense 42,expense,2024-06-01,0.0,0.0,0.0,,,,,1,1
+ACC-6042,6042,Operating Expense 43,expense,2024-06-01,0.0,0.0,0.0,,,,,1,1
+ACC-6043,6043,Operating Expense 44,expense,2024-06-01,0.0,0.0,0.0,,,,,1,1
+ACC-6044,6044,Operating Expense 45,expense,2024-06-01,0.0,0.0,0.0,,,,,1,1
+ACC-6045,6045,Operating Expense 46,expense,2024-06-01,0.0,0.0,0.0,,,,,1,1
+ACC-6046,6046,Operating Expense 47,expense,2024-06-01,0.0,0.0,0.0,,,,,1,1
+ACC-6047,6047,Operating Expense 48,expense,2024-06-01,0.0,0.0,0.0,,,,,1,1
+ACC-6048,6048,Operating Expense 49,expense,2024-06-01,0.0,0.0,0.0,,,,,1,1
+ACC-6049,6049,Operating Expense 50,expense,2024-06-01,0.0,0.0,0.0,,,,,1,1
+ACC-6050,6050,Operating Expense 51,expense,2024-06-01,0.0,0.0,0.0,,,,,1,1
+ACC-6051,6051,Operating Expense 52,expense,2024-06-01,0.0,0.0,0.0,,,,,1,1
+ACC-6052,6052,Operating Expense 53,expense,2024-06-01,0.0,0.0,0.0,,,,,1,1
+ACC-6053,6053,Operating Expense 54,expense,2024-06-01,0.0,0.0,0.0,,,,,1,1
+ACC-6054,6054,Operating Expense 55,expense,2024-06-01,0.0,0.0,0.0,,,,,1,1
+ACC-6055,6055,Operating Expense 56,expense,2024-06-01,0.0,0.0,0.0,,,,,1,1
+ACC-6056,6056,Operating Expense 57,expense,2024-06-01,0.0,0.0,0.0,,,,,1,1
+ACC-1000,1000,Cash and Cash Equivalents,asset,2024-05-01,0.0,0.0,0.0,,,,,1,1
+ACC-1100,1100,Accounts Receivable,asset,2024-05-01,0.0,0.0,0.0,,,,,1,1
+ACC-1200,1200,Inventory,asset,2024-05-01,0.0,0.0,0.0,,,,,1,1
+ACC-1300,1300,Other Asset 01,asset,2024-05-01,0.0,0.0,0.0,,,,,1,1
+ACC-1301,1301,Other Asset 02,asset,2024-05-01,0.0,0.0,0.0,,,,,1,1
+ACC-1302,1302,Other Asset 03,asset,2024-05-01,0.0,0.0,0.0,,,,,1,1
+ACC-1303,1303,Other Asset 04,asset,2024-05-01,0.0,0.0,0.0,,,,,1,1
+ACC-1304,1304,Other Asset 05,asset,2024-05-01,0.0,0.0,0.0,,,,,1,1
+ACC-1305,1305,Other Asset 06,asset,2024-05-01,0.0,0.0,0.0,,,,,1,1
+ACC-1306,1306,Other Asset 07,asset,2024-05-01,0.0,0.0,0.0,,,,,1,1
+ACC-1307,1307,Other Asset 08,asset,2024-05-01,0.0,0.0,0.0,,,,,1,1
+ACC-1308,1308,Other Asset 09,asset,2024-05-01,0.0,0.0,0.0,,,,,1,1
+ACC-1309,1309,Other Asset 10,asset,2024-05-01,0.0,0.0,0.0,,,,,1,1
+ACC-1310,1310,Other Asset 11,asset,2024-05-01,0.0,0.0,0.0,,,,,1,1
+ACC-1311,1311,Other Asset 12,asset,2024-05-01,0.0,0.0,0.0,,,,,1,1
+ACC-1312,1312,Other Asset 13,asset,2024-05-01,0.0,0.0,0.0,,,,,1,1
+ACC-1313,1313,Other Asset 14,asset,2024-05-01,0.0,0.0,0.0,,,,,1,1
+ACC-1314,1314,Other Asset 15,asset,2024-05-01,0.0,0.0,0.0,,,,,1,1
+ACC-1315,1315,Other Asset 16,asset,2024-05-01,0.0,0.0,0.0,,,,,1,1
+ACC-1316,1316,Other Asset 17,asset,2024-05-01,0.0,0.0,0.0,,,,,1,1
+ACC-2000,2000,Liability 01,liability,2024-05-01,0.0,0.0,0.0,,,,,1,1
+ACC-2001,2001,Liability 02,liability,2024-05-01,0.0,0.0,0.0,,,,,1,1
+ACC-2002,2002,Liability 03,liability,2024-05-01,0.0,0.0,0.0,,,,,1,1
+ACC-2003,2003,Liability 04,liability,2024-05-01,0.0,0.0,0.0,,,,,1,1
+ACC-2004,2004,Liability 05,liability,2024-05-01,0.0,0.0,0.0,,,,,1,1
+ACC-2005,2005,Liability 06,liability,2024-05-01,0.0,0.0,0.0,,,,,1,1
+ACC-2006,2006,Liability 07,liability,2024-05-01,0.0,0.0,0.0,,,,,1,1
+ACC-2007,2007,Liability 08,liability,2024-05-01,0.0,0.0,0.0,,,,,1,1
+ACC-2008,2008,Liability 09,liability,2024-05-01,0.0,0.0,0.0,,,,,1,1
+ACC-2009,2009,Liability 10,liability,2024-05-01,0.0,0.0,0.0,,,,,1,1
+ACC-3000,3000,Equity 01,equity,2024-05-01,0.0,0.0,0.0,,,,,1,1
+ACC-3001,3001,Equity 02,equity,2024-05-01,0.0,0.0,0.0,,,,,1,1
+ACC-3002,3002,Equity 03,equity,2024-05-01,0.0,0.0,0.0,,,,,1,1
+ACC-4000,4000,Revenue 01,revenue,2024-05-01,0.0,0.0,0.0,,,,,1,1
+ACC-4001,4001,Revenue 02,revenue,2024-05-01,0.0,0.0,0.0,,,,,1,1
+ACC-4002,4002,Revenue 03,revenue,2024-05-01,0.0,0.0,0.0,,,,,1,1
+ACC-4003,4003,Revenue 04,revenue,2024-05-01,0.0,0.0,0.0,,,,,1,1
+ACC-4004,4004,Revenue 05,revenue,2024-05-01,0.0,0.0,0.0,,,,,1,1
+ACC-4005,4005,Revenue 06,revenue,2024-05-01,0.0,0.0,0.0,,,,,1,1
+ACC-4006,4006,Revenue 07,revenue,2024-05-01,0.0,0.0,0.0,,,,,1,1
+ACC-4007,4007,Revenue 08,revenue,2024-05-01,0.0,0.0,0.0,,,,,1,1
+ACC-4008,4008,Revenue 09,revenue,2024-05-01,0.0,0.0,0.0,,,,,1,1
+ACC-4009,4009,Revenue 10,revenue,2024-05-01,0.0,0.0,0.0,,,,,1,1
+ACC-4010,4010,Revenue 11,revenue,2024-05-01,0.0,0.0,0.0,,,,,1,1
+ACC-4011,4011,Revenue 12,revenue,2024-05-01,0.0,0.0,0.0,,,,,1,1
+ACC-4012,4012,Revenue 13,revenue,2024-05-01,0.0,0.0,0.0,,,,,1,1
+ACC-4013,4013,Revenue 14,revenue,2024-05-01,0.0,0.0,0.0,,,,,1,1
+ACC-4014,4014,Revenue 15,revenue,2024-05-01,0.0,0.0,0.0,,,,,1,1
+ACC-4015,4015,Revenue 16,revenue,2024-05-01,0.0,0.0,0.0,,,,,1,1
+ACC-4016,4016,Revenue 17,revenue,2024-05-01,0.0,0.0,0.0,,,,,1,1
+ACC-4017,4017,Revenue 18,revenue,2024-05-01,0.0,0.0,0.0,,,,,1,1
+ACC-4018,4018,Revenue 19,revenue,2024-05-01,0.0,0.0,0.0,,,,,1,1
+ACC-4019,4019,Revenue 20,revenue,2024-05-01,0.0,0.0,0.0,,,,,1,1
+ACC-5000,5000,Cost of Goods Sold 01,cogs,2024-05-01,0.0,0.0,0.0,,,,,1,1
+ACC-5001,5001,Cost of Goods Sold 02,cogs,2024-05-01,0.0,0.0,0.0,,,,,1,1
+ACC-5002,5002,Cost of Goods Sold 03,cogs,2024-05-01,0.0,0.0,0.0,,,,,1,1
+ACC-5003,5003,Cost of Goods Sold 04,cogs,2024-05-01,0.0,0.0,0.0,,,,,1,1
+ACC-5004,5004,Cost of Goods Sold 05,cogs,2024-05-01,0.0,0.0,0.0,,,,,1,1
+ACC-5005,5005,Cost of Goods Sold 06,cogs,2024-05-01,0.0,0.0,0.0,,,,,1,1
+ACC-5006,5006,Cost of Goods Sold 07,cogs,2024-05-01,0.0,0.0,0.0,,,,,1,1
+ACC-5007,5007,Cost of Goods Sold 08,cogs,2024-05-01,0.0,0.0,0.0,,,,,1,1
+ACC-5008,5008,Cost of Goods Sold 09,cogs,2024-05-01,0.0,0.0,0.0,,,,,1,1
+ACC-5009,5009,Cost of Goods Sold 10,cogs,2024-05-01,0.0,0.0,0.0,,,,,1,1
+ACC-6000,6000,Operating Expense 01,expense,2024-05-01,0.0,0.0,0.0,,,,,1,1
+ACC-6001,6001,Operating Expense 02,expense,2024-05-01,0.0,0.0,0.0,,,,,1,1
+ACC-6002,6002,Operating Expense 03,expense,2024-05-01,0.0,0.0,0.0,,,,,1,1
+ACC-6003,6003,Operating Expense 04,expense,2024-05-01,0.0,0.0,0.0,,,,,1,1
+ACC-6004,6004,Operating Expense 05,expense,2024-05-01,0.0,0.0,0.0,,,,,1,1
+ACC-6005,6005,Operating Expense 06,expense,2024-05-01,0.0,0.0,0.0,,,,,1,1
+ACC-6006,6006,Operating Expense 07,expense,2024-05-01,0.0,0.0,0.0,,,,,1,1
+ACC-6007,6007,Operating Expense 08,expense,2024-05-01,0.0,0.0,0.0,,,,,1,1
+ACC-6008,6008,Operating Expense 09,expense,2024-05-01,0.0,0.0,0.0,,,,,1,1
+ACC-6009,6009,Operating Expense 10,expense,2024-05-01,0.0,0.0,0.0,,,,,1,1
+ACC-6010,6010,Operating Expense 11,expense,2024-05-01,0.0,0.0,0.0,,,,,1,1
+ACC-6011,6011,Operating Expense 12,expense,2024-05-01,0.0,0.0,0.0,,,,,1,1
+ACC-6012,6012,Operating Expense 13,expense,2024-05-01,0.0,0.0,0.0,,,,,1,1
+ACC-6013,6013,Operating Expense 14,expense,2024-05-01,0.0,0.0,0.0,,,,,1,1
+ACC-6014,6014,Operating Expense 15,expense,2024-05-01,0.0,0.0,0.0,,,,,1,1
+ACC-6015,6015,Operating Expense 16,expense,2024-05-01,0.0,0.0,0.0,,,,,1,1
+ACC-6016,6016,Operating Expense 17,expense,2024-05-01,0.0,0.0,0.0,,,,,1,1
+ACC-6017,6017,Operating Expense 18,expense,2024-05-01,0.0,0.0,0.0,,,,,1,1
+ACC-6018,6018,Operating Expense 19,expense,2024-05-01,0.0,0.0,0.0,,,,,1,1
+ACC-6019,6019,Operating Expense 20,expense,2024-05-01,0.0,0.0,0.0,,,,,1,1
+ACC-6020,6020,Operating Expense 21,expense,2024-05-01,0.0,0.0,0.0,,,,,1,1
+ACC-6021,6021,Operating Expense 22,expense,2024-05-01,0.0,0.0,0.0,,,,,1,1
+ACC-6022,6022,Operating Expense 23,expense,2024-05-01,0.0,0.0,0.0,,,,,1,1
+ACC-6023,6023,Operating Expense 24,expense,2024-05-01,0.0,0.0,0.0,,,,,1,1
+ACC-6024,6024,Operating Expense 25,expense,2024-05-01,0.0,0.0,0.0,,,,,1,1
+ACC-6025,6025,Operating Expense 26,expense,2024-05-01,0.0,0.0,0.0,,,,,1,1
+ACC-6026,6026,Operating Expense 27,expense,2024-05-01,0.0,0.0,0.0,,,,,1,1
+ACC-6027,6027,Operating Expense 28,expense,2024-05-01,0.0,0.0,0.0,,,,,1,1
+ACC-6028,6028,Operating Expense 29,expense,2024-05-01,0.0,0.0,0.0,,,,,1,1
+ACC-6029,6029,Operating Expense 30,expense,2024-05-01,0.0,0.0,0.0,,,,,1,1
+ACC-6030,6030,Operating Expense 31,expense,2024-05-01,0.0,0.0,0.0,,,,,1,1
+ACC-6031,6031,Operating Expense 32,expense,2024-05-01,0.0,0.0,0.0,,,,,1,1
+ACC-6032,6032,Operating Expense 33,expense,2024-05-01,0.0,0.0,0.0,,,,,1,1
+ACC-6033,6033,Operating Expense 34,expense,2024-05-01,0.0,0.0,0.0,,,,,1,1
+ACC-6034,6034,Operating Expense 35,expense,2024-05-01,0.0,0.0,0.0,,,,,1,1
+ACC-6035,6035,Operating Expense 36,expense,2024-05-01,0.0,0.0,0.0,,,,,1,1
+ACC-6036,6036,Operating Expense 37,expense,2024-05-01,0.0,0.0,0.0,,,,,1,1
+ACC-6037,6037,Operating Expense 38,expense,2024-05-01,0.0,0.0,0.0,,,,,1,1
+ACC-6038,6038,Operating Expense 39,expense,2024-05-01,0.0,0.0,0.0,,,,,1,1
+ACC-6039,6039,Operating Expense 40,expense,2024-05-01,0.0,0.0,0.0,,,,,1,1
+ACC-6040,6040,Operating Expense 41,expense,2024-05-01,0.0,0.0,0.0,,,,,1,1
+ACC-6041,6041,Operating Expense 42,expense,2024-05-01,0.0,0.0,0.0,,,,,1,1
+ACC-6042,6042,Operating Expense 43,expense,2024-05-01,0.0,0.0,0.0,,,,,1,1
+ACC-6043,6043,Operating Expense 44,expense,2024-05-01,0.0,0.0,0.0,,,,,1,1
+ACC-6044,6044,Operating Expense 45,expense,2024-05-01,0.0,0.0,0.0,,,,,1,1
+ACC-6045,6045,Operating Expense 46,expense,2024-05-01,0.0,0.0,0.0,,,,,1,1
+ACC-6046,6046,Operating Expense 47,expense,2024-05-01,0.0,0.0,0.0,,,,,1,1
+ACC-6047,6047,Operating Expense 48,expense,2024-05-01,0.0,0.0,0.0,,,,,1,1
+ACC-6048,6048,Operating Expense 49,expense,2024-05-01,0.0,0.0,0.0,,,,,1,1
+ACC-6049,6049,Operating Expense 50,expense,2024-05-01,0.0,0.0,0.0,,,,,1,1
+ACC-6050,6050,Operating Expense 51,expense,2024-05-01,0.0,0.0,0.0,,,,,1,1
+ACC-6051,6051,Operating Expense 52,expense,2024-05-01,0.0,0.0,0.0,,,,,1,1
+ACC-6052,6052,Operating Expense 53,expense,2024-05-01,0.0,0.0,0.0,,,,,1,1
+ACC-6053,6053,Operating Expense 54,expense,2024-05-01,0.0,0.0,0.0,,,,,1,1
+ACC-6054,6054,Operating Expense 55,expense,2024-05-01,0.0,0.0,0.0,,,,,1,1
+ACC-6055,6055,Operating Expense 56,expense,2024-05-01,0.0,0.0,0.0,,,,,1,1
+ACC-6056,6056,Operating Expense 57,expense,2024-05-01,0.0,0.0,0.0,,,,,1,1
+ACC-1000,1000,Cash and Cash Equivalents,asset,2024-04-01,0.0,0.0,0.0,,,,,1,1
+ACC-1100,1100,Accounts Receivable,asset,2024-04-01,0.0,0.0,0.0,,,,,1,1
+ACC-1200,1200,Inventory,asset,2024-04-01,0.0,0.0,0.0,,,,,1,1
+ACC-1300,1300,Other Asset 01,asset,2024-04-01,0.0,0.0,0.0,,,,,1,1
+ACC-1301,1301,Other Asset 02,asset,2024-04-01,0.0,0.0,0.0,,,,,1,1
+ACC-1302,1302,Other Asset 03,asset,2024-04-01,0.0,0.0,0.0,,,,,1,1
+ACC-1303,1303,Other Asset 04,asset,2024-04-01,0.0,0.0,0.0,,,,,1,1
+ACC-1304,1304,Other Asset 05,asset,2024-04-01,0.0,0.0,0.0,,,,,1,1
+ACC-1305,1305,Other Asset 06,asset,2024-04-01,0.0,0.0,0.0,,,,,1,1
+ACC-1306,1306,Other Asset 07,asset,2024-04-01,0.0,0.0,0.0,,,,,1,1
+ACC-1307,1307,Other Asset 08,asset,2024-04-01,0.0,0.0,0.0,,,,,1,1
+ACC-1308,1308,Other Asset 09,asset,2024-04-01,0.0,0.0,0.0,,,,,1,1
+ACC-1309,1309,Other Asset 10,asset,2024-04-01,0.0,0.0,0.0,,,,,1,1
+ACC-1310,1310,Other Asset 11,asset,2024-04-01,0.0,0.0,0.0,,,,,1,1
+ACC-1311,1311,Other Asset 12,asset,2024-04-01,0.0,0.0,0.0,,,,,1,1
+ACC-1312,1312,Other Asset 13,asset,2024-04-01,0.0,0.0,0.0,,,,,1,1
+ACC-1313,1313,Other Asset 14,asset,2024-04-01,0.0,0.0,0.0,,,,,1,1
+ACC-1314,1314,Other Asset 15,asset,2024-04-01,0.0,0.0,0.0,,,,,1,1
+ACC-1315,1315,Other Asset 16,asset,2024-04-01,0.0,0.0,0.0,,,,,1,1
+ACC-1316,1316,Other Asset 17,asset,2024-04-01,0.0,0.0,0.0,,,,,1,1
+ACC-2000,2000,Liability 01,liability,2024-04-01,0.0,0.0,0.0,,,,,1,1
+ACC-2001,2001,Liability 02,liability,2024-04-01,0.0,0.0,0.0,,,,,1,1
+ACC-2002,2002,Liability 03,liability,2024-04-01,0.0,0.0,0.0,,,,,1,1
+ACC-2003,2003,Liability 04,liability,2024-04-01,0.0,0.0,0.0,,,,,1,1
+ACC-2004,2004,Liability 05,liability,2024-04-01,0.0,0.0,0.0,,,,,1,1
+ACC-2005,2005,Liability 06,liability,2024-04-01,0.0,0.0,0.0,,,,,1,1
+ACC-2006,2006,Liability 07,liability,2024-04-01,0.0,0.0,0.0,,,,,1,1
+ACC-2007,2007,Liability 08,liability,2024-04-01,0.0,0.0,0.0,,,,,1,1
+ACC-2008,2008,Liability 09,liability,2024-04-01,0.0,0.0,0.0,,,,,1,1
+ACC-2009,2009,Liability 10,liability,2024-04-01,0.0,0.0,0.0,,,,,1,1
+ACC-3000,3000,Equity 01,equity,2024-04-01,0.0,0.0,0.0,,,,,1,1
+ACC-3001,3001,Equity 02,equity,2024-04-01,0.0,0.0,0.0,,,,,1,1
+ACC-3002,3002,Equity 03,equity,2024-04-01,0.0,0.0,0.0,,,,,1,1
+ACC-4000,4000,Revenue 01,revenue,2024-04-01,0.0,0.0,0.0,,,,,1,1
+ACC-4001,4001,Revenue 02,revenue,2024-04-01,0.0,0.0,0.0,,,,,1,1
+ACC-4002,4002,Revenue 03,revenue,2024-04-01,0.0,0.0,0.0,,,,,1,1
+ACC-4003,4003,Revenue 04,revenue,2024-04-01,0.0,0.0,0.0,,,,,1,1
+ACC-4004,4004,Revenue 05,revenue,2024-04-01,0.0,0.0,0.0,,,,,1,1
+ACC-4005,4005,Revenue 06,revenue,2024-04-01,0.0,0.0,0.0,,,,,1,1
+ACC-4006,4006,Revenue 07,revenue,2024-04-01,0.0,0.0,0.0,,,,,1,1
+ACC-4007,4007,Revenue 08,revenue,2024-04-01,0.0,0.0,0.0,,,,,1,1
+ACC-4008,4008,Revenue 09,revenue,2024-04-01,0.0,0.0,0.0,,,,,1,1
+ACC-4009,4009,Revenue 10,revenue,2024-04-01,0.0,0.0,0.0,,,,,1,1
+ACC-4010,4010,Revenue 11,revenue,2024-04-01,0.0,0.0,0.0,,,,,1,1
+ACC-4011,4011,Revenue 12,revenue,2024-04-01,0.0,0.0,0.0,,,,,1,1
+ACC-4012,4012,Revenue 13,revenue,2024-04-01,0.0,0.0,0.0,,,,,1,1
+ACC-4013,4013,Revenue 14,revenue,2024-04-01,0.0,0.0,0.0,,,,,1,1
+ACC-4014,4014,Revenue 15,revenue,2024-04-01,0.0,0.0,0.0,,,,,1,1
+ACC-4015,4015,Revenue 16,revenue,2024-04-01,0.0,0.0,0.0,,,,,1,1
+ACC-4016,4016,Revenue 17,revenue,2024-04-01,0.0,0.0,0.0,,,,,1,1
+ACC-4017,4017,Revenue 18,revenue,2024-04-01,0.0,0.0,0.0,,,,,1,1
+ACC-4018,4018,Revenue 19,revenue,2024-04-01,0.0,0.0,0.0,,,,,1,1
+ACC-4019,4019,Revenue 20,revenue,2024-04-01,0.0,0.0,0.0,,,,,1,1
+ACC-5000,5000,Cost of Goods Sold 01,cogs,2024-04-01,0.0,0.0,0.0,,,,,1,1
+ACC-5001,5001,Cost of Goods Sold 02,cogs,2024-04-01,0.0,0.0,0.0,,,,,1,1
+ACC-5002,5002,Cost of Goods Sold 03,cogs,2024-04-01,0.0,0.0,0.0,,,,,1,1
+ACC-5003,5003,Cost of Goods Sold 04,cogs,2024-04-01,0.0,0.0,0.0,,,,,1,1
+ACC-5004,5004,Cost of Goods Sold 05,cogs,2024-04-01,0.0,0.0,0.0,,,,,1,1
+ACC-5005,5005,Cost of Goods Sold 06,cogs,2024-04-01,0.0,0.0,0.0,,,,,1,1
+ACC-5006,5006,Cost of Goods Sold 07,cogs,2024-04-01,0.0,0.0,0.0,,,,,1,1
+ACC-5007,5007,Cost of Goods Sold 08,cogs,2024-04-01,0.0,0.0,0.0,,,,,1,1
+ACC-5008,5008,Cost of Goods Sold 09,cogs,2024-04-01,0.0,0.0,0.0,,,,,1,1
+ACC-5009,5009,Cost of Goods Sold 10,cogs,2024-04-01,0.0,0.0,0.0,,,,,1,1
+ACC-6000,6000,Operating Expense 01,expense,2024-04-01,0.0,0.0,0.0,,,,,1,1
+ACC-6001,6001,Operating Expense 02,expense,2024-04-01,0.0,0.0,0.0,,,,,1,1
+ACC-6002,6002,Operating Expense 03,expense,2024-04-01,0.0,0.0,0.0,,,,,1,1
+ACC-6003,6003,Operating Expense 04,expense,2024-04-01,0.0,0.0,0.0,,,,,1,1
+ACC-6004,6004,Operating Expense 05,expense,2024-04-01,0.0,0.0,0.0,,,,,1,1
+ACC-6005,6005,Operating Expense 06,expense,2024-04-01,0.0,0.0,0.0,,,,,1,1
+ACC-6006,6006,Operating Expense 07,expense,2024-04-01,0.0,0.0,0.0,,,,,1,1
+ACC-6007,6007,Operating Expense 08,expense,2024-04-01,0.0,0.0,0.0,,,,,1,1
+ACC-6008,6008,Operating Expense 09,expense,2024-04-01,0.0,0.0,0.0,,,,,1,1
+ACC-6009,6009,Operating Expense 10,expense,2024-04-01,0.0,0.0,0.0,,,,,1,1
+ACC-6010,6010,Operating Expense 11,expense,2024-04-01,0.0,0.0,0.0,,,,,1,1
+ACC-6011,6011,Operating Expense 12,expense,2024-04-01,0.0,0.0,0.0,,,,,1,1
+ACC-6012,6012,Operating Expense 13,expense,2024-04-01,0.0,0.0,0.0,,,,,1,1
+ACC-6013,6013,Operating Expense 14,expense,2024-04-01,0.0,0.0,0.0,,,,,1,1
+ACC-6014,6014,Operating Expense 15,expense,2024-04-01,0.0,0.0,0.0,,,,,1,1
+ACC-6015,6015,Operating Expense 16,expense,2024-04-01,0.0,0.0,0.0,,,,,1,1
+ACC-6016,6016,Operating Expense 17,expense,2024-04-01,0.0,0.0,0.0,,,,,1,1
+ACC-6017,6017,Operating Expense 18,expense,2024-04-01,0.0,0.0,0.0,,,,,1,1
+ACC-6018,6018,Operating Expense 19,expense,2024-04-01,0.0,0.0,0.0,,,,,1,1
+ACC-6019,6019,Operating Expense 20,expense,2024-04-01,0.0,0.0,0.0,,,,,1,1
+ACC-6020,6020,Operating Expense 21,expense,2024-04-01,0.0,0.0,0.0,,,,,1,1
+ACC-6021,6021,Operating Expense 22,expense,2024-04-01,0.0,0.0,0.0,,,,,1,1
+ACC-6022,6022,Operating Expense 23,expense,2024-04-01,0.0,0.0,0.0,,,,,1,1
+ACC-6023,6023,Operating Expense 24,expense,2024-04-01,0.0,0.0,0.0,,,,,1,1
+ACC-6024,6024,Operating Expense 25,expense,2024-04-01,0.0,0.0,0.0,,,,,1,1
+ACC-6025,6025,Operating Expense 26,expense,2024-04-01,0.0,0.0,0.0,,,,,1,1
+ACC-6026,6026,Operating Expense 27,expense,2024-04-01,0.0,0.0,0.0,,,,,1,1
+ACC-6027,6027,Operating Expense 28,expense,2024-04-01,0.0,0.0,0.0,,,,,1,1
+ACC-6028,6028,Operating Expense 29,expense,2024-04-01,0.0,0.0,0.0,,,,,1,1
+ACC-6029,6029,Operating Expense 30,expense,2024-04-01,0.0,0.0,0.0,,,,,1,1
+ACC-6030,6030,Operating Expense 31,expense,2024-04-01,0.0,0.0,0.0,,,,,1,1
+ACC-6031,6031,Operating Expense 32,expense,2024-04-01,0.0,0.0,0.0,,,,,1,1
+ACC-6032,6032,Operating Expense 33,expense,2024-04-01,0.0,0.0,0.0,,,,,1,1
+ACC-6033,6033,Operating Expense 34,expense,2024-04-01,0.0,0.0,0.0,,,,,1,1
+ACC-6034,6034,Operating Expense 35,expense,2024-04-01,0.0,0.0,0.0,,,,,1,1
+ACC-6035,6035,Operating Expense 36,expense,2024-04-01,0.0,0.0,0.0,,,,,1,1
+ACC-6036,6036,Operating Expense 37,expense,2024-04-01,0.0,0.0,0.0,,,,,1,1
+ACC-6037,6037,Operating Expense 38,expense,2024-04-01,0.0,0.0,0.0,,,,,1,1
+ACC-6038,6038,Operating Expense 39,expense,2024-04-01,0.0,0.0,0.0,,,,,1,1
+ACC-6039,6039,Operating Expense 40,expense,2024-04-01,0.0,0.0,0.0,,,,,1,1
+ACC-6040,6040,Operating Expense 41,expense,2024-04-01,0.0,0.0,0.0,,,,,1,1
+ACC-6041,6041,Operating Expense 42,expense,2024-04-01,0.0,0.0,0.0,,,,,1,1
+ACC-6042,6042,Operating Expense 43,expense,2024-04-01,0.0,0.0,0.0,,,,,1,1
+ACC-6043,6043,Operating Expense 44,expense,2024-04-01,0.0,0.0,0.0,,,,,1,1
+ACC-6044,6044,Operating Expense 45,expense,2024-04-01,0.0,0.0,0.0,,,,,1,1
+ACC-6045,6045,Operating Expense 46,expense,2024-04-01,0.0,0.0,0.0,,,,,1,1
+ACC-6046,6046,Operating Expense 47,expense,2024-04-01,0.0,0.0,0.0,,,,,1,1
+ACC-6047,6047,Operating Expense 48,expense,2024-04-01,0.0,0.0,0.0,,,,,1,1
+ACC-6048,6048,Operating Expense 49,expense,2024-04-01,0.0,0.0,0.0,,,,,1,1
+ACC-6049,6049,Operating Expense 50,expense,2024-04-01,0.0,0.0,0.0,,,,,1,1
+ACC-6050,6050,Operating Expense 51,expense,2024-04-01,0.0,0.0,0.0,,,,,1,1
+ACC-6051,6051,Operating Expense 52,expense,2024-04-01,0.0,0.0,0.0,,,,,1,1
+ACC-6052,6052,Operating Expense 53,expense,2024-04-01,0.0,0.0,0.0,,,,,1,1
+ACC-6053,6053,Operating Expense 54,expense,2024-04-01,0.0,0.0,0.0,,,,,1,1
+ACC-6054,6054,Operating Expense 55,expense,2024-04-01,0.0,0.0,0.0,,,,,1,1
+ACC-6055,6055,Operating Expense 56,expense,2024-04-01,0.0,0.0,0.0,,,,,1,1
+ACC-6056,6056,Operating Expense 57,expense,2024-04-01,0.0,0.0,0.0,,,,,1,1
+ACC-1000,1000,Cash and Cash Equivalents,asset,2024-03-01,0.0,0.0,0.0,,,,,1,1
+ACC-1100,1100,Accounts Receivable,asset,2024-03-01,0.0,0.0,0.0,,,,,1,1
+ACC-1200,1200,Inventory,asset,2024-03-01,0.0,0.0,0.0,,,,,1,1
+ACC-1300,1300,Other Asset 01,asset,2024-03-01,0.0,0.0,0.0,,,,,1,1
+ACC-1301,1301,Other Asset 02,asset,2024-03-01,0.0,0.0,0.0,,,,,1,1
+ACC-1302,1302,Other Asset 03,asset,2024-03-01,0.0,0.0,0.0,,,,,1,1
+ACC-1303,1303,Other Asset 04,asset,2024-03-01,0.0,0.0,0.0,,,,,1,1
+ACC-1304,1304,Other Asset 05,asset,2024-03-01,0.0,0.0,0.0,,,,,1,1
+ACC-1305,1305,Other Asset 06,asset,2024-03-01,0.0,0.0,0.0,,,,,1,1
+ACC-1306,1306,Other Asset 07,asset,2024-03-01,0.0,0.0,0.0,,,,,1,1
+ACC-1307,1307,Other Asset 08,asset,2024-03-01,0.0,0.0,0.0,,,,,1,1
+ACC-1308,1308,Other Asset 09,asset,2024-03-01,0.0,0.0,0.0,,,,,1,1
+ACC-1309,1309,Other Asset 10,asset,2024-03-01,0.0,0.0,0.0,,,,,1,1
+ACC-1310,1310,Other Asset 11,asset,2024-03-01,0.0,0.0,0.0,,,,,1,1
+ACC-1311,1311,Other Asset 12,asset,2024-03-01,0.0,0.0,0.0,,,,,1,1
+ACC-1312,1312,Other Asset 13,asset,2024-03-01,0.0,0.0,0.0,,,,,1,1
+ACC-1313,1313,Other Asset 14,asset,2024-03-01,0.0,0.0,0.0,,,,,1,1
+ACC-1314,1314,Other Asset 15,asset,2024-03-01,0.0,0.0,0.0,,,,,1,1
+ACC-1315,1315,Other Asset 16,asset,2024-03-01,0.0,0.0,0.0,,,,,1,1
+ACC-1316,1316,Other Asset 17,asset,2024-03-01,0.0,0.0,0.0,,,,,1,1
+ACC-2000,2000,Liability 01,liability,2024-03-01,0.0,0.0,0.0,,,,,1,1
+ACC-2001,2001,Liability 02,liability,2024-03-01,0.0,0.0,0.0,,,,,1,1
+ACC-2002,2002,Liability 03,liability,2024-03-01,0.0,0.0,0.0,,,,,1,1
+ACC-2003,2003,Liability 04,liability,2024-03-01,0.0,0.0,0.0,,,,,1,1
+ACC-2004,2004,Liability 05,liability,2024-03-01,0.0,0.0,0.0,,,,,1,1
+ACC-2005,2005,Liability 06,liability,2024-03-01,0.0,0.0,0.0,,,,,1,1
+ACC-2006,2006,Liability 07,liability,2024-03-01,0.0,0.0,0.0,,,,,1,1
+ACC-2007,2007,Liability 08,liability,2024-03-01,0.0,0.0,0.0,,,,,1,1
+ACC-2008,2008,Liability 09,liability,2024-03-01,0.0,0.0,0.0,,,,,1,1
+ACC-2009,2009,Liability 10,liability,2024-03-01,0.0,0.0,0.0,,,,,1,1
+ACC-3000,3000,Equity 01,equity,2024-03-01,0.0,0.0,0.0,,,,,1,1
+ACC-3001,3001,Equity 02,equity,2024-03-01,0.0,0.0,0.0,,,,,1,1
+ACC-3002,3002,Equity 03,equity,2024-03-01,0.0,0.0,0.0,,,,,1,1
+ACC-4000,4000,Revenue 01,revenue,2024-03-01,0.0,0.0,0.0,,,,,1,1
+ACC-4001,4001,Revenue 02,revenue,2024-03-01,0.0,0.0,0.0,,,,,1,1
+ACC-4002,4002,Revenue 03,revenue,2024-03-01,0.0,0.0,0.0,,,,,1,1
+ACC-4003,4003,Revenue 04,revenue,2024-03-01,0.0,0.0,0.0,,,,,1,1
+ACC-4004,4004,Revenue 05,revenue,2024-03-01,0.0,0.0,0.0,,,,,1,1
+ACC-4005,4005,Revenue 06,revenue,2024-03-01,0.0,0.0,0.0,,,,,1,1
+ACC-4006,4006,Revenue 07,revenue,2024-03-01,0.0,0.0,0.0,,,,,1,1
+ACC-4007,4007,Revenue 08,revenue,2024-03-01,0.0,0.0,0.0,,,,,1,1
+ACC-4008,4008,Revenue 09,revenue,2024-03-01,0.0,0.0,0.0,,,,,1,1
+ACC-4009,4009,Revenue 10,revenue,2024-03-01,0.0,0.0,0.0,,,,,1,1
+ACC-4010,4010,Revenue 11,revenue,2024-03-01,0.0,0.0,0.0,,,,,1,1
+ACC-4011,4011,Revenue 12,revenue,2024-03-01,0.0,0.0,0.0,,,,,1,1
+ACC-4012,4012,Revenue 13,revenue,2024-03-01,0.0,0.0,0.0,,,,,1,1
+ACC-4013,4013,Revenue 14,revenue,2024-03-01,0.0,0.0,0.0,,,,,1,1
+ACC-4014,4014,Revenue 15,revenue,2024-03-01,0.0,0.0,0.0,,,,,1,1
+ACC-4015,4015,Revenue 16,revenue,2024-03-01,0.0,0.0,0.0,,,,,1,1
+ACC-4016,4016,Revenue 17,revenue,2024-03-01,0.0,0.0,0.0,,,,,1,1
+ACC-4017,4017,Revenue 18,revenue,2024-03-01,0.0,0.0,0.0,,,,,1,1
+ACC-4018,4018,Revenue 19,revenue,2024-03-01,0.0,0.0,0.0,,,,,1,1
+ACC-4019,4019,Revenue 20,revenue,2024-03-01,0.0,0.0,0.0,,,,,1,1
+ACC-5000,5000,Cost of Goods Sold 01,cogs,2024-03-01,0.0,0.0,0.0,,,,,1,1
+ACC-5001,5001,Cost of Goods Sold 02,cogs,2024-03-01,0.0,0.0,0.0,,,,,1,1
+ACC-5002,5002,Cost of Goods Sold 03,cogs,2024-03-01,0.0,0.0,0.0,,,,,1,1
+ACC-5003,5003,Cost of Goods Sold 04,cogs,2024-03-01,0.0,0.0,0.0,,,,,1,1
+ACC-5004,5004,Cost of Goods Sold 05,cogs,2024-03-01,0.0,0.0,0.0,,,,,1,1
+ACC-5005,5005,Cost of Goods Sold 06,cogs,2024-03-01,0.0,0.0,0.0,,,,,1,1
+ACC-5006,5006,Cost of Goods Sold 07,cogs,2024-03-01,0.0,0.0,0.0,,,,,1,1
+ACC-5007,5007,Cost of Goods Sold 08,cogs,2024-03-01,0.0,0.0,0.0,,,,,1,1
+ACC-5008,5008,Cost of Goods Sold 09,cogs,2024-03-01,0.0,0.0,0.0,,,,,1,1
+ACC-5009,5009,Cost of Goods Sold 10,cogs,2024-03-01,0.0,0.0,0.0,,,,,1,1
+ACC-6000,6000,Operating Expense 01,expense,2024-03-01,0.0,0.0,0.0,,,,,1,1
+ACC-6001,6001,Operating Expense 02,expense,2024-03-01,0.0,0.0,0.0,,,,,1,1
+ACC-6002,6002,Operating Expense 03,expense,2024-03-01,0.0,0.0,0.0,,,,,1,1
+ACC-6003,6003,Operating Expense 04,expense,2024-03-01,0.0,0.0,0.0,,,,,1,1
+ACC-6004,6004,Operating Expense 05,expense,2024-03-01,0.0,0.0,0.0,,,,,1,1
+ACC-6005,6005,Operating Expense 06,expense,2024-03-01,0.0,0.0,0.0,,,,,1,1
+ACC-6006,6006,Operating Expense 07,expense,2024-03-01,0.0,0.0,0.0,,,,,1,1
+ACC-6007,6007,Operating Expense 08,expense,2024-03-01,0.0,0.0,0.0,,,,,1,1
+ACC-6008,6008,Operating Expense 09,expense,2024-03-01,0.0,0.0,0.0,,,,,1,1
+ACC-6009,6009,Operating Expense 10,expense,2024-03-01,0.0,0.0,0.0,,,,,1,1
+ACC-6010,6010,Operating Expense 11,expense,2024-03-01,0.0,0.0,0.0,,,,,1,1
+ACC-6011,6011,Operating Expense 12,expense,2024-03-01,0.0,0.0,0.0,,,,,1,1
+ACC-6012,6012,Operating Expense 13,expense,2024-03-01,0.0,0.0,0.0,,,,,1,1
+ACC-6013,6013,Operating Expense 14,expense,2024-03-01,0.0,0.0,0.0,,,,,1,1
+ACC-6014,6014,Operating Expense 15,expense,2024-03-01,0.0,0.0,0.0,,,,,1,1
+ACC-6015,6015,Operating Expense 16,expense,2024-03-01,0.0,0.0,0.0,,,,,1,1
+ACC-6016,6016,Operating Expense 17,expense,2024-03-01,0.0,0.0,0.0,,,,,1,1
+ACC-6017,6017,Operating Expense 18,expense,2024-03-01,0.0,0.0,0.0,,,,,1,1
+ACC-6018,6018,Operating Expense 19,expense,2024-03-01,0.0,0.0,0.0,,,,,1,1
+ACC-6019,6019,Operating Expense 20,expense,2024-03-01,0.0,0.0,0.0,,,,,1,1
+ACC-6020,6020,Operating Expense 21,expense,2024-03-01,0.0,0.0,0.0,,,,,1,1
+ACC-6021,6021,Operating Expense 22,expense,2024-03-01,0.0,0.0,0.0,,,,,1,1
+ACC-6022,6022,Operating Expense 23,expense,2024-03-01,0.0,0.0,0.0,,,,,1,1
+ACC-6023,6023,Operating Expense 24,expense,2024-03-01,0.0,0.0,0.0,,,,,1,1
+ACC-6024,6024,Operating Expense 25,expense,2024-03-01,0.0,0.0,0.0,,,,,1,1
+ACC-6025,6025,Operating Expense 26,expense,2024-03-01,0.0,0.0,0.0,,,,,1,1
+ACC-6026,6026,Operating Expense 27,expense,2024-03-01,0.0,0.0,0.0,,,,,1,1
+ACC-6027,6027,Operating Expense 28,expense,2024-03-01,0.0,0.0,0.0,,,,,1,1
+ACC-6028,6028,Operating Expense 29,expense,2024-03-01,0.0,0.0,0.0,,,,,1,1
+ACC-6029,6029,Operating Expense 30,expense,2024-03-01,0.0,0.0,0.0,,,,,1,1
+ACC-6030,6030,Operating Expense 31,expense,2024-03-01,0.0,0.0,0.0,,,,,1,1
+ACC-6031,6031,Operating Expense 32,expense,2024-03-01,0.0,0.0,0.0,,,,,1,1
+ACC-6032,6032,Operating Expense 33,expense,2024-03-01,0.0,0.0,0.0,,,,,1,1
+ACC-6033,6033,Operating Expense 34,expense,2024-03-01,0.0,0.0,0.0,,,,,1,1
+ACC-6034,6034,Operating Expense 35,expense,2024-03-01,0.0,0.0,0.0,,,,,1,1
+ACC-6035,6035,Operating Expense 36,expense,2024-03-01,0.0,0.0,0.0,,,,,1,1
+ACC-6036,6036,Operating Expense 37,expense,2024-03-01,0.0,0.0,0.0,,,,,1,1
+ACC-6037,6037,Operating Expense 38,expense,2024-03-01,0.0,0.0,0.0,,,,,1,1
+ACC-6038,6038,Operating Expense 39,expense,2024-03-01,0.0,0.0,0.0,,,,,1,1
+ACC-6039,6039,Operating Expense 40,expense,2024-03-01,0.0,0.0,0.0,,,,,1,1
+ACC-6040,6040,Operating Expense 41,expense,2024-03-01,0.0,0.0,0.0,,,,,1,1
+ACC-6041,6041,Operating Expense 42,expense,2024-03-01,0.0,0.0,0.0,,,,,1,1
+ACC-6042,6042,Operating Expense 43,expense,2024-03-01,0.0,0.0,0.0,,,,,1,1
+ACC-6043,6043,Operating Expense 44,expense,2024-03-01,0.0,0.0,0.0,,,,,1,1
+ACC-6044,6044,Operating Expense 45,expense,2024-03-01,0.0,0.0,0.0,,,,,1,1
+ACC-6045,6045,Operating Expense 46,expense,2024-03-01,0.0,0.0,0.0,,,,,1,1
+ACC-6046,6046,Operating Expense 47,expense,2024-03-01,0.0,0.0,0.0,,,,,1,1
+ACC-6047,6047,Operating Expense 48,expense,2024-03-01,0.0,0.0,0.0,,,,,1,1
+ACC-6048,6048,Operating Expense 49,expense,2024-03-01,0.0,0.0,0.0,,,,,1,1
+ACC-6049,6049,Operating Expense 50,expense,2024-03-01,0.0,0.0,0.0,,,,,1,1
+ACC-6050,6050,Operating Expense 51,expense,2024-03-01,0.0,0.0,0.0,,,,,1,1
+ACC-6051,6051,Operating Expense 52,expense,2024-03-01,0.0,0.0,0.0,,,,,1,1
+ACC-6052,6052,Operating Expense 53,expense,2024-03-01,0.0,0.0,0.0,,,,,1,1
+ACC-6053,6053,Operating Expense 54,expense,2024-03-01,0.0,0.0,0.0,,,,,1,1
+ACC-6054,6054,Operating Expense 55,expense,2024-03-01,0.0,0.0,0.0,,,,,1,1
+ACC-6055,6055,Operating Expense 56,expense,2024-03-01,0.0,0.0,0.0,,,,,1,1
+ACC-6056,6056,Operating Expense 57,expense,2024-03-01,0.0,0.0,0.0,,,,,1,1
+ACC-1000,1000,Cash and Cash Equivalents,asset,2024-02-01,0.0,0.0,0.0,,,,,1,1
+ACC-1100,1100,Accounts Receivable,asset,2024-02-01,0.0,0.0,0.0,,,,,1,1
+ACC-1200,1200,Inventory,asset,2024-02-01,0.0,0.0,0.0,,,,,1,1
+ACC-1300,1300,Other Asset 01,asset,2024-02-01,0.0,0.0,0.0,,,,,1,1
+ACC-1301,1301,Other Asset 02,asset,2024-02-01,0.0,0.0,0.0,,,,,1,1
+ACC-1302,1302,Other Asset 03,asset,2024-02-01,0.0,0.0,0.0,,,,,1,1
+ACC-1303,1303,Other Asset 04,asset,2024-02-01,0.0,0.0,0.0,,,,,1,1
+ACC-1304,1304,Other Asset 05,asset,2024-02-01,0.0,0.0,0.0,,,,,1,1
+ACC-1305,1305,Other Asset 06,asset,2024-02-01,0.0,0.0,0.0,,,,,1,1
+ACC-1306,1306,Other Asset 07,asset,2024-02-01,0.0,0.0,0.0,,,,,1,1
+ACC-1307,1307,Other Asset 08,asset,2024-02-01,0.0,0.0,0.0,,,,,1,1
+ACC-1308,1308,Other Asset 09,asset,2024-02-01,0.0,0.0,0.0,,,,,1,1
+ACC-1309,1309,Other Asset 10,asset,2024-02-01,0.0,0.0,0.0,,,,,1,1
+ACC-1310,1310,Other Asset 11,asset,2024-02-01,0.0,0.0,0.0,,,,,1,1
+ACC-1311,1311,Other Asset 12,asset,2024-02-01,0.0,0.0,0.0,,,,,1,1
+ACC-1312,1312,Other Asset 13,asset,2024-02-01,0.0,0.0,0.0,,,,,1,1
+ACC-1313,1313,Other Asset 14,asset,2024-02-01,0.0,0.0,0.0,,,,,1,1
+ACC-1314,1314,Other Asset 15,asset,2024-02-01,0.0,0.0,0.0,,,,,1,1
+ACC-1315,1315,Other Asset 16,asset,2024-02-01,0.0,0.0,0.0,,,,,1,1
+ACC-1316,1316,Other Asset 17,asset,2024-02-01,0.0,0.0,0.0,,,,,1,1
+ACC-2000,2000,Liability 01,liability,2024-02-01,0.0,0.0,0.0,,,,,1,1
+ACC-2001,2001,Liability 02,liability,2024-02-01,0.0,0.0,0.0,,,,,1,1
+ACC-2002,2002,Liability 03,liability,2024-02-01,0.0,0.0,0.0,,,,,1,1
+ACC-2003,2003,Liability 04,liability,2024-02-01,0.0,0.0,0.0,,,,,1,1
+ACC-2004,2004,Liability 05,liability,2024-02-01,0.0,0.0,0.0,,,,,1,1
+ACC-2005,2005,Liability 06,liability,2024-02-01,0.0,0.0,0.0,,,,,1,1
+ACC-2006,2006,Liability 07,liability,2024-02-01,0.0,0.0,0.0,,,,,1,1
+ACC-2007,2007,Liability 08,liability,2024-02-01,0.0,0.0,0.0,,,,,1,1
+ACC-2008,2008,Liability 09,liability,2024-02-01,0.0,0.0,0.0,,,,,1,1
+ACC-2009,2009,Liability 10,liability,2024-02-01,0.0,0.0,0.0,,,,,1,1
+ACC-3000,3000,Equity 01,equity,2024-02-01,0.0,0.0,0.0,,,,,1,1
+ACC-3001,3001,Equity 02,equity,2024-02-01,0.0,0.0,0.0,,,,,1,1
+ACC-3002,3002,Equity 03,equity,2024-02-01,0.0,0.0,0.0,,,,,1,1
+ACC-4000,4000,Revenue 01,revenue,2024-02-01,0.0,0.0,0.0,,,,,1,1
+ACC-4001,4001,Revenue 02,revenue,2024-02-01,0.0,0.0,0.0,,,,,1,1
+ACC-4002,4002,Revenue 03,revenue,2024-02-01,0.0,0.0,0.0,,,,,1,1
+ACC-4003,4003,Revenue 04,revenue,2024-02-01,0.0,0.0,0.0,,,,,1,1
+ACC-4004,4004,Revenue 05,revenue,2024-02-01,0.0,0.0,0.0,,,,,1,1
+ACC-4005,4005,Revenue 06,revenue,2024-02-01,0.0,0.0,0.0,,,,,1,1
+ACC-4006,4006,Revenue 07,revenue,2024-02-01,0.0,0.0,0.0,,,,,1,1
+ACC-4007,4007,Revenue 08,revenue,2024-02-01,0.0,0.0,0.0,,,,,1,1
+ACC-4008,4008,Revenue 09,revenue,2024-02-01,0.0,0.0,0.0,,,,,1,1
+ACC-4009,4009,Revenue 10,revenue,2024-02-01,0.0,0.0,0.0,,,,,1,1
+ACC-4010,4010,Revenue 11,revenue,2024-02-01,0.0,0.0,0.0,,,,,1,1
+ACC-4011,4011,Revenue 12,revenue,2024-02-01,0.0,0.0,0.0,,,,,1,1
+ACC-4012,4012,Revenue 13,revenue,2024-02-01,0.0,0.0,0.0,,,,,1,1
+ACC-4013,4013,Revenue 14,revenue,2024-02-01,0.0,0.0,0.0,,,,,1,1
+ACC-4014,4014,Revenue 15,revenue,2024-02-01,0.0,0.0,0.0,,,,,1,1
+ACC-4015,4015,Revenue 16,revenue,2024-02-01,0.0,0.0,0.0,,,,,1,1
+ACC-4016,4016,Revenue 17,revenue,2024-02-01,0.0,0.0,0.0,,,,,1,1
+ACC-4017,4017,Revenue 18,revenue,2024-02-01,0.0,0.0,0.0,,,,,1,1
+ACC-4018,4018,Revenue 19,revenue,2024-02-01,0.0,0.0,0.0,,,,,1,1
+ACC-4019,4019,Revenue 20,revenue,2024-02-01,0.0,0.0,0.0,,,,,1,1
+ACC-5000,5000,Cost of Goods Sold 01,cogs,2024-02-01,0.0,0.0,0.0,,,,,1,1
+ACC-5001,5001,Cost of Goods Sold 02,cogs,2024-02-01,0.0,0.0,0.0,,,,,1,1
+ACC-5002,5002,Cost of Goods Sold 03,cogs,2024-02-01,0.0,0.0,0.0,,,,,1,1
+ACC-5003,5003,Cost of Goods Sold 04,cogs,2024-02-01,0.0,0.0,0.0,,,,,1,1
+ACC-5004,5004,Cost of Goods Sold 05,cogs,2024-02-01,0.0,0.0,0.0,,,,,1,1
+ACC-5005,5005,Cost of Goods Sold 06,cogs,2024-02-01,0.0,0.0,0.0,,,,,1,1
+ACC-5006,5006,Cost of Goods Sold 07,cogs,2024-02-01,0.0,0.0,0.0,,,,,1,1
+ACC-5007,5007,Cost of Goods Sold 08,cogs,2024-02-01,0.0,0.0,0.0,,,,,1,1
+ACC-5008,5008,Cost of Goods Sold 09,cogs,2024-02-01,0.0,0.0,0.0,,,,,1,1
+ACC-5009,5009,Cost of Goods Sold 10,cogs,2024-02-01,0.0,0.0,0.0,,,,,1,1
+ACC-6000,6000,Operating Expense 01,expense,2024-02-01,0.0,0.0,0.0,,,,,1,1
+ACC-6001,6001,Operating Expense 02,expense,2024-02-01,0.0,0.0,0.0,,,,,1,1
+ACC-6002,6002,Operating Expense 03,expense,2024-02-01,0.0,0.0,0.0,,,,,1,1
+ACC-6003,6003,Operating Expense 04,expense,2024-02-01,0.0,0.0,0.0,,,,,1,1
+ACC-6004,6004,Operating Expense 05,expense,2024-02-01,0.0,0.0,0.0,,,,,1,1
+ACC-6005,6005,Operating Expense 06,expense,2024-02-01,0.0,0.0,0.0,,,,,1,1
+ACC-6006,6006,Operating Expense 07,expense,2024-02-01,0.0,0.0,0.0,,,,,1,1
+ACC-6007,6007,Operating Expense 08,expense,2024-02-01,0.0,0.0,0.0,,,,,1,1
+ACC-6008,6008,Operating Expense 09,expense,2024-02-01,0.0,0.0,0.0,,,,,1,1
+ACC-6009,6009,Operating Expense 10,expense,2024-02-01,0.0,0.0,0.0,,,,,1,1
+ACC-6010,6010,Operating Expense 11,expense,2024-02-01,0.0,0.0,0.0,,,,,1,1
+ACC-6011,6011,Operating Expense 12,expense,2024-02-01,0.0,0.0,0.0,,,,,1,1
+ACC-6012,6012,Operating Expense 13,expense,2024-02-01,0.0,0.0,0.0,,,,,1,1
+ACC-6013,6013,Operating Expense 14,expense,2024-02-01,0.0,0.0,0.0,,,,,1,1
+ACC-6014,6014,Operating Expense 15,expense,2024-02-01,0.0,0.0,0.0,,,,,1,1
+ACC-6015,6015,Operating Expense 16,expense,2024-02-01,0.0,0.0,0.0,,,,,1,1
+ACC-6016,6016,Operating Expense 17,expense,2024-02-01,0.0,0.0,0.0,,,,,1,1
+ACC-6017,6017,Operating Expense 18,expense,2024-02-01,0.0,0.0,0.0,,,,,1,1
+ACC-6018,6018,Operating Expense 19,expense,2024-02-01,0.0,0.0,0.0,,,,,1,1
+ACC-6019,6019,Operating Expense 20,expense,2024-02-01,0.0,0.0,0.0,,,,,1,1
+ACC-6020,6020,Operating Expense 21,expense,2024-02-01,0.0,0.0,0.0,,,,,1,1
+ACC-6021,6021,Operating Expense 22,expense,2024-02-01,0.0,0.0,0.0,,,,,1,1
+ACC-6022,6022,Operating Expense 23,expense,2024-02-01,0.0,0.0,0.0,,,,,1,1
+ACC-6023,6023,Operating Expense 24,expense,2024-02-01,0.0,0.0,0.0,,,,,1,1
+ACC-6024,6024,Operating Expense 25,expense,2024-02-01,0.0,0.0,0.0,,,,,1,1
+ACC-6025,6025,Operating Expense 26,expense,2024-02-01,0.0,0.0,0.0,,,,,1,1
+ACC-6026,6026,Operating Expense 27,expense,2024-02-01,0.0,0.0,0.0,,,,,1,1
+ACC-6027,6027,Operating Expense 28,expense,2024-02-01,0.0,0.0,0.0,,,,,1,1
+ACC-6028,6028,Operating Expense 29,expense,2024-02-01,0.0,0.0,0.0,,,,,1,1
+ACC-6029,6029,Operating Expense 30,expense,2024-02-01,0.0,0.0,0.0,,,,,1,1
+ACC-6030,6030,Operating Expense 31,expense,2024-02-01,0.0,0.0,0.0,,,,,1,1
+ACC-6031,6031,Operating Expense 32,expense,2024-02-01,0.0,0.0,0.0,,,,,1,1
+ACC-6032,6032,Operating Expense 33,expense,2024-02-01,0.0,0.0,0.0,,,,,1,1
+ACC-6033,6033,Operating Expense 34,expense,2024-02-01,0.0,0.0,0.0,,,,,1,1
+ACC-6034,6034,Operating Expense 35,expense,2024-02-01,0.0,0.0,0.0,,,,,1,1
+ACC-6035,6035,Operating Expense 36,expense,2024-02-01,0.0,0.0,0.0,,,,,1,1
+ACC-6036,6036,Operating Expense 37,expense,2024-02-01,0.0,0.0,0.0,,,,,1,1
+ACC-6037,6037,Operating Expense 38,expense,2024-02-01,0.0,0.0,0.0,,,,,1,1
+ACC-6038,6038,Operating Expense 39,expense,2024-02-01,0.0,0.0,0.0,,,,,1,1
+ACC-6039,6039,Operating Expense 40,expense,2024-02-01,0.0,0.0,0.0,,,,,1,1
+ACC-6040,6040,Operating Expense 41,expense,2024-02-01,0.0,0.0,0.0,,,,,1,1
+ACC-6041,6041,Operating Expense 42,expense,2024-02-01,0.0,0.0,0.0,,,,,1,1
+ACC-6042,6042,Operating Expense 43,expense,2024-02-01,0.0,0.0,0.0,,,,,1,1
+ACC-6043,6043,Operating Expense 44,expense,2024-02-01,0.0,0.0,0.0,,,,,1,1
+ACC-6044,6044,Operating Expense 45,expense,2024-02-01,0.0,0.0,0.0,,,,,1,1
+ACC-6045,6045,Operating Expense 46,expense,2024-02-01,0.0,0.0,0.0,,,,,1,1
+ACC-6046,6046,Operating Expense 47,expense,2024-02-01,0.0,0.0,0.0,,,,,1,1
+ACC-6047,6047,Operating Expense 48,expense,2024-02-01,0.0,0.0,0.0,,,,,1,1
+ACC-6048,6048,Operating Expense 49,expense,2024-02-01,0.0,0.0,0.0,,,,,1,1
+ACC-6049,6049,Operating Expense 50,expense,2024-02-01,0.0,0.0,0.0,,,,,1,1
+ACC-6050,6050,Operating Expense 51,expense,2024-02-01,0.0,0.0,0.0,,,,,1,1
+ACC-6051,6051,Operating Expense 52,expense,2024-02-01,0.0,0.0,0.0,,,,,1,1
+ACC-6052,6052,Operating Expense 53,expense,2024-02-01,0.0,0.0,0.0,,,,,1,1
+ACC-6053,6053,Operating Expense 54,expense,2024-02-01,0.0,0.0,0.0,,,,,1,1
+ACC-6054,6054,Operating Expense 55,expense,2024-02-01,0.0,0.0,0.0,,,,,1,1
+ACC-6055,6055,Operating Expense 56,expense,2024-02-01,0.0,0.0,0.0,,,,,1,1
+ACC-6056,6056,Operating Expense 57,expense,2024-02-01,0.0,0.0,0.0,,,,,1,1
+ACC-1000,1000,Cash and Cash Equivalents,asset,2024-01-01,0.0,,,,,,,1,1
+ACC-1100,1100,Accounts Receivable,asset,2024-01-01,0.0,,,,,,,1,1
+ACC-1200,1200,Inventory,asset,2024-01-01,0.0,,,,,,,1,1
+ACC-1300,1300,Other Asset 01,asset,2024-01-01,0.0,,,,,,,1,1
+ACC-1301,1301,Other Asset 02,asset,2024-01-01,0.0,,,,,,,1,1
+ACC-1302,1302,Other Asset 03,asset,2024-01-01,0.0,,,,,,,1,1
+ACC-1303,1303,Other Asset 04,asset,2024-01-01,0.0,,,,,,,1,1
+ACC-1304,1304,Other Asset 05,asset,2024-01-01,0.0,,,,,,,1,1
+ACC-1305,1305,Other Asset 06,asset,2024-01-01,0.0,,,,,,,1,1
+ACC-1306,1306,Other Asset 07,asset,2024-01-01,0.0,,,,,,,1,1
+ACC-1307,1307,Other Asset 08,asset,2024-01-01,0.0,,,,,,,1,1
+ACC-1308,1308,Other Asset 09,asset,2024-01-01,0.0,,,,,,,1,1
+ACC-1309,1309,Other Asset 10,asset,2024-01-01,0.0,,,,,,,1,1
+ACC-1310,1310,Other Asset 11,asset,2024-01-01,0.0,,,,,,,1,1
+ACC-1311,1311,Other Asset 12,asset,2024-01-01,0.0,,,,,,,1,1
+ACC-1312,1312,Other Asset 13,asset,2024-01-01,0.0,,,,,,,1,1
+ACC-1313,1313,Other Asset 14,asset,2024-01-01,0.0,,,,,,,1,1
+ACC-1314,1314,Other Asset 15,asset,2024-01-01,0.0,,,,,,,1,1
+ACC-1315,1315,Other Asset 16,asset,2024-01-01,0.0,,,,,,,1,1
+ACC-1316,1316,Other Asset 17,asset,2024-01-01,0.0,,,,,,,1,1
+ACC-2000,2000,Liability 01,liability,2024-01-01,0.0,,,,,,,1,1
+ACC-2001,2001,Liability 02,liability,2024-01-01,0.0,,,,,,,1,1
+ACC-2002,2002,Liability 03,liability,2024-01-01,0.0,,,,,,,1,1
+ACC-2003,2003,Liability 04,liability,2024-01-01,0.0,,,,,,,1,1
+ACC-2004,2004,Liability 05,liability,2024-01-01,0.0,,,,,,,1,1
+ACC-2005,2005,Liability 06,liability,2024-01-01,0.0,,,,,,,1,1
+ACC-2006,2006,Liability 07,liability,2024-01-01,0.0,,,,,,,1,1
+ACC-2007,2007,Liability 08,liability,2024-01-01,0.0,,,,,,,1,1
+ACC-2008,2008,Liability 09,liability,2024-01-01,0.0,,,,,,,1,1
+ACC-2009,2009,Liability 10,liability,2024-01-01,0.0,,,,,,,1,1
+ACC-3000,3000,Equity 01,equity,2024-01-01,0.0,,,,,,,1,1
+ACC-3001,3001,Equity 02,equity,2024-01-01,0.0,,,,,,,1,1
+ACC-3002,3002,Equity 03,equity,2024-01-01,0.0,,,,,,,1,1
+ACC-4000,4000,Revenue 01,revenue,2024-01-01,0.0,,,,,,,1,1
+ACC-4001,4001,Revenue 02,revenue,2024-01-01,0.0,,,,,,,1,1
+ACC-4002,4002,Revenue 03,revenue,2024-01-01,0.0,,,,,,,1,1
+ACC-4003,4003,Revenue 04,revenue,2024-01-01,0.0,,,,,,,1,1
+ACC-4004,4004,Revenue 05,revenue,2024-01-01,0.0,,,,,,,1,1
+ACC-4005,4005,Revenue 06,revenue,2024-01-01,0.0,,,,,,,1,1
+ACC-4006,4006,Revenue 07,revenue,2024-01-01,0.0,,,,,,,1,1
+ACC-4007,4007,Revenue 08,revenue,2024-01-01,0.0,,,,,,,1,1
+ACC-4008,4008,Revenue 09,revenue,2024-01-01,0.0,,,,,,,1,1
+ACC-4009,4009,Revenue 10,revenue,2024-01-01,0.0,,,,,,,1,1
+ACC-4010,4010,Revenue 11,revenue,2024-01-01,0.0,,,,,,,1,1
+ACC-4011,4011,Revenue 12,revenue,2024-01-01,0.0,,,,,,,1,1
+ACC-4012,4012,Revenue 13,revenue,2024-01-01,0.0,,,,,,,1,1
+ACC-4013,4013,Revenue 14,revenue,2024-01-01,0.0,,,,,,,1,1
+ACC-4014,4014,Revenue 15,revenue,2024-01-01,0.0,,,,,,,1,1
+ACC-4015,4015,Revenue 16,revenue,2024-01-01,0.0,,,,,,,1,1
+ACC-4016,4016,Revenue 17,revenue,2024-01-01,0.0,,,,,,,1,1
+ACC-4017,4017,Revenue 18,revenue,2024-01-01,0.0,,,,,,,1,1
+ACC-4018,4018,Revenue 19,revenue,2024-01-01,0.0,,,,,,,1,1
+ACC-4019,4019,Revenue 20,revenue,2024-01-01,0.0,,,,,,,1,1
+ACC-5000,5000,Cost of Goods Sold 01,cogs,2024-01-01,0.0,,,,,,,1,1
+ACC-5001,5001,Cost of Goods Sold 02,cogs,2024-01-01,0.0,,,,,,,1,1
+ACC-5002,5002,Cost of Goods Sold 03,cogs,2024-01-01,0.0,,,,,,,1,1
+ACC-5003,5003,Cost of Goods Sold 04,cogs,2024-01-01,0.0,,,,,,,1,1
+ACC-5004,5004,Cost of Goods Sold 05,cogs,2024-01-01,0.0,,,,,,,1,1
+ACC-5005,5005,Cost of Goods Sold 06,cogs,2024-01-01,0.0,,,,,,,1,1
+ACC-5006,5006,Cost of Goods Sold 07,cogs,2024-01-01,0.0,,,,,,,1,1
+ACC-5007,5007,Cost of Goods Sold 08,cogs,2024-01-01,0.0,,,,,,,1,1
+ACC-5008,5008,Cost of Goods Sold 09,cogs,2024-01-01,0.0,,,,,,,1,1
+ACC-5009,5009,Cost of Goods Sold 10,cogs,2024-01-01,0.0,,,,,,,1,1
+ACC-6000,6000,Operating Expense 01,expense,2024-01-01,0.0,,,,,,,1,1
+ACC-6001,6001,Operating Expense 02,expense,2024-01-01,0.0,,,,,,,1,1
+ACC-6002,6002,Operating Expense 03,expense,2024-01-01,0.0,,,,,,,1,1
+ACC-6003,6003,Operating Expense 04,expense,2024-01-01,0.0,,,,,,,1,1
+ACC-6004,6004,Operating Expense 05,expense,2024-01-01,0.0,,,,,,,1,1
+ACC-6005,6005,Operating Expense 06,expense,2024-01-01,0.0,,,,,,,1,1
+ACC-6006,6006,Operating Expense 07,expense,2024-01-01,0.0,,,,,,,1,1
+ACC-6007,6007,Operating Expense 08,expense,2024-01-01,0.0,,,,,,,1,1
+ACC-6008,6008,Operating Expense 09,expense,2024-01-01,0.0,,,,,,,1,1
+ACC-6009,6009,Operating Expense 10,expense,2024-01-01,0.0,,,,,,,1,1
+ACC-6010,6010,Operating Expense 11,expense,2024-01-01,0.0,,,,,,,1,1
+ACC-6011,6011,Operating Expense 12,expense,2024-01-01,0.0,,,,,,,1,1
+ACC-6012,6012,Operating Expense 13,expense,2024-01-01,0.0,,,,,,,1,1
+ACC-6013,6013,Operating Expense 14,expense,2024-01-01,0.0,,,,,,,1,1
+ACC-6014,6014,Operating Expense 15,expense,2024-01-01,0.0,,,,,,,1,1
+ACC-6015,6015,Operating Expense 16,expense,2024-01-01,0.0,,,,,,,1,1
+ACC-6016,6016,Operating Expense 17,expense,2024-01-01,0.0,,,,,,,1,1
+ACC-6017,6017,Operating Expense 18,expense,2024-01-01,0.0,,,,,,,1,1
+ACC-6018,6018,Operating Expense 19,expense,2024-01-01,0.0,,,,,,,1,1
+ACC-6019,6019,Operating Expense 20,expense,2024-01-01,0.0,,,,,,,1,1
+ACC-6020,6020,Operating Expense 21,expense,2024-01-01,0.0,,,,,,,1,1
+ACC-6021,6021,Operating Expense 22,expense,2024-01-01,0.0,,,,,,,1,1
+ACC-6022,6022,Operating Expense 23,expense,2024-01-01,0.0,,,,,,,1,1
+ACC-6023,6023,Operating Expense 24,expense,2024-01-01,0.0,,,,,,,1,1
+ACC-6024,6024,Operating Expense 25,expense,2024-01-01,0.0,,,,,,,1,1
+ACC-6025,6025,Operating Expense 26,expense,2024-01-01,0.0,,,,,,,1,1
+ACC-6026,6026,Operating Expense 27,expense,2024-01-01,0.0,,,,,,,1,1
+ACC-6027,6027,Operating Expense 28,expense,2024-01-01,0.0,,,,,,,1,1
+ACC-6028,6028,Operating Expense 29,expense,2024-01-01,0.0,,,,,,,1,1
+ACC-6029,6029,Operating Expense 30,expense,2024-01-01,0.0,,,,,,,1,1
+ACC-6030,6030,Operating Expense 31,expense,2024-01-01,0.0,,,,,,,1,1
+ACC-6031,6031,Operating Expense 32,expense,2024-01-01,0.0,,,,,,,1,1
+ACC-6032,6032,Operating Expense 33,expense,2024-01-01,0.0,,,,,,,1,1
+ACC-6033,6033,Operating Expense 34,expense,2024-01-01,0.0,,,,,,,1,1
+ACC-6034,6034,Operating Expense 35,expense,2024-01-01,0.0,,,,,,,1,1
+ACC-6035,6035,Operating Expense 36,expense,2024-01-01,0.0,,,,,,,1,1
+ACC-6036,6036,Operating Expense 37,expense,2024-01-01,0.0,,,,,,,1,1
+ACC-6037,6037,Operating Expense 38,expense,2024-01-01,0.0,,,,,,,1,1
+ACC-6038,6038,Operating Expense 39,expense,2024-01-01,0.0,,,,,,,1,1
+ACC-6039,6039,Operating Expense 40,expense,2024-01-01,0.0,,,,,,,1,1
+ACC-6040,6040,Operating Expense 41,expense,2024-01-01,0.0,,,,,,,1,1
+ACC-6041,6041,Operating Expense 42,expense,2024-01-01,0.0,,,,,,,1,1
+ACC-6042,6042,Operating Expense 43,expense,2024-01-01,0.0,,,,,,,1,1
+ACC-6043,6043,Operating Expense 44,expense,2024-01-01,0.0,,,,,,,1,1
+ACC-6044,6044,Operating Expense 45,expense,2024-01-01,0.0,,,,,,,1,1
+ACC-6045,6045,Operating Expense 46,expense,2024-01-01,0.0,,,,,,,1,1
+ACC-6046,6046,Operating Expense 47,expense,2024-01-01,0.0,,,,,,,1,1
+ACC-6047,6047,Operating Expense 48,expense,2024-01-01,0.0,,,,,,,1,1
+ACC-6048,6048,Operating Expense 49,expense,2024-01-01,0.0,,,,,,,1,1
+ACC-6049,6049,Operating Expense 50,expense,2024-01-01,0.0,,,,,,,1,1
+ACC-6050,6050,Operating Expense 51,expense,2024-01-01,0.0,,,,,,,1,1
+ACC-6051,6051,Operating Expense 52,expense,2024-01-01,0.0,,,,,,,1,1
+ACC-6052,6052,Operating Expense 53,expense,2024-01-01,0.0,,,,,,,1,1
+ACC-6053,6053,Operating Expense 54,expense,2024-01-01,0.0,,,,,,,1,1
+ACC-6054,6054,Operating Expense 55,expense,2024-01-01,0.0,,,,,,,1,1
+ACC-6055,6055,Operating Expense 56,expense,2024-01-01,0.0,,,,,,,1,1
+ACC-6056,6056,Operating Expense 57,expense,2024-01-01,0.0,,,,,,,1,1

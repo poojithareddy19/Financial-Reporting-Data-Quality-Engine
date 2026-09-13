@@ -1,0 +1,29 @@
+repos:
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.6.9
+    hooks:
+      - id: ruff
+        args: [--fix]
+      - id: ruff-format
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v5.0.0
+    hooks:
+      - id: check-yaml
+      - id: end-of-file-fixer
+      - id: trailing-whitespace
+      - id: detect-private-key
+      - id: check-added-large-files
+        args: [--maxkb=2000]
+  - repo: local
+    hooks:
+      - id: mypy
+        name: mypy (strict)
+        entry: .venv/bin/mypy
+        language: system
+        pass_filenames: false
+        files: ^src/
+      - id: no-hardcoded-credentials
+        name: no hard-coded credentials outside local config
+        entry: bash -c 'if grep -rnE "(AKIA[0-9A-Z]{16}|aws_secret_access_key\s*=|password\s*=\s*\"[^\"]{6,}\")" src infra scripts --include="*.py"; then echo "credential-looking string found"; exit 1; fi'
+        language: system
+        pass_filenames: false

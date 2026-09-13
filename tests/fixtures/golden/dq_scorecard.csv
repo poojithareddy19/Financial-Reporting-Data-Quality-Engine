@@ -1,0 +1,18 @@
+rule_id,description,owner,dimension,severity,runs,passes,fails,errors,run_pass_rate_pct,rows_checked,rows_failed,row_pass_rate_pct,last_failed_on,dimension_fails,severity_fails,window_start,window_end
+DQ-015,FX rate must resolve for every row (unknown currency or missing rate),treasury@example.com,consistency,blocking,8,4,4,0,50.0,2324.0,7.0,99.6988,2025-01-07,7.0,17.0,2025-01-01,2025-01-08
+DQ-003,amount_local must be present,finance-ops@example.com,completeness,blocking,8,5,3,0,62.5,2324.0,3.0,99.8709,2025-01-06,8.0,17.0,2025-01-01,2025-01-08
+DQ-006,currency must be one of the governed ISO codes,treasury@example.com,validity,blocking,8,5,3,0,62.5,2324.0,3.0,99.8709,2025-01-07,5.0,17.0,2025-01-01,2025-01-08
+DQ-002,posted_date must be present,finance-ops@example.com,completeness,blocking,8,6,2,0,75.0,2324.0,3.0,99.8709,2025-01-07,8.0,17.0,2025-01-01,2025-01-08
+DQ-008,posted_date must be between 2000-01-01 and the day after the run date,finance-ops@example.com,validity,blocking,8,6,2,0,75.0,2324.0,2.0,99.9139,2025-01-03,5.0,17.0,2025-01-01,2025-01-08
+DQ-001,transaction_id must be present on every row,data-platform@example.com,completeness,blocking,8,7,1,0,87.5,2324.0,2.0,99.9139,2025-01-06,8.0,17.0,2025-01-01,2025-01-08
+DQ-010,account_id must exist in dim_account,finance-ops@example.com,consistency,blocking,8,7,1,0,87.5,2324.0,1.0,99.957,2025-01-07,7.0,17.0,2025-01-01,2025-01-08
+DQ-011,entity_id must exist in dim_entity,finance-ops@example.com,consistency,blocking,8,7,1,0,87.5,2324.0,1.0,99.957,2025-01-03,7.0,17.0,2025-01-01,2025-01-08
+DQ-005,transaction_id must be unique within the batch after deduplication,data-platform@example.com,uniqueness,blocking,8,8,0,0,100.0,2324.0,0.0,100.0,,0.0,17.0,2025-01-01,2025-01-08
+DQ-013,the newest posted_date in the batch must be within N days of the run date,data-platform@example.com,timeliness,info,8,8,0,0,100.0,8.0,0.0,100.0,,0.0,0.0,2025-01-01,2025-01-08
+DQ-017,description should not be blank,finance-ops@example.com,completeness,info,8,8,0,0,100.0,2324.0,0.0,100.0,,8.0,0.0,2025-01-01,2025-01-08
+DQ-014,batch row count must be within tolerance of the prior batch,data-platform@example.com,completeness,warning,8,6,2,0,75.0,8.0,2.0,75.0,2025-01-06,8.0,4.0,2025-01-01,2025-01-08
+DQ-012,customer_id should exist in dim_customer (current version),sales-ops@example.com,consistency,warning,8,7,1,0,87.5,2324.0,1.0,99.957,2025-01-06,7.0,4.0,2025-01-01,2025-01-08
+DQ-016,"credit-normal accounts (revenue, liability, equity) must not carry positive debit amounts on sale events",finance-ops@example.com,accuracy,warning,8,7,1,0,87.5,2324.0,1.0,99.957,2025-01-05,1.0,4.0,2025-01-01,2025-01-08
+DQ-004,customer_id should be present on sale and payment events,finance-ops@example.com,completeness,warning,8,8,0,0,100.0,2324.0,0.0,100.0,,8.0,4.0,2025-01-01,2025-01-08
+DQ-007,transaction_id must follow the TXN-<12 digits> pattern,data-platform@example.com,validity,warning,8,8,0,0,100.0,2324.0,0.0,100.0,,5.0,4.0,2025-01-01,2025-01-08
+DQ-009,amount_local must be within plausible bounds,finance-ops@example.com,accuracy,warning,8,8,0,0,100.0,2324.0,0.0,100.0,,1.0,4.0,2025-01-01,2025-01-08

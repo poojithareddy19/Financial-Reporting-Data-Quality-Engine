@@ -1,0 +1,13 @@
+-- 001: schemas and migration bookkeeping
+CREATE SCHEMA IF NOT EXISTS meta;
+CREATE SCHEMA IF NOT EXISTS raw;
+CREATE SCHEMA IF NOT EXISTS staging;
+CREATE SCHEMA IF NOT EXISTS curated;
+CREATE SCHEMA IF NOT EXISTS dq;
+CREATE SCHEMA IF NOT EXISTS governance;
+
+CREATE TABLE IF NOT EXISTS meta.schema_version (
+    version     TEXT PRIMARY KEY,
+    applied_at  TIMESTAMPTZ NOT NULL DEFAULT now(),
+    checksum    TEXT NOT NULL
+);

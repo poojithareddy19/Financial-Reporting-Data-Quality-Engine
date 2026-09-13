@@ -1,0 +1,65 @@
+                                                                                                                        QUERY PLAN                                                                                                                        
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Sort  (cost=9166.23..9179.43 rows=5280 width=346) (actual time=70.574..70.635 rows=1560 loops=1)
+   Sort Key: lagged.month_start DESC, (rank() OVER (?)), lagged.account_code
+   Sort Method: quicksort  Memory: 241kB
+   Buffers: shared hit=2346
+   ->  WindowAgg  (cost=8047.80..8839.76 rows=5280 width=346) (actual time=65.260..68.245 rows=1560 loops=1)
+         Buffers: shared hit=2343
+         ->  Incremental Sort  (cost=8047.80..8443.76 rows=5280 width=210) (actual time=65.250..66.673 rows=1560 loops=1)
+               Sort Key: lagged.month_start, (abs(COALESCE((lagged.net_usd - lagged.prior_month_usd), '0'::numeric))) DESC
+               Presorted Key: lagged.month_start
+               Full-sort Groups: 13  Sort Method: quicksort  Average Memory: 30kB  Peak Memory: 30kB
+               Pre-sorted Groups: 13  Sort Method: quicksort  Average Memory: 35kB  Peak Memory: 35kB
+               Buffers: shared hit=2343
+               ->  WindowAgg  (cost=8047.76..8206.16 rows=5280 width=210) (actual time=65.124..65.912 rows=1560 loops=1)
+                     Buffers: shared hit=2340
+                     ->  Sort  (cost=8047.76..8060.96 rows=5280 width=202) (actual time=65.118..65.191 rows=1560 loops=1)
+                           Sort Key: lagged.month_start, (abs(COALESCE((lagged.net_usd - lagged.prior_year_usd), '0'::numeric))) DESC
+                           Sort Method: quicksort  Memory: 185kB
+                           Buffers: shared hit=2340
+                           ->  Subquery Scan on lagged  (cost=6800.81..7721.29 rows=5280 width=202) (actual time=59.927..64.204 rows=1560 loops=1)
+                                 Filter: (lagged.month_start >= ((date_trunc('month'::text, ('2024-11-30'::date)::timestamp with time zone) - '1 year'::interval))::date)
+                                 Rows Removed by Filter: 1440
+                                 Buffers: shared hit=2340
+                                 ->  WindowAgg  (cost=6800.81..7312.09 rows=15840 width=138) (actual time=59.895..62.702 rows=3000 loops=1)
+                                       Buffers: shared hit=2340
+                                       ->  Merge Left Join  (cost=6800.81..6995.29 rows=15840 width=74) (actual time=59.880..60.658 rows=3000 loops=1)
+                                             Merge Cond: ((a.account_id = x.account_id) AND (dim_date.month_start = x.month_start))
+                                             Buffers: shared hit=2340
+                                             ->  Sort  (cost=1347.17..1386.77 rows=15840 width=42) (actual time=3.407..3.550 rows=3000 loops=1)
+                                                   Sort Key: a.account_id, dim_date.month_start
+                                                   Sort Method: quicksort  Memory: 300kB
+                                                   Buffers: shared hit=13
+                                                   ->  Nested Loop  (cost=39.41..242.23 rows=15840 width=42) (actual time=0.237..0.678 rows=3000 loops=1)
+                                                         Buffers: shared hit=13
+                                                         ->  HashAggregate  (cost=39.41..40.73 rows=132 width=4) (actual time=0.226..0.231 rows=25 loops=1)
+                                                               Group Key: dim_date.month_start
+                                                               Batches: 1  Memory Usage: 40kB
+                                                               Buffers: shared hit=11
+                                                               ->  Index Scan using dim_date_calendar_date_key on dim_date  (cost=0.29..37.51 rows=761 width=4) (actual time=0.017..0.125 rows=761 loops=1)
+                                                                     Index Cond: ((calendar_date >= ((date_trunc('month'::text, ('2024-11-30'::date)::timestamp with time zone) - '2 years'::interval))::date) AND (calendar_date <= '2024-11-30'::date))
+                                                                     Buffers: shared hit=11
+                                                         ->  Materialize  (cost=0.00..3.80 rows=120 width=38) (actual time=0.000..0.007 rows=120 loops=25)
+                                                               Buffers: shared hit=2
+                                                               ->  Seq Scan on dim_account a  (cost=0.00..3.20 rows=120 width=38) (actual time=0.006..0.017 rows=120 loops=1)
+                                                                     Buffers: shared hit=2
+                                             ->  Sort  (cost=5453.63..5470.14 rows=6604 width=45) (actual time=56.465..56.485 rows=354 loops=1)
+                                                   Sort Key: x.account_id, x.month_start
+                                                   Sort Method: quicksort  Memory: 41kB
+                                                   Buffers: shared hit=2327
+                                                   ->  Subquery Scan on x  (cost=4803.50..5034.64 rows=6604 width=45) (actual time=56.050..56.251 rows=354 loops=1)
+                                                         Buffers: shared hit=2327
+                                                         ->  HashAggregate  (cost=4803.50..4968.60 rows=6604 width=53) (actual time=56.049..56.224 rows=354 loops=1)
+                                                               Group Key: f.account_id, date_trunc('month'::text, (f.posted_date)::timestamp with time zone)
+                                                               Batches: 1  Memory Usage: 465kB
+                                                               Buffers: shared hit=2327
+                                                               ->  Seq Scan on fact_transactions f  (cost=0.00..4308.20 rows=66040 width=27) (actual time=0.016..41.965 rows=66040 loops=1)
+                                                                     Filter: ((posted_date <= '2024-11-30'::date) AND (posted_date >= ((date_trunc('month'::text, ('2024-11-30'::date)::timestamp with time zone) - '2 years'::interval))::date))
+                                                                     Buffers: shared hit=2327
+ Planning:
+   Buffers: shared hit=341
+ Planning Time: 1.252 ms
+ Execution Time: 71.245 ms
+(61 rows)
+

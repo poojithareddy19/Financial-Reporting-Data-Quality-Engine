@@ -1,0 +1,161 @@
+# Governed data quality rule registry.
+# Change control: edit via PR; the rule owner must approve (see docs/data_governance_policy.md#change-control).
+# Every rule is loaded into dq.rule_registry at pipeline start with a version hash of its definition.
+# Row-level rules run against staging.transactions for the current batch.
+# severity: blocking -> quarantine row, warning -> load with reduced dq_score, info -> load, record only.
+rules:
+  - id: DQ-001
+    type: not_null
+    description: transaction_id must be present on every row
+    dimension: completeness
+    severity: blocking
+    owner: data-platform@example.com
+    policy_section: "3.1 Completeness"
+    params: { column: transaction_id }
+
+  - id: DQ-002
+    type: not_null
+    description: posted_date must be present
+    dimension: completeness
+    severity: blocking
+    owner: finance-ops@example.com
+    policy_section: "3.1 Completeness"
+    params: { column: posted_date }
+
+  - id: DQ-003
+    type: not_null
+    description: amount_local must be present
+    dimension: completeness
+    severity: blocking
+    owner: finance-ops@example.com
+    policy_section: "3.1 Completeness"
+    params: { column: amount_local }
+
+  - id: DQ-004
+    type: custom_sql
+    description: customer_id should be present on sale and payment events
+    dimension: completeness
+    severity: warning
+    owner: finance-ops@example.com
+    policy_section: "3.1 Completeness"
+    params:
+      sql: "SELECT transaction_id FROM staging.transactions WHERE batch_id = :batch_id AND customer_id IS NULL AND event_type IN ('sale', 'payment')"
+
+  - id: DQ-005
+    type: unique
+    description: transaction_id must be unique within the batch after deduplication
+    dimension: uniqueness
+    severity: blocking
+    owner: data-platform@example.com
+    policy_section: "3.2 Uniqueness"
+    params: { column: transaction_id }
+
+  - id: DQ-006
+    type: accepted_values
+    description: currency must be one of the governed ISO codes
+    dimension: validity
+    severity: blocking
+    owner: treasury@example.com
+    policy_section: "3.3 Validity"
+    params: { column: currency, values: [USD, EUR, GBP, JPY] }
+
+  - id: DQ-007
+    type: regex_match
+    description: transaction_id must follow the TXN-<12 digits> pattern
+    dimension: validity
+    severity: warning
+    owner: data-platform@example.com
+    policy_section: "3.3 Validity"
+    params: { column: transaction_id, pattern: '^TXN-[0-9]{12}$' }
+
+  - id: DQ-008
+    type: range
+    description: posted_date must be between 2000-01-01 and the day after the run date
+    dimension: validity
+    severity: blocking
+    owner: finance-ops@example.com
+    policy_section: "3.3 Validity"
+    params: { column: posted_date, min: "2000-01-01", max: "{run_date_plus_1}" }
+
+  - id: DQ-009
+    type: range
+    description: amount_local must be within plausible bounds
+    dimension: accuracy
+    severity: warning
+    owner: finance-ops@example.com
+    policy_section: "3.6 Accuracy"
+    params: { column: amount_local, min: -10000000, max: 10000000 }
+
+  - id: DQ-010
+    type: referential_integrity
+    description: account_id must exist in dim_account
+    dimension: consistency
+    severity: blocking
+    owner: finance-ops@example.com
+    policy_section: "3.4 Consistency"
+    params: { column: account_id, ref_table: curated.dim_account, ref_column: account_id }
+
+  - id: DQ-011
+    type: referential_integrity
+    description: entity_id must exist in dim_entity
+    dimension: consistency
+    severity: blocking
+    owner: finance-ops@example.com
+    policy_section: "3.4 Consistency"
+    params: { column: entity_id, ref_table: curated.dim_entity, ref_column: entity_id }
+
+  - id: DQ-012
+    type: referential_integrity
+    description: customer_id should exist in dim_customer (current version)
+    dimension: consistency
+    severity: warning
+    owner: sales-ops@example.com
+    policy_section: "3.4 Consistency"
+    params: { column: customer_id, ref_table: curated.dim_customer, ref_column: customer_id, ref_filter: "is_current" }
+
+  - id: DQ-013
+    type: freshness
+    description: the newest posted_date in the batch must be within N days of the run date
+    dimension: timeliness
+    severity: info
+    owner: data-platform@example.com
+    policy_section: "3.5 Timeliness"
+    params: { column: posted_date, max_age_days: 3 }
+
+  - id: DQ-014
+    type: row_count_delta
+    description: batch row count must be within tolerance of the prior batch
+    dimension: completeness
+    severity: warning
+    owner: data-platform@example.com
+    policy_section: "3.1 Completeness"
+    params: { tolerance_pct: 50.0 }
+
+  - id: DQ-015
+    type: custom_sql
+    description: FX rate must resolve for every row (unknown currency or missing rate)
+    dimension: consistency
+    severity: blocking
+    owner: treasury@example.com
+    policy_section: "3.4 Consistency"
+    params:
+      sql: "SELECT transaction_id FROM staging.transactions WHERE batch_id = :batch_id AND fx_rate IS NULL"
+
+  - id: DQ-016
+    type: sign_by_account_type
+    description: credit-normal accounts (revenue, liability, equity) must not carry positive debit amounts on sale events
+    dimension: accuracy
+    severity: warning
+    owner: finance-ops@example.com
+    policy_section: "3.6 Accuracy"
+    params: { account_types: [revenue], event_types: [sale] }
+
+  - id: DQ-017
+    type: custom_sql
+    description: description should not be blank
+    dimension: completeness
+    severity: info
+    owner: finance-ops@example.com
+    policy_section: "3.1 Completeness"
+    params:
+      sql: "SELECT transaction_id FROM staging.transactions WHERE batch_id = :batch_id AND (description IS NULL OR btrim(description) = '')"

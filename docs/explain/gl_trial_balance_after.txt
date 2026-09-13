@@ -1,0 +1,64 @@
+                                                                       QUERY PLAN                                                                       
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+ Sort  (cost=9176.43..9176.50 rows=30 width=337) (actual time=152.439..152.504 rows=1607 loops=1)
+   Sort Key: b.entity_id, b.month_start, a.account_code
+   Sort Method: quicksort  Memory: 272kB
+   Buffers: shared hit=5549, temp read=593 written=756
+   CTE scoped
+     ->  Seq Scan on fact_transactions f  (cost=0.00..3647.80 rows=66040 width=41) (actual time=0.008..28.395 rows=66040 loops=1)
+           Filter: (posted_date <= '2024-11-30'::date)
+           Buffers: shared hit=2327
+   CTE by_account
+     ->  HashAggregate  (cost=4970.93..5119.52 rows=6604 width=204) (actual time=144.252..145.239 rows=1607 loops=1)
+           Group Key: s.entity_id, s.month_start, s.account_id
+           Batches: 1  Memory Usage: 1745kB
+           Buffers: shared hit=2327, temp read=593 written=756
+           ->  Hash Left Join  (cost=1822.11..3319.93 rows=66040 width=120) (actual time=102.385..120.689 rows=66040 loops=1)
+                 Hash Cond: (s.event_id = e_1.event_id)
+                 Buffers: shared hit=2327, temp read=593 written=756
+                 ->  CTE Scan on scoped s  (cost=0.00..1320.80 rows=66040 width=120) (actual time=0.009..5.994 rows=66040 loops=1)
+                       Buffers: shared hit=1, temp read=436 written=1
+                 ->  Hash  (cost=1821.27..1821.27 rows=67 width=32) (actual time=102.360..102.363 rows=543 loops=1)
+                       Buckets: 1024  Batches: 1  Memory Usage: 34kB
+                       Buffers: shared hit=2326, temp read=157 written=755
+                       ->  Subquery Scan on e_1  (cost=1816.10..1821.27 rows=67 width=32) (actual time=82.214..102.199 rows=543 loops=1)
+                             Buffers: shared hit=2326, temp read=157 written=755
+                             ->  HashAggregate  (cost=1816.10..1820.60 rows=67 width=72) (actual time=82.213..102.149 rows=543 loops=1)
+                                   Group Key: scoped.event_id
+                                   Filter: ((abs(sum(scoped.amount_usd)) > 0.005) OR ((count(*) % '2'::bigint) = 1))
+                                   Batches: 5  Memory Usage: 8257kB  Disk Usage: 1656kB
+                                   Rows Removed by Filter: 32694
+                                   Buffers: shared hit=2326, temp read=157 written=755
+                                   ->  CTE Scan on scoped  (cost=0.00..1320.80 rows=66040 width=52) (actual time=0.002..56.069 rows=66040 loops=1)
+                                         Buffers: shared hit=2326, temp written=435
+   ->  Nested Loop  (cost=229.37..408.37 rows=30 width=337) (actual time=146.460..150.262 rows=1607 loops=1)
+         Buffers: shared hit=5543, temp read=593 written=756
+         ->  Hash Join  (cost=229.22..396.27 rows=65 width=303) (actual time=146.411..147.329 rows=1607 loops=1)
+               Hash Cond: (b.account_id = a.account_id)
+               Buffers: shared hit=2329, temp read=593 written=756
+               ->  Hash Join  (cost=224.52..391.27 rows=109 width=300) (actual time=146.347..146.943 rows=1607 loops=1)
+                     Hash Cond: ((b.entity_id = em.entity_id) AND (b.month_start = em.month_start))
+                     Buffers: shared hit=2327, temp read=593 written=756
+                     ->  CTE Scan on by_account b  (cost=0.00..132.08 rows=6604 width=204) (actual time=144.255..144.374 rows=1607 loops=1)
+                           Buffers: shared hit=2327, temp read=593 written=756
+                     ->  Hash  (cost=214.62..214.62 rows=660 width=100) (actual time=2.064..2.065 rows=20 loops=1)
+                           Buckets: 1024  Batches: 1  Memory Usage: 10kB
+                           ->  Subquery Scan on em  (cost=198.12..214.62 rows=660 width=100) (actual time=2.042..2.055 rows=20 loops=1)
+                                 ->  HashAggregate  (cost=198.12..208.02 rows=660 width=100) (actual time=2.041..2.051 rows=20 loops=1)
+                                       Group Key: by_account.entity_id, by_account.month_start
+                                       Batches: 1  Memory Usage: 57kB
+                                       ->  CTE Scan on by_account  (cost=0.00..132.08 rows=6604 width=100) (actual time=0.001..1.551 rows=1607 loops=1)
+               ->  Hash  (cost=3.20..3.20 rows=120 width=44) (actual time=0.052..0.053 rows=120 loops=1)
+                     Buckets: 1024  Batches: 1  Memory Usage: 18kB
+                     Buffers: shared hit=2
+                     ->  Seq Scan on dim_account a  (cost=0.00..3.20 rows=120 width=44) (actual time=0.007..0.019 rows=120 loops=1)
+                           Buffers: shared hit=2
+         ->  Index Scan using dim_entity_pkey on dim_entity e  (cost=0.15..0.17 rows=1 width=64) (actual time=0.001..0.001 rows=1 loops=1607)
+               Index Cond: (entity_id = b.entity_id)
+               Buffers: shared hit=3214
+ Planning:
+   Buffers: shared hit=298
+ Planning Time: 1.081 ms
+ Execution Time: 153.713 ms
+(60 rows)
+

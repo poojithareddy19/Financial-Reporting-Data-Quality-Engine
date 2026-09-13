@@ -1,0 +1,60 @@
+                                                                                   QUERY PLAN                                                                                   
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Sort  (cost=3451.20..3451.66 rows=182 width=285) (actual time=61.425..61.455 rows=301 loops=1)
+   Sort Key: (round(sum(invoices.open_usd), 2)) DESC, invoices.customer_id
+   Sort Method: quicksort  Memory: 69kB
+   Buffers: shared hit=2337
+   ->  GroupAggregate  (cost=3406.05..3444.37 rows=182 width=285) (actual time=47.835..61.218 rows=301 loops=1)
+         Group Key: invoices.customer_id, c.customer_name, c.customer_email, c.segment
+         Buffers: shared hit=2334
+         ->  Incremental Sort  (cost=3406.05..3418.44 rows=182 width=117) (actual time=47.775..56.015 rows=10841 loops=1)
+               Sort Key: invoices.customer_id, c.customer_name, c.customer_email, c.segment
+               Presorted Key: invoices.customer_id
+               Full-sort Groups: 248  Sort Method: quicksort  Average Memory: 29kB  Peak Memory: 29kB
+               Pre-sorted Groups: 48  Sort Method: quicksort  Average Memory: 28kB  Peak Memory: 28kB
+               Buffers: shared hit=2334
+               ->  Merge Left Join  (cost=3406.02..3410.25 rows=182 width=117) (actual time=47.729..51.490 rows=10841 loops=1)
+                     Merge Cond: (invoices.customer_id = c.customer_id)
+                     Buffers: shared hit=2334
+                     ->  Sort  (cost=3385.67..3386.13 rows=182 width=68) (actual time=47.478..48.240 rows=10841 loops=1)
+                           Sort Key: invoices.customer_id
+                           Sort Method: quicksort  Memory: 893kB
+                           Buffers: shared hit=2329
+                           ->  Subquery Scan on invoices  (cost=3360.52..3378.84 rows=182 width=68) (actual time=29.461..42.843 rows=10841 loops=1)
+                                 Buffers: shared hit=2329
+                                 ->  GroupAggregate  (cost=3360.52..3377.02 rows=182 width=81) (actual time=29.460..41.894 rows=10841 loops=1)
+                                       Group Key: f.reference_id
+                                       Filter: ((min(f.posted_date) FILTER (WHERE (f.amount_usd > '0'::numeric)) IS NOT NULL) AND (sum(f.amount_usd) > 0.005))
+                                       Rows Removed by Filter: 5290
+                                       Buffers: shared hit=2329
+                                       ->  Sort  (cost=3360.52..3361.90 rows=550 width=34) (actual time=29.437..30.754 rows=16487 loops=1)
+                                             Sort Key: f.reference_id
+                                             Sort Method: quicksort  Memory: 1799kB
+                                             Buffers: shared hit=2329
+                                             ->  Hash Join  (cost=3.51..3335.49 rows=550 width=34) (actual time=0.036..18.062 rows=16487 loops=1)
+                                                   Hash Cond: (f.account_id = a.account_id)
+                                                   Buffers: shared hit=2329
+                                                   ->  Seq Scan on fact_transactions f  (cost=0.00..3152.50 rows=66040 width=43) (actual time=0.006..10.479 rows=66040 loops=1)
+                                                         Filter: ((reference_id IS NOT NULL) AND (posted_date <= '2024-11-30'::date))
+                                                         Buffers: shared hit=2327
+                                                   ->  Hash  (cost=3.50..3.50 rows=1 width=9) (actual time=0.014..0.015 rows=1 loops=1)
+                                                         Buckets: 1024  Batches: 1  Memory Usage: 9kB
+                                                         Buffers: shared hit=2
+                                                         ->  Seq Scan on dim_account a  (cost=0.00..3.50 rows=1 width=9) (actual time=0.004..0.011 rows=1 loops=1)
+                                                               Filter: (account_code = '1100'::text)
+                                                               Rows Removed by Filter: 119
+                                                               Buffers: shared hit=2
+                     ->  Sort  (cost=20.34..21.09 rows=300 width=60) (actual time=0.245..0.653 rows=10796 loops=1)
+                           Sort Key: c.customer_id
+                           Sort Method: quicksort  Memory: 51kB
+                           Buffers: shared hit=5
+                           ->  Seq Scan on dim_customer c  (cost=0.00..8.00 rows=300 width=60) (actual time=0.019..0.070 rows=300 loops=1)
+                                 Filter: is_current
+                                 Rows Removed by Filter: 3
+                                 Buffers: shared hit=5
+ Planning:
+   Buffers: shared hit=352
+ Planning Time: 1.299 ms
+ Execution Time: 61.796 ms
+(56 rows)
+

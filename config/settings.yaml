@@ -1,0 +1,54 @@
+# Default settings. Every key can be overridden with an environment variable
+# using the prefix FIN_DQ__ and __ as the nesting delimiter, e.g.
+#   FIN_DQ__DATABASE__URL=postgresql+psycopg://user:pw@host:5432/db
+environment: local            # local | aws
+actor: pipeline               # who is writing, recorded in governance.audit_log
+role: analyst                 # analyst | finance_admin (unmasked PII)
+
+paths:
+  data_dir: ./data            # raw/, staged/, curated/ live under here in local mode
+  out_dir: ./out              # summaries, charts, notifications in local mode
+  sql_dir: ./sql
+  config_dir: ./config
+
+database:
+  url: postgresql+psycopg://postgres:postgres@localhost:5432/fin_dq
+  echo: false
+
+aws:
+  region: us-east-1
+  raw_bucket: fin-dq-raw
+  staged_bucket: fin-dq-staged
+  curated_bucket: fin-dq-curated
+  sns_topic_arn: arn:aws:sns:us-east-1:000000000000:fin-dq-alerts
+  secret_name: fin-dq/db-credentials
+  metrics_namespace: FinDQEngine
+
+pipeline:
+  batch_failure_threshold_pct: 5.0   # abort load when blocking failure rate exceeds this
+  late_arrival_days: 3
+  freshness_days: 3
+  row_count_tolerance_pct: 50.0
+  accepted_currencies: [USD, EUR, GBP, JPY]
+  reporting_currency: USD
+  warning_penalty: 20                # dq_score deduction per failed warning rule
+  info_penalty: 5                    # dq_score deduction per failed info rule
+
+anomaly:
+  revenue_window_days: 28
+  zscore_threshold: 3.0
+  mad_threshold: 3.5
+  isolation_forest_training_days: 90
+  isolation_forest_contamination: 0.01
+  isolation_forest_min_rows: 200
+  benford_p_value: 0.001
+  benford_min_rows: 300
+  fx_jump_pct: 5.0
+
+governance:
+  retention_days:
+    raw: 400        # class "raw"
+    staged: 90      # class "staged"
+    curated: 2555   # class "financial-record", 7 years
+    logs: 730       # class "operational"
+  pii_columns: [customer_email, customer_name]

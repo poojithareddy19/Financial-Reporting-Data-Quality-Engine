@@ -1,0 +1,30 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: fin-dq-postgres
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: fin_dq
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d fin_dq"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+
+  # Optional: emulate S3 / SNS / Secrets Manager locally. Start with `docker compose --profile localstack up`.
+  localstack:
+    image: localstack/localstack:3
+    profiles: ["localstack"]
+    environment:
+      SERVICES: s3,sns,secretsmanager,cloudwatch
+      DEFAULT_REGION: us-east-1
+    ports:
+      - "4566:4566"
+
+volumes:
+  pgdata:

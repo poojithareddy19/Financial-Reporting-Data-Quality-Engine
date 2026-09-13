@@ -1,0 +1,93 @@
+# Data dictionary for the curated schema. tests/unit/test_data_dictionary.py fails if any curated
+# column is missing here. retention_class values map to governance.retention_days in settings.yaml.
+# pii: true columns are masked in every report output unless the caller has role finance_admin.
+tables:
+  curated.fact_transactions:
+    owner: finance-ops@example.com
+    grain: one GL posting leg
+    retention_class: curated
+    columns:
+      transaction_id:   { type: text,          description: Unique posting leg identifier TXN-<12 digits>, pii: false }
+      event_id:         { type: text,          description: Business event that produced the double-entry pair, pii: false }
+      event_type:       { type: text,          description: sale | cogs | payment | expense | adjustment, pii: false }
+      reference_id:     { type: text,          description: Invoice or document reference shared by sale and payment legs, pii: false }
+      posted_date:      { type: date,          description: Accounting date of the posting, pii: false }
+      created_at:       { type: timestamptz,   description: Timestamp the source system created the posting, pii: false }
+      entity_id:        { type: text,          description: Legal entity FK to dim_entity, pii: false }
+      account_id:       { type: text,          description: GL account FK to dim_account, pii: false }
+      customer_id:      { type: text,          description: Customer FK to dim_customer (nullable for non-customer postings), pii: false }
+      currency:         { type: text,          description: ISO 4217 transaction currency, pii: false }
+      amount_local:     { type: numeric,       description: Signed amount in transaction currency (debit positive, credit negative), pii: false }
+      amount_usd:       { type: numeric,       description: amount_local converted at fx_rate, pii: false }
+      fx_rate:          { type: numeric,       description: Units of USD per one unit of currency on posted_date, pii: false }
+      description:      { type: text,          description: Free-text posting description, pii: false }
+      source_system:    { type: text,          description: Originating system (ERP, BILLING, BANK), pii: false }
+      dq_score:         { type: integer,       description: Row data quality score 0-100 from the rule engine, pii: false }
+      batch_id:         { type: text,          description: Pipeline batch that loaded or last updated the row, pii: false }
+      loaded_at:        { type: timestamptz,   description: Warehouse load timestamp, pii: false }
+
+  curated.dim_account:
+    owner: finance-ops@example.com
+    grain: one GL account
+    retention_class: curated
+    columns:
+      account_id:       { type: text, description: Surrogate business key ACC-<n>, pii: false }
+      account_code:     { type: text, description: Four digit chart-of-accounts code, pii: false }
+      account_name:     { type: text, description: Account display name, pii: false }
+      account_type:     { type: text, description: asset | liability | equity | revenue | cogs | expense, pii: false }
+      normal_balance:   { type: text, description: debit | credit, pii: false }
+
+  curated.dim_entity:
+    owner: finance-ops@example.com
+    grain: one legal entity
+    retention_class: curated
+    columns:
+      entity_id:          { type: text, description: Entity business key ENT-<n>, pii: false }
+      entity_code:        { type: text, description: Short code used in reporting, pii: false }
+      entity_name:        { type: text, description: Legal name, pii: false }
+      country:            { type: text, description: Country of incorporation, pii: false }
+      functional_currency: { type: text, description: Functional currency of the entity, pii: false }
+
+  curated.dim_customer:
+    owner: sales-ops@example.com
+    grain: one customer version (SCD Type 2)
+    retention_class: curated
+    columns:
+      customer_sk:      { type: integer,     description: Surrogate key per version, pii: false }
+      customer_id:      { type: text,        description: Customer business key CUST-<n>, pii: false }
+      customer_name:    { type: text,        description: Customer legal or trading name, pii: true }
+      customer_email:   { type: text,        description: Billing contact email, pii: true }
+      segment:          { type: text,        description: Enterprise | Mid-Market | SMB, pii: false }
+      region:           { type: text,        description: Sales region, pii: false }
+      country:          { type: text,        description: Billing country, pii: false }
+      customer_since:   { type: date,        description: First contract date, used for tenure, pii: false }
+      valid_from:       { type: date,        description: SCD2 version start, pii: false }
+      valid_to:         { type: date,        description: SCD2 version end (9999-12-31 for current), pii: false }
+      is_current:       { type: boolean,     description: True for the active version, pii: false }
+
+  curated.dim_date:
+    owner: data-platform@example.com
+    grain: one calendar day
+    retention_class: curated
+    columns:
+      date_key:       { type: integer, description: YYYYMMDD integer key, pii: false }
+      calendar_date:  { type: date,    description: Calendar date, pii: false }
+      year:           { type: integer, description: Calendar year, pii: false }
+      quarter:        { type: integer, description: Calendar quarter 1-4, pii: false }
+      month:          { type: integer, description: Calendar month 1-12, pii: false }
+      day:            { type: integer, description: Day of month, pii: false }
+      day_of_week:    { type: integer, description: ISO day of week 1=Monday, pii: false }
+      is_weekend:     { type: boolean, description: Saturday or Sunday, pii: false }
+      month_start:    { type: date,    description: First day of the month, pii: false }
+      month_end:      { type: date,    description: Last day of the month, pii: false }
+
+  curated.dim_fx_rate:
+    owner: treasury@example.com
+    grain: one currency per rate date
+    retention_class: curated
+    columns:
+      currency:     { type: text,        description: ISO 4217 code, pii: false }
+      rate_date:    { type: date,        description: Rate effective date, pii: false }
+      rate_to_usd:  { type: numeric,     description: USD per one unit of currency, pii: false }
+      source:       { type: text,        description: Rate provider, pii: false }
+      loaded_at:    { type: timestamptz, description: Warehouse load timestamp, pii: false }

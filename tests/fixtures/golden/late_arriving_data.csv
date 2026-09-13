@@ -1,0 +1,4 @@
+source_system,rows_in_batch,late_rows,late_pct,late_abs_usd,max_lag_days,avg_late_lag_days,p95_lag_days
+BILLING,268,12,4.48,7785.24,10,8.0,0.0
+BANK,46,4,8.7,4380.98,14,13.0,12.0
+ERP,60,4,6.67,7301.28,10,7.5,5.0

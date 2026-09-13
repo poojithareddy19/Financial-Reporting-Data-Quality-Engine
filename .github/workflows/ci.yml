@@ -1,0 +1,60 @@
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  lint-and-types:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v3
+      - run: uv venv --python 3.11 .venv && uv pip install -e ".[dev]"
+      - run: .venv/bin/ruff check src tests scripts infra
+      - run: .venv/bin/ruff format --check src tests scripts infra
+      - run: .venv/bin/mypy
+
+  unit-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v3
+      - run: uv venv --python 3.11 .venv && uv pip install -e ".[dev]"
+      # Unit tests that need no database (DB-backed unit tests skip without FIN_DQ_TEST_DATABASE_URL or Docker).
+      - run: .venv/bin/python -m pytest tests/unit -q --deselect tests/unit/test_rules.py --deselect tests/unit/test_data_dictionary.py --deselect tests/unit/test_lambda_and_cli.py
+
+  integration-tests:
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:16-alpine
+        env:
+          POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: postgres
+          POSTGRES_DB: fin_dq_test
+        ports: ["5432:5432"]
+        options: >-
+          --health-cmd "pg_isready -U postgres" --health-interval 5s --health-timeout 3s --health-retries 20
+    env:
+      FIN_DQ_TEST_DATABASE_URL: postgresql+psycopg://postgres:postgres@localhost:5432/fin_dq_test
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v3
+      - run: uv venv --python 3.11 .venv && uv pip install -e ".[dev]"
+      - run: .venv/bin/python -m pytest --cov --cov-report=term-missing --cov-report=xml
+      - uses: actions/upload-artifact@v4
+        with:
+          name: coverage
+          path: coverage.xml
+
+  cdk-synth:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: "20" }
+      - uses: astral-sh/setup-uv@v3
+      - run: uv venv --python 3.11 .venv && uv pip install -e ".[dev]"
+      - run: cd infra && PATH=$PWD/../.venv/bin:$PATH npx --yes aws-cdk@2 synth --quiet -c image_tag=ci

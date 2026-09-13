@@ -1,0 +1,10 @@
+{
+  "app": "python app.py",
+  "context": {
+    "prefix": "fin-dq",
+    "alert_email": "finance-ops@example.com",
+    "@aws-cdk/aws-lambda:recognizeLayerVersion": true,
+    "@aws-cdk/core:checkSecretUsage": true,
+    "@aws-cdk/aws-iam:minimizePolicies": true
+  }
+}

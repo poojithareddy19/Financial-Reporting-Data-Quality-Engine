@@ -1,0 +1,37 @@
+{
+  "fin-dq-storage": {
+    "AWS::S3::Bucket": 3,
+    "AWS::S3::BucketPolicy": 3
+  },
+  "fin-dq-data": {
+    "AWS::EC2::RouteTable": 2,
+    "AWS::EC2::SecurityGroup": 8,
+    "AWS::EC2::SecurityGroupIngress": 1,
+    "AWS::EC2::Subnet": 2,
+    "AWS::EC2::SubnetRouteTableAssociation": 2,
+    "AWS::EC2::VPC": 1,
+    "AWS::EC2::VPCEndpoint": 7,
+    "AWS::RDS::DBInstance": 1,
+    "AWS::RDS::DBSubnetGroup": 1,
+    "AWS::SecretsManager::Secret": 1,
+    "AWS::SecretsManager::SecretTargetAttachment": 1
+  },
+  "fin-dq-compute": {
+    "AWS::ECR::Repository": 1,
+    "AWS::Events::Rule": 1,
+    "AWS::IAM::Policy": 4,
+    "AWS::IAM::Role": 4,
+    "AWS::Lambda::Function": 7,
+    "AWS::Logs::LogGroup": 1,
+    "AWS::SNS::Subscription": 2,
+    "AWS::SNS::Topic": 2,
+    "AWS::StepFunctions::StateMachine": 1,
+    "Custom::LogRetention": 6
+  },
+  "fin-dq-observability": {
+    "AWS::CloudWatch::Alarm": 9,
+    "AWS::CloudWatch::Dashboard": 1,
+    "AWS::SNS::Subscription": 1,
+    "AWS::SNS::Topic": 1
+  }
+}

@@ -1,0 +1,51 @@
+                                                                       QUERY PLAN                                                                       
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+ Sort  (cost=16478.84..16478.92 rows=30 width=337) (actual time=221.465..221.588 rows=1607 loops=1)
+   Sort Key: b.entity_id, b.month_start, a.account_code
+   Sort Method: quicksort  Memory: 272kB
+   Buffers: shared hit=5549, temp read=437 written=438
+   CTE by_account
+     ->  HashAggregate  (cost=15921.15..16069.74 rows=6604 width=156) (actual time=206.277..207.995 rows=1607 loops=1)
+           Group Key: f.entity_id, (date_trunc('month'::text, (f.posted_date)::timestamp with time zone))::date, f.account_id
+           Batches: 1  Memory Usage: 1745kB
+           Buffers: shared hit=2327, temp read=437 written=438
+           ->  WindowAgg  (cost=10472.85..12288.95 rows=66040 width=81) (actual time=68.613..157.362 rows=66040 loops=1)
+                 Buffers: shared hit=2327, temp read=437 written=438
+                 ->  Sort  (cost=10472.85..10637.95 rows=66040 width=41) (actual time=68.586..80.528 rows=66040 loops=1)
+                       Sort Key: f.event_id
+                       Sort Method: external merge  Disk: 3496kB
+                       Buffers: shared hit=2327, temp read=437 written=438
+                       ->  Seq Scan on fact_transactions f  (cost=0.00..3152.50 rows=66040 width=41) (actual time=0.004..13.312 rows=66040 loops=1)
+                             Filter: (posted_date <= '2024-11-30'::date)
+                             Buffers: shared hit=2327
+   ->  Nested Loop  (cost=229.37..408.37 rows=30 width=337) (actual time=210.509..217.489 rows=1607 loops=1)
+         Buffers: shared hit=5543, temp read=437 written=438
+         ->  Hash Join  (cost=229.22..396.27 rows=65 width=303) (actual time=210.463..212.170 rows=1607 loops=1)
+               Hash Cond: (b.account_id = a.account_id)
+               Buffers: shared hit=2329, temp read=437 written=438
+               ->  Hash Join  (cost=224.52..391.27 rows=109 width=300) (actual time=210.392..211.508 rows=1607 loops=1)
+                     Hash Cond: ((b.entity_id = em.entity_id) AND (b.month_start = em.month_start))
+                     Buffers: shared hit=2327, temp read=437 written=438
+                     ->  CTE Scan on by_account b  (cost=0.00..132.08 rows=6604 width=204) (actual time=206.280..206.581 rows=1607 loops=1)
+                           Buffers: shared hit=2327, temp read=437 written=438
+                     ->  Hash  (cost=214.62..214.62 rows=660 width=100) (actual time=4.091..4.093 rows=20 loops=1)
+                           Buckets: 1024  Batches: 1  Memory Usage: 10kB
+                           ->  Subquery Scan on em  (cost=198.12..214.62 rows=660 width=100) (actual time=4.020..4.049 rows=20 loops=1)
+                                 ->  HashAggregate  (cost=198.12..208.02 rows=660 width=100) (actual time=4.018..4.043 rows=20 loops=1)
+                                       Group Key: by_account.entity_id, by_account.month_start
+                                       Batches: 1  Memory Usage: 57kB
+                                       ->  CTE Scan on by_account  (cost=0.00..132.08 rows=6604 width=100) (actual time=0.001..2.950 rows=1607 loops=1)
+               ->  Hash  (cost=3.20..3.20 rows=120 width=44) (actual time=0.053..0.054 rows=120 loops=1)
+                     Buckets: 1024  Batches: 1  Memory Usage: 18kB
+                     Buffers: shared hit=2
+                     ->  Seq Scan on dim_account a  (cost=0.00..3.20 rows=120 width=44) (actual time=0.008..0.020 rows=120 loops=1)
+                           Buffers: shared hit=2
+         ->  Index Scan using dim_entity_pkey on dim_entity e  (cost=0.15..0.17 rows=1 width=64) (actual time=0.001..0.001 rows=1 loops=1607)
+               Index Cond: (entity_id = b.entity_id)
+               Buffers: shared hit=3214
+ Planning:
+   Buffers: shared hit=301
+ Planning Time: 1.104 ms
+ Execution Time: 222.846 ms
+(47 rows)
+
