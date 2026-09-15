@@ -125,4 +125,4 @@ def write_parquet(storage: Storage, layer: Layer, key: str, df: pd.DataFrame) ->
 
 def read_parquet(storage: Storage, layer: Layer, key: str) -> pd.DataFrame:
     """Read a Parquet object."""
-    return pd.read_parquet(io.BytesIO(storage.read_bytes(layer, key)))  # type: ignore[no-any-return]
+    return pd.read_parquet(io.BytesIO(storage.read_bytes(layer, key)))

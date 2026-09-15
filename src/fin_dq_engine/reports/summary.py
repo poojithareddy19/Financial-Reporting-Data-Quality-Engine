@@ -264,7 +264,7 @@ def render_html(data: SummaryData, markdown_text: str) -> str:
     business_md, technical_md = markdown_text.split("\n---\n", 1)
 
     def conv(t: str) -> str:
-        return str(md.markdown(t, extensions=["tables"]))  # type: ignore[no-untyped-call]
+        return str(md.markdown(t, extensions=["tables"]))
 
     env = Environment(autoescape=select_autoescape(default=False))
     return env.from_string(HTML_TEMPLATE).render(

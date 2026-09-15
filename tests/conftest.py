@@ -81,6 +81,7 @@ def make_settings(database_url: str, data_dir: Path, out_dir: Path) -> Settings:
             "out_dir": str(out_dir),
             "sql_dir": str(REPO / "sql"),
             "config_dir": str(REPO / "config"),
+            "contracts_dir": str(REPO / "contracts"),
         },
     )
 

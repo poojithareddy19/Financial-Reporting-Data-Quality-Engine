@@ -24,6 +24,7 @@ class PathsConfig(BaseModel):
     out_dir: Path = Path("./out")
     sql_dir: Path = Path("./sql")
     config_dir: Path = Path("./config")
+    contracts_dir: Path = Path("./contracts")
 
 
 class DatabaseConfig(BaseModel):

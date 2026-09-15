@@ -13,9 +13,11 @@ from fin_dq_engine.config import Settings, load_settings
 from fin_dq_engine.logging_utils import configure_logging
 
 app = typer.Typer(add_completion=False, help="Financial Reporting & Data Quality Engine", no_args_is_help=True)
+contracts_app = typer.Typer(help="Schema contract commands")
 dq_app = typer.Typer(help="Data quality commands")
 lineage_app = typer.Typer(help="Lineage commands")
 retention_app = typer.Typer(help="Retention commands")
+app.add_typer(contracts_app, name="contracts")
 app.add_typer(dq_app, name="dq")
 app.add_typer(lineage_app, name="lineage")
 app.add_typer(retention_app, name="retention")
@@ -162,6 +164,49 @@ def run_daily_cmd(
         }
     )
     if r.status != "success":
+        raise typer.Exit(code=2)
+
+
+@contracts_app.command(name="check")
+def contracts_check(
+    run_date: RunDate = None,
+    local: LocalFlag = True,
+    config: ConfigOpt = None,
+) -> None:
+    """Check each source file header for the date against contracts/*.avsc. No database, nothing landed.
+
+    Exit code 2 on a breaking verdict, which is what ingest would refuse. See docs/runbook.md#contract-violation.
+    """
+    from fin_dq_engine.contracts import header_from_bytes, load_contracts, validate_feeds
+    from fin_dq_engine.ingest.ingest import source_keys
+    from fin_dq_engine.storage import get_storage
+
+    s = _settings(local, config)
+    storage = get_storage(s)
+    contracts = load_contracts(s.paths.contracts_dir)
+    headers = {
+        feed: header_from_bytes(storage.read_bytes("raw", key))
+        for feed, key in source_keys(_date(run_date)).items()
+        if storage.exists("raw", key)
+    }
+    if not headers:
+        typer.echo(f"No source files for {_date(run_date)}")
+        raise typer.Exit(code=1)
+    verdicts = validate_feeds(contracts, headers)
+    _echo(
+        {
+            feed: {
+                "status": v.verdict,
+                "owner": v.owner,
+                "version": v.version,
+                "missing": list(v.missing),
+                "duplicated": list(v.duplicated),
+                "unknown": list(v.unknown),
+            }
+            for feed, v in verdicts.items()
+        }
+    )
+    if any(v.is_breaking for v in verdicts.values()):
         raise typer.Exit(code=2)
 
 

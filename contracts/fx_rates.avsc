@@ -1,0 +1,15 @@
+{
+  "type": "record",
+  "name": "FxRate",
+  "namespace": "fin_dq.raw",
+  "doc": "One currency-to-USD rate for one date. Missing dates are carried forward by the transform stage.",
+  "owner": "treasury@example.com",
+  "producing_system": "fx-feed",
+  "delivery_window": "daily by 01:30 UTC",
+  "fields": [
+    {"name": "currency", "type": "string", "doc": "ISO 4217 code being converted."},
+    {"name": "rate_date", "type": "string", "doc": "Date the rate applies to, YYYY-MM-DD."},
+    {"name": "rate_to_usd", "type": "string", "doc": "Multiply a local amount by this to get USD."},
+    {"name": "source", "type": "string", "doc": "Rate provider, retained for audit."}
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "type": "record",
+  "name": "Customer",
+  "namespace": "fin_dq.raw",
+  "doc": "A customer master change. One row per attribute version; loaded as SCD2 in curated.",
+  "owner": "crm-platform@example.com",
+  "producing_system": "crm",
+  "delivery_window": "daily by 02:00 UTC, sparse (change files only)",
+  "fields": [
+    {"name": "customer_id", "type": "string", "doc": "Stable customer key."},
+    {"name": "customer_name", "type": "string", "doc": "PII. Masked for the analyst role."},
+    {"name": "customer_email", "type": ["null", "string"], "default": null, "doc": "PII. Masked for the analyst role."},
+    {"name": "segment", "type": "string", "doc": "enterprise | mid_market | smb."},
+    {"name": "region", "type": "string", "doc": "Reporting region."},
+    {"name": "country", "type": "string", "doc": "ISO 3166-1 alpha-2."},
+    {"name": "customer_since", "type": "string", "doc": "First contract date, YYYY-MM-DD."},
+    {"name": "effective_date", "type": "string", "doc": "Date this version becomes current. Drives the SCD2 merge."}
+  ]
+}

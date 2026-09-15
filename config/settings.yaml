@@ -10,6 +10,7 @@ paths:
   out_dir: ./out              # summaries, charts, notifications in local mode
   sql_dir: ./sql
   config_dir: ./config
+  contracts_dir: ./contracts   # Avro schema contracts, one .avsc per raw feed
 
 database:
   url: postgresql+psycopg://postgres:postgres@localhost:5432/fin_dq

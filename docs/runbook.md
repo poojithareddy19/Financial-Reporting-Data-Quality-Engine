@@ -27,6 +27,39 @@ Symptoms: SNS email "[fin-dq] CRITICAL: ... Pipeline aborted", Step Functions ex
      quarantined; only the abort is suppressed. Record the decision in the incident ticket.
 4. After a successful re-run confirm `reconciled = true` in the summary's technical appendix.
 
+## Contract violation
+
+Symptoms: `SchemaDriftError` from the ingest stage, structured log line `contract_violation`, a `breaking`
+row in `governance.contract_events`. **Nothing was landed** and curated is untouched, so there is no
+cleanup to do and no urgency to re-run before the producer has answered.
+
+1. See the field and the accountable owner without touching the database:
+   ```bash
+   fin-dq contracts check --run-date 2025-03-05
+   ```
+   Exit code 2 means breaking. `missing` names fields the file no longer carries, `unknown` names fields
+   it carries that the contract does not know about. A rename shows up in both lists at once.
+2. Confirm against the durable record:
+   ```sql
+   SELECT feed, verdict, missing_fields, unknown_fields, owner, observed_at
+   FROM governance.contract_events WHERE verdict = 'breaking' ORDER BY observed_at DESC LIMIT 10;
+   ```
+3. Raise a producer incident against the `owner` on the event row. **Never hand-edit the source file**:
+   that hides a producer-side change as a data-quality blip and the same break returns tomorrow.
+4. Once the producer confirms the change is intentional, update `contracts/<feed>.avsc` under the
+   change-control process in `docs/data_governance_policy.md#9-change-control-for-rules`. The contract
+   version is a fingerprint of the field structure, so the new version registers itself on the next run
+   and the old one stays in `governance.contract_registry` for audit.
+5. Re-run the date normally: `fin-dq run-daily --run-date 2025-03-05`.
+
+An `additive` verdict is not an incident. The file carried a field the contract does not list, the batch
+loaded normally, and the field is recorded in `governance.contract_events` for follow-up at your pace:
+
+```sql
+SELECT feed, unknown_fields, run_date FROM governance.contract_events
+WHERE verdict = 'additive' ORDER BY observed_at DESC;
+```
+
 ## A stage failed (exception, not a DQ abort)
 
 1. Read the structured log line `stage_failed` (CloudWatch Logs `/aws/lambda/fin-dq-<stage>` or the terminal).

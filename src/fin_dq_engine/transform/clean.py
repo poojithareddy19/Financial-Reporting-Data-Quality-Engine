@@ -38,7 +38,7 @@ def cast_types(raw: pd.DataFrame) -> pd.DataFrame:
     for col in TEXT_COLUMNS:
         if col in df.columns:
             s = df[col].astype("string").str.strip()
-            df[col] = s.astype(object).where((s.notna() & (s != "")).to_numpy(), None)  # type: ignore[call-overload]
+            df[col] = s.astype(object).where((s.notna() & (s != "")).to_numpy(), None)
     df["currency"] = df["currency"].map(lambda v: v.upper() if isinstance(v, str) else None)
     df["posted_date"] = pd.to_datetime(df["posted_date"], errors="coerce", format="%Y-%m-%d").dt.date
     df["posted_date"] = df["posted_date"].astype(object).where(df["posted_date"].notna(), None)

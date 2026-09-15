@@ -1,0 +1,24 @@
+{
+  "type": "record",
+  "name": "Transaction",
+  "namespace": "fin_dq.raw",
+  "doc": "One posting leg of a business event. Double-entry: all legs sharing an event_id net to zero.",
+  "owner": "finance-ops@example.com",
+  "producing_system": "ledger-core",
+  "delivery_window": "daily by 02:00 UTC",
+  "fields": [
+    {"name": "transaction_id", "type": "string", "doc": "Unique id of this posting leg."},
+    {"name": "event_id", "type": "string", "doc": "Business event the leg belongs to. COGS legs carry the parent id with a -C suffix."},
+    {"name": "event_type", "type": "string", "doc": "sale | cogs | payment | refund | accrual | fx_revaluation."},
+    {"name": "reference_id", "type": ["null", "string"], "default": null, "doc": "Invoice or payment reference in the source system."},
+    {"name": "posted_date", "type": "string", "doc": "Accounting date, YYYY-MM-DD. Drives every report period."},
+    {"name": "created_at", "type": "string", "doc": "Source-system write timestamp, ISO 8601."},
+    {"name": "entity_id", "type": "string", "doc": "Legal entity, e.g. ENT-01."},
+    {"name": "account_id", "type": "string", "doc": "GL account from the chart of accounts."},
+    {"name": "customer_id", "type": ["null", "string"], "default": null, "doc": "Null for legs with no customer, e.g. accruals."},
+    {"name": "currency", "type": "string", "doc": "ISO 4217 code of amount_local."},
+    {"name": "amount_local", "type": "string", "doc": "Signed amount in currency. Debit positive, credit negative."},
+    {"name": "description", "type": ["null", "string"], "default": null, "doc": "Free text from the source system."},
+    {"name": "source_system", "type": "string", "doc": "Originating system name, used for the late-arrival report."}
+  ]
+}

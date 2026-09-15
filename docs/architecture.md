@@ -178,6 +178,26 @@ Uses a 24-month spine from `dim_date` so `LAG(net_usd, 12)` compares against a r
 no postings; all sorts are in memory (`Sort Method: quicksort`). The spine cross join is 120 accounts x 25 months and
 dominates planning, not execution. No change needed at this scale.
 
+### Contracts are checked outside the landing transaction
+
+Each raw feed has an Avro contract in `contracts/`. `validate_contracts` in
+`src/fin_dq_engine/ingest/ingest.py` runs *before* the landing transaction opens and commits every
+verdict on a transaction of its own. The split is not tidiness: the first implementation wrote the
+breach to `governance.contract_events` inside the landing transaction, so the exception that correctly
+refused the batch also rolled back the only evidence of why, leaving an empty table after a run that had
+done exactly the right thing. An audit record about a failure must never share a transaction with the
+work that failed.
+
+Presence is validated, not nullability. A nullable field still owes a column; it is the values inside it
+that may be empty. Column order is ignored because files are read by name. A rename is reported as
+breaking rather than additive, because the absent old name is what decides the verdict, with the new name
+listed alongside it so the producer sees both halves of the change.
+
+Without this gate, `out = df.reindex(columns=TRANSACTION_COLUMNS)` silently manufactures a missing column
+full of `NaN`, ingest reports success, and every row then fails the completeness rule, which routes the
+incident to the data team when the fault is at the source. That `reindex` line is still there and still
+correct; it is now unreachable with an unvalidated header.
+
 ### PostgreSQL run-condition pitfall
 
 `customer_concentration.sql` originally combined `RANK() OVER (ORDER BY ...)` and
