@@ -14,7 +14,9 @@ from typing import Any
 
 import pytest
 from sqlalchemy import Engine, text
+from typer.testing import CliRunner
 
+from fin_dq_engine import cli
 from fin_dq_engine.config import Settings
 from fin_dq_engine.contracts import (
     Contract,
@@ -181,3 +183,47 @@ def test_registry_records_the_current_promise(tmp_settings: Settings, pg_engine:
     assert row.owner == "finance-ops@example.com"
     assert list(row.fields) == TRANSACTION_COLUMNS
     assert row.version == load_contract(CONTRACTS / "transactions.avsc").version
+
+
+@pytest.fixture
+def cli_env(monkeypatch: pytest.MonkeyPatch, tmp_path: Path) -> Path:
+    """Point the CLI at an empty temp data dir and the repo's real contracts. No database involved."""
+    monkeypatch.setenv("FIN_DQ_CONFIG", str(REPO / "config" / "settings.yaml"))
+    monkeypatch.setenv("FIN_DQ__PATHS__DATA_DIR", str(tmp_path))
+    monkeypatch.setenv("FIN_DQ__PATHS__CONTRACTS_DIR", str(CONTRACTS))
+    return tmp_path
+
+
+def _check(run_date: date) -> Any:
+    return CliRunner().invoke(cli.app, ["contracts", "check", "--run-date", run_date.isoformat()])
+
+
+def test_cli_contracts_check_exit_codes(cli_env: Path) -> None:
+    """The runbook makes this an on-call's first step, so the exit codes are part of the contract."""
+    _write_transactions(cli_env, RUN_DATE, list(TRANSACTION_COLUMNS))
+    ok = _check(RUN_DATE)
+    assert ok.exit_code == 0, ok.output
+    assert '"status": "compatible"' in ok.output
+
+    # Additive must not fail the command: the batch still loads, the field is only recorded.
+    additive_date = date(2025, 6, 5)
+    _write_transactions(cli_env, additive_date, [*TRANSACTION_COLUMNS, "settlement_ref"])
+    added = _check(additive_date)
+    assert added.exit_code == 0, added.output
+    assert '"status": "additive"' in added.output and "settlement_ref" in added.output
+
+    # Breaking is exit 2, and must name both the absent field and the accountable owner.
+    drift_date = date(2025, 6, 6)
+    renamed = ["amount" if c == "amount_local" else c for c in TRANSACTION_COLUMNS]
+    _write_transactions(cli_env, drift_date, renamed)
+    broken = _check(drift_date)
+    assert broken.exit_code == 2, broken.output
+    assert '"status": "breaking"' in broken.output
+    assert "amount_local" in broken.output and "finance-ops@example.com" in broken.output
+
+
+def test_cli_contracts_check_without_source_files(cli_env: Path) -> None:
+    """A date with no drop yet is exit 1 and a plain message, not a traceback."""
+    result = _check(date(1999, 1, 1))
+    assert result.exit_code == 1
+    assert "No source files" in result.output
