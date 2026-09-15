@@ -1,13 +1,16 @@
 # Financial Reporting & Data Quality Engine
 
-A production-shaped daily pipeline that lands GL postings, cleans and FX-normalises them, runs a governed rule
+A production-shaped daily pipeline that validates each source feed against a schema contract, lands GL postings,
+cleans and FX-normalises them, runs a governed rule
 engine that quarantines bad rows and scores the rest, loads an idempotent star schema in PostgreSQL, runs eight SQL
 reports, detects anomalies, and emails an executive summary. Runs end to end on a laptop with Docker Postgres and
 `./data`, or on AWS with S3, Lambda, Step Functions, RDS, SNS and CloudWatch via CDK.
 
 ```mermaid
 flowchart LR
-    RAW[(S3 raw<br/>daily CSVs)] --> I[ingest<br/>checksum, skip dupes]
+    RAW[(S3 raw<br/>daily CSVs)] --> C{contract check<br/>Avro header validation}
+    C -->|"breaking -> abort, nothing landed"| DRIFT[SchemaDriftError<br/>names field + owner]
+    C --> I[ingest<br/>checksum, skip dupes]
     I --> T[transform<br/>type, dedupe, FX as-of]
     T --> STG[(S3 staged<br/>Parquet)]
     T --> V[validate<br/>17 rules, quarantine,<br/>dq_score, anomalies]
@@ -17,7 +20,7 @@ flowchart LR
     PG --> R[report<br/>8 SQL reports,<br/>PII masking, lineage]
     R --> CUR[(S3 curated<br/>CSV, Parquet,<br/>summary.md + .html)]
     R --> N[notify<br/>SNS / Slack blocks]
-    EB[EventBridge<br/>06:00 UTC] --> SF[Step Functions<br/>retry + catch] --> I
+    EB[EventBridge<br/>06:00 UTC] --> SF[Step Functions<br/>retry + catch] --> C
     PG --> DASH[Streamlit dashboard]
 ```
 
@@ -50,6 +53,7 @@ Verify everything: `make check` (ruff, mypy strict, pytest with coverage; the DB
 
 ```
 config/           settings.yaml (env overrides FIN_DQ__SECTION__KEY), dq_rules.yaml, data_dictionary.yaml
+contracts/        one Avro schema per raw feed: promised fields, owner, producing system, delivery window
 sql/ddl/          versioned DDL (meta.schema_version), raw/staging/curated/dq/governance schemas, indexes
 sql/reports/      one file per report, header metadata drives lineage
 sql/quality/      reconciliation.sql
@@ -75,7 +79,8 @@ Every stage is separately invokable; all take `--run-date YYYY-MM-DD` (default: 
 |---|---|
 | `fin-dq migrate` | Apply `sql/ddl/*.sql` in order, recorded in `meta.schema_version` |
 | `fin-dq seed [--events N]` | Generate synthetic raw data into `./data/raw` (0 = reuse) and upsert dims, dim_date, FX history |
-| `fin-dq ingest [--force]` | Land the date's files into `raw.*`; skips if the checksum was already processed |
+| `fin-dq contracts check` | Validate each feed header against `contracts/*.avsc`; exit 2 on a breaking verdict |
+| `fin-dq ingest [--force]` | Validate contracts, then land the date's files into `raw.*`; skips if the checksum was already processed |
 | `fin-dq transform [--batch-id]` | Type, dedupe on `transaction_id`, FX as-of join, write `staging.*` and Parquet |
 | `fin-dq validate` | Run the rule engine, quarantine, score, anomaly detection; aborts above the threshold |
 | `fin-dq load` | Upsert `curated.fact_transactions`, SCD2 merge `dim_customer`, audit log |
@@ -121,6 +126,40 @@ masks PII columns listed in `governance.pii_columns`, and records lineage from t
 assertion to `tests/integration/test_pipeline.py::test_reports_expected_row_counts`; the golden CSV is created on
 first run (`UPDATE_GOLDEN=1` to refresh).
 
+## Schema contracts
+
+Every raw feed has an Avro contract in [`contracts/`](contracts/) carrying the promised fields plus the metadata that
+makes a structural change routable: owning team, producing system and delivery window. Ingest validates each file
+header **before** the landing transaction opens, so a producer-side change is refused rather than arriving as a
+column full of nulls that the completeness rule then blames on the data team.
+
+| Verdict | Meaning | What happens |
+|---|---|---|
+| `compatible` | Header matches the contract | Loads normally |
+| `additive` | File carries a field the contract does not list | Loads normally, recorded for follow-up |
+| `breaking` | A promised field is missing, or a name is repeated | `SchemaDriftError`, nothing landed |
+
+Presence is validated, not nullability: a nullable field still owes a column, it is the values inside it that may be
+empty. Column order is ignored because files are read by name. A rename is breaking rather than additive, since the
+absent old name is what decides the verdict, with the new name reported alongside it so the producer sees both
+halves of the change.
+
+```bash
+fin-dq contracts check --run-date 2024-11-15   # exit 2 on a breaking verdict, no database needed
+```
+
+Each verdict is committed on a transaction of its own, separate from the batch, so evidence of a refusal survives
+the abort it causes. `governance.contract_registry` holds the current promise per feed and
+`governance.contract_events` is the append-only record of what each file actually delivered:
+
+```sql
+SELECT feed, verdict, missing_fields, unknown_fields, owner
+FROM governance.contract_events WHERE verdict = 'breaking' ORDER BY observed_at DESC;
+```
+
+Runbook entry: [docs/runbook.md#contract-violation](docs/runbook.md#contract-violation). Why the gate sits outside
+the landing transaction: [docs/architecture.md](docs/architecture.md).
+
 ## Data quality engine
 
 - **10 rule types**: `not_null`, `unique`, `accepted_values`, `regex_match`, `range`, `referential_integrity`,
@@ -153,9 +192,9 @@ against, are documented in [docs/architecture.md](docs/architecture.md#query-opt
 
 ## Governance
 
-Data dictionary enforced by test, PII masked unless `role: finance_admin` (every unmasked access logged), lineage per
-report, audit log on every write, retention by class with dry-run, and a versioned rule registry with change
-control. See [docs/data_governance_policy.md](docs/data_governance_policy.md).
+Schema contracts per feed with a registry and an append-only breach log, data dictionary enforced by test, PII
+masked unless `role: finance_admin` (every unmasked access logged), lineage per report, audit log on every write,
+retention by class with dry-run, and a versioned rule registry with change control. See [docs/data_governance_policy.md](docs/data_governance_policy.md).
 
 ## Deployment (AWS)
 
@@ -221,7 +260,7 @@ quarantined or sign-flipped leg), report row counts, lineage/PII/audit rows, ide
 | "Built a daily financial data pipeline on AWS (S3, Lambda, Step Functions, RDS PostgreSQL) with IaC in CDK, idempotent stages and automated retries and alerting." | `infra/stacks/*.py` (4 stacks, least-privilege IAM, retry/catch, EventBridge), `orchestration/runner.py` and `lambda_handlers.py`, idempotency table in `docs/architecture.md`, `test_idempotent_rerun_leaves_curated_unchanged` |
 | "Designed a rule-driven data quality engine with 10 rule types, severity-based quarantine, row-level quality scores and statistical anomaly detection (z-score, Isolation Forest, Benford)." | `quality/rules.py`, `quality/engine.py`, `quality/scoring.py`, `quality/anomaly.py`, `config/dq_rules.yaml`, 21 parametrised rule tests plus hypothesis properties |
 | "Authored the financial reporting layer: star schema with SCD Type 2 dimensions and eight SQL reports (trial balance, AR aging, FX exposure, MoM variance) with EXPLAIN-driven optimisation." | `sql/ddl/004_curated.sql`, `load/load.py::merge_customers_scd2`, `sql/reports/*.sql`, `docs/architecture.md#query-optimisation` with before/after plans in `docs/explain/` |
-| "Implemented data governance: enforced data dictionary, PII masking with access logging, column-level lineage, audit trail, retention policies and a versioned rule registry with change control." | `config/data_dictionary.yaml` + `test_data_dictionary.py`, `governance/pii.py`, `governance/lineage.py`, `governance/audit.py`, `governance/retention.py`, `dq.rule_registry`, `docs/data_governance_policy.md` |
+| "Implemented data governance: schema contracts enforced at the ingest boundary, enforced data dictionary, PII masking with access logging, column-level lineage, audit trail, retention policies and a versioned rule registry with change control." | `contracts/*.avsc` + `contracts.py` + `test_contracts.py`, `governance.contract_registry` / `contract_events`, `config/data_dictionary.yaml` + `test_data_dictionary.py`, `governance/pii.py`, `governance/lineage.py`, `governance/audit.py`, `governance/retention.py`, `dq.rule_registry`, `docs/data_governance_policy.md` |
 
 ## Design notes
 
