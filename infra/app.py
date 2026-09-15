@@ -19,10 +19,13 @@ from stacks.storage_stack import StorageStack
 def build_app(app: cdk.App | None = None) -> cdk.App:
     """Wire the four stacks together. Exposed for the snapshot test."""
     app = app or cdk.App()
-    env = cdk.Environment(
-        account=os.environ.get("CDK_DEFAULT_ACCOUNT", "111111111111"),
-        region=os.environ.get("CDK_DEFAULT_REGION", "us-east-1"),
-    )
+    # Environment-agnostic unless real credentials are present. Pinning a concrete account makes CDK
+    # resolve the VPC's availability zones through an AWS API call, which fails anywhere without
+    # credentials (CI, a fresh clone, the snapshot test). The CDK CLI sets CDK_DEFAULT_* from the active
+    # profile, so a real `cdk deploy` still gets a concrete environment.
+    account = os.environ.get("CDK_DEFAULT_ACCOUNT")
+    region = os.environ.get("CDK_DEFAULT_REGION")
+    env = cdk.Environment(account=account, region=region) if account and region else None
     prefix = app.node.try_get_context("prefix") or "fin-dq"
     alert_email = app.node.try_get_context("alert_email") or "finance-ops@example.com"
     image_tag = app.node.try_get_context("image_tag") or "latest"
