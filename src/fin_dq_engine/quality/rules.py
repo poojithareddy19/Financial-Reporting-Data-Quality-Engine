@@ -107,6 +107,27 @@ def _ident(name: str) -> str:
     return name
 
 
+_SQL_STATEMENT_BREAK = re.compile(r";|--|/\*")
+_SQL_WRITE_KEYWORD = re.compile(
+    r"\b(INSERT|UPDATE|DELETE|DROP|ALTER|TRUNCATE|GRANT|REVOKE|CREATE|COPY)\b", re.IGNORECASE
+)
+
+
+def _read_only_subquery(sql: str) -> str:
+    """Keep a ``custom_sql`` rule body to a single read-only expression.
+
+    ``dq_rules.yaml`` is version-controlled and under the change control in
+    ``docs/data_governance_policy.md``, so this is not the security boundary. It is a guard against a
+    typo or a thin review: the body is interpolated into a subquery, and neither ending the statement
+    nor writing to the warehouse is ever a legitimate thing for a rule to do.
+    """
+    if _SQL_STATEMENT_BREAK.search(sql):
+        raise ValueError("custom_sql must be one expression: ';', '--' and '/*' are not allowed")
+    if _SQL_WRITE_KEYWORD.search(sql):
+        raise ValueError("custom_sql must be read-only; found a write or DDL keyword")
+    return sql
+
+
 def _coerce(value: Any) -> Any:
     """Turn ISO date strings into dates so bound params compare against DATE columns."""
     if isinstance(value, str) and re.match(r"^\d{4}-\d{2}-\d{2}$", value):
@@ -276,7 +297,7 @@ class CustomSqlRule(Rule):
     """Any SQL returning the failing ``transaction_id`` values; ``:batch_id`` is bound."""
 
     def failing_sql(self, ctx: RuleContext) -> tuple[str, dict[str, Any]]:
-        inner = self.params["sql"]
+        inner = _read_only_subquery(self.params["sql"])
         sql = (
             f"SELECT t.{ctx.key}, t.{ctx.display_key} FROM {ctx.table} t "
             f"WHERE t.batch_id = :batch_id AND t.{ctx.display_key} IN ({inner})"

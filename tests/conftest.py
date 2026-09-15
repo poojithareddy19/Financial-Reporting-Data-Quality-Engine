@@ -76,6 +76,9 @@ def make_settings(database_url: str, data_dir: Path, out_dir: Path) -> Settings:
         REPO / "config" / "settings.yaml",
         environment="local",
         database={"url": database_url},
+        # Fixed so masked PII is reproducible: without a key the HMAC falls back to a per-process
+        # random one, and the golden reports containing customer_name could never match twice.
+        governance={"pii_hash_key": "test-key-not-a-secret"},
         paths={
             "data_dir": str(data_dir),
             "out_dir": str(out_dir),

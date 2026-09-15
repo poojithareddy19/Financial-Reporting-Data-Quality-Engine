@@ -53,3 +53,5 @@ governance:
     curated: 2555   # class "financial-record", 7 years
     logs: 730       # class "operational"
   pii_columns: [customer_email, customer_name]
+  pii_hash_key: ""           # HMAC key for masking. Set FIN_DQ__GOVERNANCE__PII_HASH_KEY (or
+                             # Secrets Manager) in any real environment; never commit a value.

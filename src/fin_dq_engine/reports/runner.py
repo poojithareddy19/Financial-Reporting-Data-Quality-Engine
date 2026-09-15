@@ -14,7 +14,7 @@ from sqlalchemy import Connection, Engine
 from fin_dq_engine.config import Settings
 from fin_dq_engine.db import query_df, transaction
 from fin_dq_engine.governance.lineage import active_rule_versions, record_lineage
-from fin_dq_engine.governance.pii import log_pii_access, mask_frame
+from fin_dq_engine.governance.pii import log_pii_access, mask_frame, resolve_key
 from fin_dq_engine.logging_utils import get_logger
 from fin_dq_engine.storage import Storage, get_storage, write_parquet
 
@@ -127,7 +127,9 @@ def run_reports(
         versions = active_rule_versions(conn)
         for name in ordered:
             meta, df = run_report_sql(conn, reports_dir / f"{name}.sql", params)
-            df, pii_cols, masked = mask_frame(df, settings.governance.pii_columns, role)
+            df, pii_cols, masked = mask_frame(
+                df, settings.governance.pii_columns, role, resolve_key(settings.governance.pii_hash_key)
+            )
             log_pii_access(
                 conn,
                 actor=settings.actor,

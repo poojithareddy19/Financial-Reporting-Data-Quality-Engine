@@ -6,6 +6,7 @@ COPY pyproject.toml README.md ./
 COPY src ./src
 COPY sql ./sql
 COPY config ./config
+COPY contracts ./contracts
 
 RUN pip install --no-cache-dir --upgrade pip \
  && pip install --no-cache-dir . \
@@ -14,6 +15,7 @@ RUN pip install --no-cache-dir --upgrade pip \
 ENV FIN_DQ_CONFIG=/app/config/settings.yaml \
     FIN_DQ__PATHS__SQL_DIR=/app/sql \
     FIN_DQ__PATHS__CONFIG_DIR=/app/config \
+    FIN_DQ__PATHS__CONTRACTS_DIR=/app/contracts \
     FIN_DQ__PATHS__OUT_DIR=/tmp/out \
     FIN_DQ__PATHS__DATA_DIR=/tmp/data \
     MPLCONFIGDIR=/tmp/mpl

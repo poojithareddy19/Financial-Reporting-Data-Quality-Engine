@@ -5,7 +5,7 @@ from __future__ import annotations
 from dataclasses import dataclass
 from datetime import UTC, date, datetime
 
-from sqlalchemy import Connection, Engine
+from sqlalchemy import Connection, Engine, text
 
 from fin_dq_engine.batchlog import log_stage
 from fin_dq_engine.config import Settings
@@ -28,49 +28,119 @@ class LoadResult:
     customers_inserted: int
 
 
-def merge_customers_scd2(conn: Connection, batch_id: str) -> tuple[int, int]:
-    """Apply SCD2 changes from staging.customers.
+_AFFECTED = "SELECT DISTINCT customer_id FROM staging.customers WHERE batch_id = :b"
 
-    For each staged customer whose attributes differ from the current version (or who is new),
-    close the current version at ``effective_date - 1`` and insert a new current version.
-    Re-running the same batch is a no-op because the new version already matches.
-    """
-    closed = execute(
-        conn,
-        """
-        WITH changed AS (
-            SELECT s.customer_id, s.effective_date
-            FROM staging.customers s
-            JOIN curated.dim_customer d ON d.customer_id = s.customer_id AND d.is_current
-            WHERE s.batch_id = :b
-              AND d.valid_from < s.effective_date
-              AND (d.customer_name, d.customer_email, d.segment, d.region, d.country) IS DISTINCT FROM
-                  (s.customer_name, s.customer_email, s.segment, s.region, s.country)
-        )
-        UPDATE curated.dim_customer d
-        SET valid_to = c.effective_date - 1, is_current = FALSE
-        FROM changed c
-        WHERE d.customer_id = c.customer_id AND d.is_current
-    """,
+_ATTRS = "d.customer_name, d.customer_email, d.segment, d.region, d.country"
+
+
+def _sks(conn: Connection, batch_id: str, *, only_current: bool) -> set[int]:
+    """customer_sk values for every customer this batch touches."""
+    clause = " AND d.is_current" if only_current else ""
+    rows = conn.execute(
+        text(f"SELECT d.customer_sk FROM curated.dim_customer d WHERE d.customer_id IN ({_AFFECTED}){clause}"),
         {"b": batch_id},
     )
-    inserted = execute(
-        conn,
-        """
-        INSERT INTO curated.dim_customer (customer_id, customer_name, customer_email, segment, region, country,
-                                          customer_since, valid_from, valid_to, is_current)
-        SELECT s.customer_id, s.customer_name, s.customer_email, s.segment, s.region, s.country,
-               s.customer_since, s.effective_date, DATE '9999-12-31', TRUE
+    return {int(r.customer_sk) for r in rows}
+
+
+def merge_customers_scd2(conn: Connection, batch_id: str) -> tuple[int, int]:
+    """Apply SCD2 changes from staging.customers by rebuilding the affected version chains.
+
+    The earlier implementation closed the current version pairwise. When one batch carried two changes
+    for the same customer, ``UPDATE ... FROM`` matched an arbitrary row from the changed set, so the
+    batch left two rows with ``is_current = TRUE`` and overlapping validity. Any join on ``is_current``
+    then fanned out and double-counted that customer's revenue, silently.
+
+    Three set-based steps instead, each independent of how many changes a customer has in the batch:
+
+    1. Upsert every distinct ``(customer_id, effective_date)`` the batch carries.
+    2. Drop any version whose attributes match the version immediately before it, which is what keeps
+       an unchanged customer from accumulating a version per delivery.
+    3. Recompute ``valid_to`` and ``is_current`` across each affected customer's whole chain, so
+       exactly one version is current and the ranges are contiguous.
+
+    Re-running the same batch is a no-op: step 1 is keyed on ``(customer_id, valid_from)`` and steps 2
+    and 3 are idempotent.
+
+    Returns:
+        ``(closed, inserted)``: versions that stopped being current, and versions newly created.
+    """
+    before_all = _sks(conn, batch_id, only_current=False)
+    before_current = _sks(conn, batch_id, only_current=True)
+
+    conn.execute(
+        text("""
+        INSERT INTO curated.dim_customer (customer_id, customer_name, customer_email, segment, region,
+                                          country, customer_since, valid_from, valid_to, is_current)
+        SELECT DISTINCT ON (s.customer_id, s.effective_date)
+               s.customer_id, s.customer_name, s.customer_email, s.segment, s.region, s.country,
+               s.customer_since, s.effective_date, DATE '9999-12-31', FALSE
         FROM staging.customers s
         WHERE s.batch_id = :b
-          AND NOT EXISTS (SELECT 1 FROM curated.dim_customer d WHERE d.customer_id = s.customer_id AND d.is_current)
-        ON CONFLICT (customer_id, valid_from) DO UPDATE SET is_current = TRUE, valid_to = DATE '9999-12-31',
+        ORDER BY s.customer_id, s.effective_date
+        ON CONFLICT (customer_id, valid_from) DO UPDATE SET
             customer_name = EXCLUDED.customer_name, customer_email = EXCLUDED.customer_email,
-            segment = EXCLUDED.segment, region = EXCLUDED.region, country = EXCLUDED.country
-    """,
+            segment = EXCLUDED.segment, region = EXCLUDED.region, country = EXCLUDED.country,
+            customer_since = EXCLUDED.customer_since, is_current = FALSE
+        """),
         {"b": batch_id},
     )
-    return closed, inserted
+
+    conn.execute(
+        text(f"""
+        WITH ordered AS (
+            SELECT d.customer_sk,
+                   ROW_NUMBER() OVER w AS rn,
+                   ROW({_ATTRS}) AS attrs,
+                   LAG(ROW({_ATTRS})) OVER w AS prev_attrs
+            FROM curated.dim_customer d
+            WHERE d.customer_id IN ({_AFFECTED})
+            WINDOW w AS (PARTITION BY d.customer_id ORDER BY d.valid_from)
+        )
+        DELETE FROM curated.dim_customer d
+        USING ordered o
+        WHERE d.customer_sk = o.customer_sk AND o.rn > 1 AND o.attrs IS NOT DISTINCT FROM o.prev_attrs
+        """),
+        {"b": batch_id},
+    )
+
+    # Two statements, not one. uq_dim_customer_current is a plain unique index, so it is enforced per
+    # row as the update walks: a single statement that stood one version up while standing another down
+    # would trip on the ordering. Standing every affected version down first makes that impossible.
+    conn.execute(
+        text(f"""
+        WITH chain AS (
+            SELECT d.customer_sk,
+                   LEAD(d.valid_from) OVER (PARTITION BY d.customer_id ORDER BY d.valid_from) AS next_from
+            FROM curated.dim_customer d
+            WHERE d.customer_id IN ({_AFFECTED})
+        )
+        UPDATE curated.dim_customer d
+        SET valid_to = COALESCE(c.next_from - 1, DATE '9999-12-31'), is_current = FALSE
+        FROM chain c
+        WHERE d.customer_sk = c.customer_sk
+        """),
+        {"b": batch_id},
+    )
+    conn.execute(
+        text(f"""
+        WITH tail AS (
+            SELECT DISTINCT ON (d.customer_id) d.customer_sk
+            FROM curated.dim_customer d
+            WHERE d.customer_id IN ({_AFFECTED})
+            ORDER BY d.customer_id, d.valid_from DESC
+        )
+        UPDATE curated.dim_customer d
+        SET is_current = TRUE, valid_to = DATE '9999-12-31'
+        FROM tail t
+        WHERE d.customer_sk = t.customer_sk
+        """),
+        {"b": batch_id},
+    )
+
+    after_all = _sks(conn, batch_id, only_current=False)
+    after_current = _sks(conn, batch_id, only_current=True)
+    return len(before_current - after_current), len(after_all - before_all)
 
 
 def upsert_facts(conn: Connection, batch_id: str) -> int:

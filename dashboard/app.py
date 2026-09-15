@@ -14,16 +14,38 @@ from sqlalchemy import text
 
 from fin_dq_engine.config import load_settings
 from fin_dq_engine.db import get_engine
+from fin_dq_engine.governance.pii import log_pii_access, mask_frame, resolve_key
 
 st.set_page_config(page_title="fin-dq engine", layout="wide")
 settings = load_settings()
 engine = get_engine(settings)
 
 
+_PII_KEY = resolve_key(settings.governance.pii_hash_key)
+
+
 @st.cache_data(ttl=60)
 def q(sql: str, **params: object) -> pd.DataFrame:
+    """Run a query, masking PII and logging the access before anything reaches the browser.
+
+    Every result goes through mask_frame rather than only the queries that select PII today, so a
+    future query that adds customer_name cannot quietly bypass the controls the report path enforces.
+    Results are cached for 60s, so the access log gets one row per cache miss, not per page view.
+    """
     with engine.connect() as conn:
-        return pd.read_sql_query(text(sql), conn, params=params)
+        df = pd.read_sql_query(text(sql), conn, params=params)
+        masked, cols, was_masked = mask_frame(df, settings.governance.pii_columns, settings.role, _PII_KEY)
+        if cols:
+            with conn.begin():
+                log_pii_access(
+                    conn,
+                    actor=settings.actor,
+                    role=settings.role,
+                    report_name="dashboard",
+                    columns=cols,
+                    masked=was_masked,
+                )
+    return masked
 
 
 st.title("Financial Reporting & Data Quality Engine")

@@ -39,19 +39,23 @@ class MetricsSink:
 
     def flush(self) -> int:
         """Send buffered points. Returns the number flushed."""
-        points, self._buffer = self._buffer, []
-        if not points:
+        count = len(self._buffer)
+        if not count:
             return 0
         if self._client is not None:
-            for i in range(0, len(points), 20):
+            # Drop each chunk only once it is published. Clearing the buffer up front means a failure
+            # part way through the batches silently loses every point that had not been sent yet.
+            while self._buffer:
                 self._client.put_metric_data(
-                    Namespace=self._settings.aws.metrics_namespace, MetricData=points[i : i + 20]
+                    Namespace=self._settings.aws.metrics_namespace, MetricData=self._buffer[:20]
                 )
+                del self._buffer[:20]
         else:
+            points, self._buffer = self._buffer, []
             out = Path(self._settings.paths.out_dir)
             out.mkdir(parents=True, exist_ok=True)
             with (out / "metrics.jsonl").open("a", encoding="utf-8") as fh:
                 for p in points:
                     fh.write(json.dumps({**p, "Timestamp": p["Timestamp"].isoformat()}) + "\n")
-        log.info("metrics_flushed", count=len(points))
-        return len(points)
+        log.info("metrics_flushed", count=count)
+        return count

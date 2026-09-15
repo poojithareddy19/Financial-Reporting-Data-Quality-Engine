@@ -106,7 +106,16 @@ class ComputeStack(cdk.Stack):
                 memory_size=STAGE_MEMORY[stage],
                 ephemeral_storage_size=cdk.Size.gibibytes(2),
                 environment=env,
-                log_retention=logs.RetentionDays.ONE_MONTH,
+                # An explicit LogGroup, not the deprecated log_retention. That property provisions a
+                # custom resource with a Lambda of its own to mutate retention after the fact, and is
+                # removed in CDK v3.
+                log_group=logs.LogGroup(
+                    self,
+                    f"{stage.title()}Logs",
+                    log_group_name=f"/aws/lambda/{prefix}-{stage}",
+                    retention=logs.RetentionDays.ONE_MONTH,
+                    removal_policy=cdk.RemovalPolicy.DESTROY,
+                ),
                 architecture=lambda_.Architecture.X86_64,
             )
 

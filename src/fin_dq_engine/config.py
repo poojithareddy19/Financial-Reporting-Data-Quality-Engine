@@ -80,6 +80,9 @@ class GovernanceConfig(BaseModel):
         default_factory=lambda: {"raw": 400, "staged": 90, "curated": 2555, "logs": 730}
     )
     pii_columns: list[str] = Field(default_factory=lambda: ["customer_email", "customer_name"])
+    # Never commit a real value. Supply it as FIN_DQ__GOVERNANCE__PII_HASH_KEY, or from Secrets Manager
+    # in AWS. Empty means a per-process random key: masked values stop being stable across runs.
+    pii_hash_key: str = ""
 
 
 class Settings(BaseSettings):
